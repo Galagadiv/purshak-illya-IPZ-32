@@ -1,176 +1,239 @@
-
-<!Doctype html>
+<!DOCTYPE html>
 <html>
-    <head>
-        <title>Lab1_Purshak_Illa</title>
-        
-        <link rel="preconnect" href="https://fonts.googleapis.com">
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+  <head>
+    <title>Lab1_Purshak_Illa</title>
 
-        <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+      rel="stylesheet"
+    />
 
-        <style>
-            .highline {
-                background-color: bisque;
-                width: 1500px;
-                height: 80px;
-                padding-left: 100px;
-                align-content: center;
-            }
-            .header {
-                background-color: #2F303A ;
-                width: 1600px;
-                height: 600px;
-                align-content: center;
-                text-align: center;
-            }
-            .special {
-                background-color: antiquewhite;
-                width: 1600px;
-                height: 98px;
-                padding-top: 40px;
-                padding-bottom: 40px;
-                align-content: center;
-            }
-            .fter {
-                width: 1500px; 
-                height: 251px; 
-                background-color: #2F303A; 
-                align-content: center;
-                padding-left: 100px;
-            }
-            .logo {
-                font-size: 30px; 
-                font-family: 'Raleway', sans-serif;
-                font-weight: bold;
-                
-            }
-            .onlyTitle {
-                color: white; 
-                font-family:Arial, Helvetica, sans-serif;
-            }
-            #text {
-                font-family: 'Roboto', sans-serif;
-            }
-            #imgs {
-                width: 370px;
-                height: auto;
-            }
-            #divTeam {
-                display: flex;                
-                flex-direction: row;        
-                justify-content: space-around;
-                align-items: center;
-                width: 1600px; 
-                height: 650px; 
-                background-color: #F5F4FA;
-            }
-            #divPhto {
-                display: flex;                
-                flex-direction: column;        
-                justify-content: center;
-                align-items: center;
-                background-color: white;
-                border-radius: 10px;
-                width: 270px; 
-            }
-            #phto {
-                width: 270px;
-                height: auto;
-            }
-        </style>
-    </head>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
 
+    <style>
+      .highline {
+        background-color: bisque;
+        width: 1500px;
+        height: 80px;
+        padding-left: 100px;
+        align-content: center;
+      }
+      .header {
+        background-color: #2f303a;
+        width: 1600px;
+        height: 600px;
+        align-content: center;
+        text-align: center;
+      }
+      .special {
+        background-color: antiquewhite;
+        width: 1600px;
+        height: 98px;
+        padding-top: 40px;
+        padding-bottom: 40px;
+        align-content: center;
+      }
+      .fter {
+        width: 1500px;
+        height: 251px;
+        background-color: #2f303a;
+        align-content: center;
+        padding-left: 100px;
+      }
+      .logo {
+        font-size: 30px;
+        font-family: "Raleway", sans-serif;
+        font-weight: bold;
+      }
+      .onlyTitle {
+        color: white;
+        font-family: Arial, Helvetica, sans-serif;
+      }
+      #text {
+        font-family: "Roboto", sans-serif;
+      }
+      #text a {
+        font-weight: bold;
+        font-size: 36px;
+      }
+      #divPhoto {
+        display: flex;
+        justify-content: center;
+        gap: 40px;
+        background-color: white;
+        padding: 20px;
+        border-radius: 8px;
+        width: 1600px;
+      }
+      #divPhoto img {
+        width: 370px;
+        height: auto;
+      }
+      #txtCenter {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: 1600px;
+      }
+      #txtCenter a {
+        font-family: "Roboto", sans-serif;
+        font-weight: bold; 
+        font-size: 36px;
+        text-align: center;
+        margin-bottom: 20px;
+        margin-top: 20px;
+      }
+      #divTeam {
+        display: flex;
+        justify-content: center;
+        gap: 40px;
+        width: 1600px;
+        padding-bottom: 50px;
+        padding-top: 30px;
+        background-color: #f5f4fa;
+      }
+      #divPhto {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        background-color: white;
+        border-radius: 10px;
+        width: 270px;
+      }
+      #phto {
+        width: 270px;
+        height: auto;
+      }
+    </style>
+  </head>
 
-    <body>
-        <header class="highline">
-            <a class="logo" href="index.html"><span style="color: #188CE8;">Web</span>Studio</a>
-                <button type="button" id="text">Студія</button>
-                <button type="button" id="text">Портфоліо</button>
-                <button type="button" id="text">Контакти</button>
-            </nav>
-            <a href="info@devstrudio.com" id="text">info@devstrudio.com</a>
-            <a href="tel: +380994814090" id="text">+38 099 481 40 90</a>
-        </header>
+  <body>
+    <header class="highline">
+      <nav>
+        <a class="logo" href="index.html">
+          <span style="color: #188ce8">Web</span>Studio
+        </a>
+        <button type="button" id="text">Студія</button>
+        <button type="button" id="text">Портфоліо</button>
+        <button type="button" id="text">Контакти</button>
+      </nav>
+      <a href="info@devstrudio.com" id="text">info@devstrudio.com</a>
+      <a href="tel: +380994814090" id="text">+38 099 481 40 90</a>
+    </header>
 
-        <main>
-        <div class="header">
-            <h1 class="onlyTitle" id="text">ЕФЕКТИВНІ РІШЕННЯ ДЛЯ</p>ВАШОГО БІЗНЕСУ</h1>
-            <button type="button" style="background-color: #188CE8; color: white; width: 
-            150px; height: 40px; font-weight: 600;">Замовити послугу</button>
+    <main>
+      <div class="header">
+        <h1 class="onlyTitle" id="text">
+          <p>ЕФЕКТИВНІ РІШЕННЯ ДЛЯ</p>
+          ВАШОГО БІЗНЕСУ
+        </h1>
+        <button
+          type="button"
+          style="
+            background-color: #188ce8;
+            color: white;
+            width: 150px;
+            height: 40px;
+            font-weight: 600;
+          "
+        >
+          Замовити послугу
+        </button>
+      </div>
+
+      <div id="divTeam" style="height: 250px">
+        <!-- Правильно розташувати блоки -->
+        <div >
+          <h3>УВАГА ДО ДЕТАЛЕЙ</h3>
+          <a id="text">
+            Ідейні міркування, і навіть початок повсякденної роботи з
+            формування позиції.
+        </a>
         </div>
 
-        <div id="divTeam" style="height: 250px">
-            <!-- Правильно розташувати блоки -->
-            <div id="text">
-                <h3>УВАГА ДО ДЕТАЛЕЙ</h3>
-                <a>Ідейні міркування, і навіть початок повсякденної роботи з формування позиції.</a>
-            </div>
+        <div >
+          <h3>ПУНКТУАЛЬНІСТЬ</h3>
+          <a id="text">
+            Завдання організації, особливо рамки і місце навчання кадрів тягне
+            у себе.
+        </a>
+        </div>
 
-            <div id="text"  >
-                <h3>ПУНКТУАЛЬНІСТЬ</h3>
-                <a>Завдання організації, особливо рамки і місце навчання кадрів тягне у себе.</a>
-            </div>
+        <div >
+          <h3>ПЛАНУВАННЯ</h3>
+          <a id="text">Так само консультація з широким активом значною мірою зумовлює.</a>
+        </div>
 
-            <div id="text"  >
-                <h3>ПЛАНУВАННЯ</h3>
-                <a>Так само консультація з широким активом значною мірою зумовлює.</a>
-            </div>
+        <div >
+          <h3>СУЧАСНІ ТЕХНОЛОГІЇ</h3>
+          <a id="text">
+            Значимість цих проблем настільки очевидна, що реалізація планових
+            завдань.
+        </a>
+        </div>
+      </div>
 
-            <div id="text"  >
-                <h3>СУЧАСНІ ТЕХНОЛОГІЇ</h3>
-                <a>Значимість цих проблем настільки очевидна, що реалізація планових завдань.</a>
-            </div>
-        </div>    
 
-        <a style="font-weight: bold; font-size: 36px;" id="text">Чим ми займаємося</a>
+      <!-- Зробити текст по середині -->
+    <div id="txtCenter" >
+      <a style="padding-top: 50px;"> Чим ми займаємося </a>
+    </div>
+      <div id="divPhoto">
+        <img src="images/image_1.jpg" alt=""/>
+        <img src="images/image_2.jpg" alt=""/>
+        <img src="images/image_3.jpg" alt=""/>
+      </div>
+
+        <div id="txtCenter" style="background-color: #f5f4fa;">
+            <a>Наша команда</a>
+        </div>
         <!-- Зробити текст по середині -->
-        <div id="divTeam" style="background-color: white;">
-            <img src="images/image_1.jpg" alt="" id="imgs">
-            <img src="images/image_2.jpg" alt="" id="imgs">
-            <img src="images/image_3.jpg" alt="" id="imgs">
+        <div id="divTeam">
+          <div id="divPhto">
+            <img src="images/photo_1.jpg" alt="" id="phto" />
+            <h4 id="text">Ігор Дем'яненко</h4>
+            <p style="font-size: 16px" id="text">Product Disigner</p>
+          </div>
+
+          <div id="divPhto">
+            <img src="images/photo_2.jpg" alt="" id="phto" />
+            <h4 id="text">Ольга Рєпіна</h4>
+            <p style="font-size: 16px" id="text">Frontend Developer</p>
+          </div>
+
+          <div id="divPhto">
+            <img src="images/photo_3.jpg" alt="" id="phto" />
+            <h4 id="text">Микола Тарасов</h4>
+            <p style="font-size: 16px" id="text">Marketing</p>
+          </div>
+
+          <div id="divPhto">
+            <img src="images/photo_4.jpg" alt="" id="phto" />
+            <h4 id="text">Михайло Єрмаков</h4>
+            <p style="font-size: 16px" id="text">UI Disigner</p>
+          </div>
         </div>
+      
+    </main>
 
-        <div style="display: flex; flex-direction: column; justify-content: center; align-content: center; width: 1600px; background-color: #F5F4FA">
-            <a style="font-weight: bold; font-size: 36px;" id="text">Наша команда</a> 
-            <!-- Зробити текст по середині -->
-            <div id="divTeam">
-
-                <div id="divPhto">
-                    <img src="images/photo_1.jpg" alt="" id="phto">
-                    <h4 id="text">Ігор Дем'яненко</h4>
-                    <p style="font-size: 16px;" id="text">Product Disigner</p>
-                </div>
-
-                <div id="divPhto">
-                    <img src="images/photo_2.jpg" alt="" id="phto">  
-                    <h4 id="text">Ольга Рєпіна</h4>
-                    <p style="font-size: 16px;" id="text">Frontend Developer</p>   
-                </div>
-
-                <div id="divPhto">
-                    <img src="images/photo_3.jpg" alt="" id="phto">
-                    <h4 id="text">Микола Тарасов</h4>
-                    <p style="font-size: 16px;" id="text">Marketing</p> 
-                </div>
-
-                <div id="divPhto">
-                    <img src="images/photo_4.jpg" alt="" id="phto">      
-                    <h4 id="text">Михайло Єрмаков</h4>
-                    <p style="font-size: 16px;" id="text">UI Disigner</p> 
-                </div>
-
-            </div>
-        </div>
-
-        </main>
-
-        <footer class="fter">
-            <p class="logo" href="index.html" style="color: white;"><span style="color: #188CE8;">Web</span>Studio</p>
-            <p style="color: white;" id="text"> м. Київ, пр-т Лесі Українки, 26</p>
-            <p style="color: white;" id="text" href="info@devstrudio.com">info@devstrudio.com</p>
-            <p style="color: white;" id="text" href="tel: +380994814090">+38 099 481 40 90</p>
-        </footer>
-    </body>
+    <footer class="fter">
+      <p class="logo" href="index.html" style="color: white">
+        <span style="color: #188ce8">Web</span>Studio
+      </p>
+      <p style="color: white" id="text">м. Київ, пр-т Лесі Українки, 26</p>
+      <p style="color: white" id="text" href="info@devstrudio.com">
+        info@devstrudio.com
+      </p>
+      <p style="color: white" id="text" href="tel: +380994814090">
+        +38 099 481 40 90
+      </p>
+    </footer>
+  </body>
 </html>
