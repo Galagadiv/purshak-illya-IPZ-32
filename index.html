@@ -1,79 +1,97 @@
-
 <!DOCTYPE html>
 <html>
-    <head>
-        <title>Lab1_Purshak_Illa</title>
-    </head>
+	<head>
+		<title>Lab1_Purshak_Illa</title>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	</head>
 
+	<body>
+		<header>
+			<a href="index.html"><b>Web</b>Studio</a>
+			<nav>
+				<ul>
+					<li><a href="#">Студія</a></li>
+					<li><a href="#">Портфоліо</a></li>
+					<li><a href="#">Контакти</a></li>
+				</ul>
+			</nav>
+			<ul>
+				<li><a href="mailto: info@devstrudio.com">info@devstrudio.com</a></li>
+				<li><a href="tel: +380994814090">+38 099 481 40 90</a></li>
+			</ul>
+		</header>
 
-    <body>
-        <header>
-            <nav>
-                <a href="index.html"><b>Web</b>Studio</a>
-                <button type="button">Студія</button>
-                <button type="button">Портфоліо</button>
-                <button type="button">Контакти</button>
-            </nav>
-            <a href="info@devstrudio.com">info@devstrudio.com</a>
-            <a href="tel: +380994814090">+38 099 481 40 90</a>
-        </header>
+		<main>
+			<!-- 4 секції замість div -->
+			<section>
+				<h1>ЕФЕКТИВНІ РІШЕННЯ ДЛЯ<br />ВАШОГО БІЗНЕСУ</h1>
+				<button type="button">Замовити послугу</button>
+			</section>
 
-        <main>
-            <div>
-                <h1>ЕФЕКТИВНІ РІШЕННЯ ДЛЯ</p>ВАШОГО БІЗНЕСУ</h1>
-                <button type="button">Замовити послугу</button>
-            <div>
-              <div>
-                <!-- Правильно розташувати блоки -->
-                <div >
-                  <h3>УВАГА ДО ДЕТАЛЕЙ</h3>
-                  <a>
-                    Ідейні міркування, і навіть початок повсякденної роботи з
-                    формування позиції.
-                </a>
-                </div>
-        
-                <div>
-                  <h3>ПУНКТУАЛЬНІСТЬ</h3>
-                  <a>
-                    Завдання організації, особливо рамки і місце навчання кадрів тягне
-                    у себе.
-                </a>
-                </div>
-        
-                <div >
-                  <h3>ПЛАНУВАННЯ</h3>
-                  <a>Так само консультація з широким активом значною мірою зумовлює.</a>
-                </div>
-        
-                <div >
-                  <h3>СУЧАСНІ ТЕХНОЛОГІЇ</h3>
-                  <a>
-                    Значимість цих проблем настільки очевидна, що реалізація планових
-                    завдань.
-                </a>
-                </div>
-              </div>
-                </div>
-            
-            <a>Чим ми займаємося</a>
-            <img src="images/image_1.jpg">
-            <img src="images/image_2.jpg">
-            <img src="images/image_3.jpg">
+			<section>
+				<!-- Правильно розташувати блоки -->
+				<ul>
+					<h3>УВАГА ДО ДЕТАЛЕЙ</h3>
+					<li>
+						<p>
+							<!-- тег <p> -->
+							Ідейні міркування, і навіть початок повсякденної роботи з
+							формування позиції.
+						</p>
+					</li>
 
-            <a>Наша команда</a>
-            <img src="images/photo_1.jpg">
-            <img src="images/photo_2.jpg">
-            <img src="images/photo_3.jpg">
-            <img src="images/photo_4.jpg">
+					<h3>ПУНКТУАЛЬНІСТЬ</h3>
+					<li>
+						<p>
+							Завдання організації, особливо рамки і місце навчання кадрів тягне
+							у себе.
+						</p>
+					</li>
 
-        </main>
+					<h3>ПЛАНУВАННЯ</h3>
+					<li>
+						<p>
+							Так само консультація з широким активом значною мірою зумовлює.
+						</p>
+					</li>
 
-        <footer>
-            <p href="index.html"><b style="color:dodgerblue">Web</b>Studio</p>
-            <p> м. Київ, пр-т Лесі Українки, 26</p>
-            <p href="info@devstrudio.com">info@devstrudio.com</p>
-            <p href="tel: +380994814090">+38 099 481 40 90</p>
-        </footer>
-    </body>
+					<h3>СУЧАСНІ ТЕХНОЛОГІЇ</h3>
+					<li>
+						<p>
+							Значимість цих проблем настільки очевидна, що реалізація планових
+							завдань.
+						</p>
+					</li>
+				</ul>
+			</section>
+			<!-- section -->
+			<!-- список -->
+			<section>
+				<h2>Чим ми займаємося</h2>
+				<ul>
+					<li><img src="images/image_1.jpg" /></li>
+					<li><img src="images/image_2.jpg" /></li>
+					<li><img src="images/image_3.jpg" /></li>
+				</ul>
+			</section>
+
+			<section>
+				<h2>Наша команда</h2>
+				<img src="images/photo_1.jpg" />
+				<img src="images/photo_2.jpg" />
+				<img src="images/photo_3.jpg" />
+				<img src="images/photo_4.jpg" />
+			</section>
+		</main>
+
+		<footer>
+			<p href="index.html"><b style="color: dodgerblue">Web</b>Studio</p>
+			<address>
+				<p>м. Київ, пр-т Лесі Українки, 26</p>
+				<a href="mailto: info@devstrudio.com">info@devstrudio.com<br /></a>
+				<a href="tel: +380994814090">+38 099 481 40 90</a>
+			</address>
+		</footer>
+	</body>
 </html>
