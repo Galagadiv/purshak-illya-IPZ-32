@@ -1,0 +1,134 @@
+#highline {
+	display: flex;
+	flex-direction: row;
+	background-color: bisque;
+	width: 1600px;
+	height: 80px;
+	align-content: center;
+}
+#highline ul {
+	display: flex;
+	flex-direction: row;
+	gap: 20px;
+}
+
+#header {
+	background-color: #2f303a;
+	width: 1600px;
+	height: 600px;
+	align-content: center;
+	text-align: center;
+}
+#header h1 {
+	color: white;
+}
+#header button {
+	background-color: #188ce8;
+	color: white;
+	width: 150px;
+	height: 40px;
+	font-weight: 600;
+}
+/* Відступи зліва */
+#special {
+	background-color: antiquewhite;
+	width: 1600px;
+	height: 98px;
+	padding-bottom: 40px;
+	align-content: center;
+}
+#special ul {
+	display: flex;
+	flex-direction: row;
+}
+#special h3 {
+	font-family: "Roboto", sans-serif;
+	font-size: 14px;
+}
+#special p {
+	font-family: "Roboto", sans-serif;
+	font-size: 14px;
+}
+
+#whatDoing {
+	width: 1600px;
+}
+#whatDoing h2 {
+	display: flex;
+	font-size: 36px;
+	justify-content: center;
+}
+#whatDoing ul {
+	display: flex;
+	flex-direction: row;
+	gap: 30px;
+	justify-content: center;
+}
+#whatDoing img {
+	width: 370px;
+	height: 294px;
+}
+
+#team {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-content: center;
+	width: 1600px;
+	height: 648px;
+	background-color: #f5f4fa;
+}
+/* вирівняти по вертикалі */
+#team h2 {
+	display: flex;
+	font-size: 36px;
+	justify-content: center;
+}
+#team ul {
+	display: flex;
+	flex-direction: row;
+	gap: 30px;
+	justify-content: center;
+}
+/* вирівняти по вертикалі */
+#team img {
+	width: 270px;
+	height: 260px;
+}
+#team div {
+	background-color: white;
+	height: 108px;
+	align-content: center;
+}
+#team h3 {
+	display: flex;
+	justify-content: center;
+}
+#team p {
+	display: flex;
+	justify-content: center;
+	color: #757575;
+}
+
+#logo {
+	font-family: "Raleway", sans-serif;
+	font-size: 26px;
+}
+
+/* Відступ зліва */
+#fter {
+	width: 1600px;
+	height: 251px;
+	background-color: #2f303a;
+	align-content: center;
+}
+#fter p {
+	font-family: "Roboto", sans-serif;
+	font-size: 14px;
+	color: white;
+}
+#fter a {
+	font-family: "Roboto", sans-serif;
+	font-size: 14px;
+	color: white;
+}
