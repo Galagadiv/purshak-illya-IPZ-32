@@ -1,16 +1,28 @@
+ul {
+	list-style-type: none;
+}
+/* Заюзати коли розберусь як працює */
+h1,
+h2,
+h3,
+a,
+p {
+	font-family: "Roboto", sans-serif;
+}
+
 .highline {
 	display: flex;
 	flex-direction: row;
 	background-color: bisque;
+	align-content: center;
 	width: 1600px;
 	height: 80px;
-	align-content: center;
 }
 .highline ul {
 	display: flex;
 	flex-direction: row;
 	gap: 20px;
-	font-family: "Roboto", sans-serif;
+
 	font-size: 14px;
 	font-weight: 500;
 }
@@ -45,11 +57,9 @@
 	flex-direction: row;
 }
 .special h3 {
-	font-family: "Roboto", sans-serif;
 	font-size: 14px;
 }
 .special p {
-	font-family: "Roboto", sans-serif;
 	font-size: 14px;
 }
 
@@ -122,12 +132,10 @@
 	align-content: center;
 }
 .fter p {
-	font-family: "Roboto", sans-serif;
 	font-size: 14px;
 	color: white;
 }
 .fter a {
-	font-family: "Roboto", sans-serif;
 	font-size: 14px;
 	color: white;
 }
@@ -143,16 +151,19 @@
 	flex-direction: row;
 	justify-content: center;
 	align-content: center;
-	gap: 20px;
+	gap: 10px;
 }
 
 .selector button {
-	font-family: "Roboto", sans-serif;
 	font-size: 16px;
 	font-weight: 400;
 	border-radius: 4px;
-	color: #f5f4fa;
+	border-width: 0px;
+	background-color: #f5f4fa;
 	color: black;
+	padding: 5px;
+	padding-left: 15px;
+	padding-right: 15px;
 }
 
 .portfolio {
@@ -165,12 +176,15 @@
 	align-content: center;
 	gap: 30px;
 }
+/* border? */
+.portfolio li {
+	border-width: 10px;
+	border-color: black;
+}
 .portfolio h3 {
-	font-family: "Roboto", sans-serif;
 	font-size: 18px;
 }
 .portfolio p {
-	font-family: "Roboto", sans-serif;
 	font-size: 16px;
 	font-weight: 400;
 	color: #757575;
