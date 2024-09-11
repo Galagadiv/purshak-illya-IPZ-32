@@ -8,8 +8,9 @@ h3,
 a,
 p {
 	font-family: "Roboto", sans-serif;
+	text-decoration: none;
 }
-
+/* нормально розташувати */
 .highline {
 	display: flex;
 	flex-direction: row;
@@ -25,6 +26,12 @@ p {
 
 	font-size: 14px;
 	font-weight: 500;
+}
+.highline a {
+	color: #212121;
+}
+.highline a:hover {
+	color: #188ce8;
 }
 
 .header {
@@ -119,11 +126,6 @@ p {
 	color: #757575;
 }
 
-.logo {
-	font-family: "Raleway", sans-serif;
-	font-size: 26px;
-}
-
 /* Відступ зліва */
 .fter {
 	width: 1600px;
@@ -145,7 +147,6 @@ p {
 .selector {
 	width: 1600px;
 }
-
 .selector ul {
 	display: flex;
 	flex-direction: row;
@@ -153,7 +154,6 @@ p {
 	align-content: center;
 	gap: 10px;
 }
-
 .selector button {
 	font-size: 16px;
 	font-weight: 400;
