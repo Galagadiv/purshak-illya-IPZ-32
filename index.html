@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 	<head>
-		<title>Lab1_Purshak_Illa</title>
+		<title>Головна</title>
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<link rel="stylesheet" href="styles.css" />
@@ -20,12 +20,12 @@
 	</head>
 
 	<body>
-		<header id="highline">
-			<a href="index.html" id="logo"><b>Web</b>Studio</a>
+		<header class="highline">
+			<a href="index.html" class="logo"><b>Web</b>Studio</a>
 			<nav>
 				<ul>
 					<li><a href="#">Студія</a></li>
-					<li><a href="#">Портфоліо</a></li>
+					<li><a href="./portfolio.html">Портфоліо</a></li>
 					<li><a href="#">Контакти</a></li>
 				</ul>
 			</nav>
@@ -37,12 +37,12 @@
 
 		<main>
 			<!-- 4 секції замість div -->
-			<section id="header">
+			<section class="header">
 				<h1>ЕФЕКТИВНІ РІШЕННЯ ДЛЯ<br />ВАШОГО БІЗНЕСУ</h1>
 				<button type="button">Замовити послугу</button>
 			</section>
 
-			<section id="special">
+			<section class="special">
 				<!-- Правильно розташувати блоки -->
 				<ul>
 					<li>
@@ -78,23 +78,34 @@
 				</ul>
 			</section>
 
-			<section id="whatDoing">
+			<section class="whatDoing">
 				<h2>Чим ми займаємося</h2>
 				<ul>
 					<li>
-						<img src="images/tablet.jpg" alt="Чоловік програмує з планшетом" />
+						<img
+							src="images/tablet.jpg"
+							alt="Чоловік програмує з планшетом"
+							style="width: 370px; height: 294px"
+						/>
 					</li>
-					<li><img src="images/phone.jpg" alt="Чоловік з телефоном" /></li>
+					<li>
+						<img
+							src="images/phone.jpg"
+							alt="Чоловік з телефоном"
+							style="width: 370px; height: 294px"
+						/>
+					</li>
 					<li>
 						<img
 							src="images/tablet_pallet.jpg"
 							alt="Жінка вибирає колір на планшеті"
+							style="width: 370px; height: 294px"
 						/>
 					</li>
 				</ul>
 			</section>
 
-			<section id="team">
+			<section class="team">
 				<h2>Наша команда</h2>
 				<ul>
 					<li>
@@ -129,8 +140,8 @@
 			</section>
 		</main>
 
-		<footer id="fter">
-			<a href="index.html" id="logo" style="color: white"
+		<footer class="fter">
+			<a href="index.html" class="logo" style="color: white"
 				><b style="color: dodgerblue">Web</b>Studio</a
 			>
 			<address>

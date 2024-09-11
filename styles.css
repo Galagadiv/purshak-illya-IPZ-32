@@ -1,4 +1,4 @@
-#highline {
+.highline {
 	display: flex;
 	flex-direction: row;
 	background-color: bisque;
@@ -6,23 +6,26 @@
 	height: 80px;
 	align-content: center;
 }
-#highline ul {
+.highline ul {
 	display: flex;
 	flex-direction: row;
 	gap: 20px;
+	font-family: "Roboto", sans-serif;
+	font-size: 14px;
+	font-weight: 500;
 }
 
-#header {
+.header {
 	background-color: #2f303a;
 	width: 1600px;
 	height: 600px;
 	align-content: center;
 	text-align: center;
 }
-#header h1 {
+.header h1 {
 	color: white;
 }
-#header button {
+.header button {
 	background-color: #188ce8;
 	color: white;
 	width: 150px;
@@ -30,46 +33,42 @@
 	font-weight: 600;
 }
 /* Відступи зліва */
-#special {
+.special {
 	background-color: antiquewhite;
 	width: 1600px;
 	height: 98px;
 	padding-bottom: 40px;
 	align-content: center;
 }
-#special ul {
+.special ul {
 	display: flex;
 	flex-direction: row;
 }
-#special h3 {
+.special h3 {
 	font-family: "Roboto", sans-serif;
 	font-size: 14px;
 }
-#special p {
+.special p {
 	font-family: "Roboto", sans-serif;
 	font-size: 14px;
 }
 
-#whatDoing {
+.whatDoing {
 	width: 1600px;
 }
-#whatDoing h2 {
+.whatDoing h2 {
 	display: flex;
 	font-size: 36px;
 	justify-content: center;
 }
-#whatDoing ul {
+.whatDoing ul {
 	display: flex;
 	flex-direction: row;
 	gap: 30px;
 	justify-content: center;
 }
-#whatDoing img {
-	width: 370px;
-	height: 294px;
-}
 
-#team {
+.team {
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
@@ -79,56 +78,98 @@
 	background-color: #f5f4fa;
 }
 /* вирівняти по вертикалі */
-#team h2 {
+.team h2 {
 	display: flex;
 	font-size: 36px;
 	justify-content: center;
 }
-#team ul {
+.team ul {
 	display: flex;
 	flex-direction: row;
 	gap: 30px;
 	justify-content: center;
 }
 /* вирівняти по вертикалі */
-#team img {
+.team img {
 	width: 270px;
 	height: 260px;
 }
-#team div {
+.team div {
 	background-color: white;
 	height: 108px;
 	align-content: center;
 }
-#team h3 {
+.team h3 {
 	display: flex;
 	justify-content: center;
 }
-#team p {
+.team p {
 	display: flex;
 	justify-content: center;
 	color: #757575;
 }
 
-#logo {
+.logo {
 	font-family: "Raleway", sans-serif;
 	font-size: 26px;
 }
 
 /* Відступ зліва */
-#fter {
+.fter {
 	width: 1600px;
 	height: 251px;
 	background-color: #2f303a;
 	align-content: center;
 }
-#fter p {
+.fter p {
 	font-family: "Roboto", sans-serif;
 	font-size: 14px;
 	color: white;
 }
-#fter a {
+.fter a {
 	font-family: "Roboto", sans-serif;
 	font-size: 14px;
 	color: white;
+}
+
+/* Портфоліо */
+
+.navBt {
+	width: 1600px;
+}
+
+.navBt ul {
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	align-content: center;
+	gap: 20px;
+}
+
+.navBt button {
+	font-family: "Roboto", sans-serif;
+	font-size: 16px;
+	font-weight: 400;
+	color: #757575;
+}
+
+.portfolio {
+	width: 1600px;
+}
+.portfolio ul {
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	align-content: center;
+	gap: 30px;
+}
+.portfolio h3 {
+	font-family: "Roboto", sans-serif;
+	font-size: 18px;
+}
+.portfolio p {
+	font-family: "Roboto", sans-serif;
+	font-size: 16px;
+	font-weight: 400;
+	color: #757575;
 }
