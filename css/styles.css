@@ -14,24 +14,27 @@ p {
 .highline {
 	display: flex;
 	flex-direction: row;
-	background-color: bisque;
-	align-content: center;
+	align-items: center;
+	justify-content: space-between;
 	width: 1600px;
 	height: 80px;
 }
 .highline ul {
 	display: flex;
 	flex-direction: row;
-	gap: 20px;
-
+	gap: 30px;
 	font-size: 14px;
 	font-weight: 500;
 }
-.highline a {
+header.highline a {
 	color: #212121;
+	font-size: 16px;
 }
 .highline a:hover {
 	color: #188ce8;
+}
+.highline img {
+	padding-left: 215px;
 }
 
 .header {
@@ -53,7 +56,6 @@ p {
 }
 /* Відступи зліва */
 .special {
-	background-color: antiquewhite;
 	width: 1600px;
 	height: 98px;
 	padding-bottom: 40px;
@@ -62,6 +64,8 @@ p {
 .special ul {
 	display: flex;
 	flex-direction: row;
+	gap: 20px;
+	/* margin: 0, 50px, 50px, 0; */
 }
 .special h3 {
 	font-size: 14px;
@@ -125,6 +129,18 @@ p {
 	justify-content: center;
 	color: #757575;
 }
+/* social media button test */
+.team button {
+	border-radius: 10px;
+	border-width: 0;
+	background-color: white;
+}
+.team button:hover {
+	background-color: #188ce8;
+}
+.team img {
+	background-color: #212121;
+}
 
 /* Відступ зліва */
 .fter {
@@ -134,27 +150,29 @@ p {
 	align-content: center;
 }
 .fter p {
+	padding-left: 251px;
 	font-size: 14px;
 	color: white;
 }
 .fter a {
+	padding-left: 251px;
 	font-size: 14px;
 	color: white;
 }
 
 /* Портфоліо */
 
-.selector {
+.filter {
 	width: 1600px;
 }
-.selector ul {
+.filter ul {
 	display: flex;
 	flex-direction: row;
 	justify-content: center;
 	align-content: center;
 	gap: 10px;
 }
-.selector button {
+.filter button {
 	font-size: 16px;
 	font-weight: 400;
 	border-radius: 4px;
@@ -164,6 +182,11 @@ p {
 	padding: 5px;
 	padding-left: 15px;
 	padding-right: 15px;
+	transition: color 0.3s ease;
+}
+.filter button:hover {
+	background-color: #188ce8;
+	color: white;
 }
 
 .portfolio {
