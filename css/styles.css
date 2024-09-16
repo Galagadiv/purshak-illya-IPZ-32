@@ -5,6 +5,7 @@ ul {
 h1,
 h2,
 h3,
+h4,
 a,
 p {
 	font-family: "Roboto", sans-serif;
@@ -43,6 +44,11 @@ header.highline a {
 	height: 600px;
 	align-content: center;
 	text-align: center;
+	/* Чого не працює? */
+	background-image: url("./images/main/backgr.jpg");
+	background-size: cover;
+	background-position: center;
+	background-repeat: no-repeat;
 }
 .header h1 {
 	color: white;
@@ -54,7 +60,6 @@ header.highline a {
 	height: 40px;
 	font-weight: 600;
 }
-/* Відступи зліва */
 .special {
 	width: 1600px;
 	height: 98px;
@@ -64,8 +69,8 @@ header.highline a {
 .special ul {
 	display: flex;
 	flex-direction: row;
+	/* Міняти */
 	gap: 20px;
-	/* margin: 0, 50px, 50px, 0; */
 }
 .special h3 {
 	font-size: 14px;
@@ -141,6 +146,27 @@ header.highline a {
 .team img {
 	background-color: #212121;
 }
+/* новий блок з лаб 4 */
+.clients {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-content: center;
+	width: 1600px;
+	height: 400px;
+}
+.clients h4 {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	font-size: 36px;
+}
+.clients ul {
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+}
 
 /* Відступ зліва */
 .fter {
@@ -158,6 +184,11 @@ header.highline a {
 	padding-left: 251px;
 	font-size: 14px;
 	color: white;
+}
+/* виправити положення */
+.fter ul {
+	display: flex;
+	flex-direction: row;
 }
 
 /* Портфоліо */
@@ -179,9 +210,7 @@ header.highline a {
 	border-width: 0px;
 	background-color: #f5f4fa;
 	color: black;
-	padding: 5px;
-	padding-left: 15px;
-	padding-right: 15px;
+	padding: 5px, 15px, 5px, 15px;
 	transition: color 0.3s ease;
 }
 .filter button:hover {
