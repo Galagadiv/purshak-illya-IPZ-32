@@ -1,3 +1,12 @@
+:root {
+	--wht-color: #ffffff;
+	--nowht-color: #f5f4fa;
+	--dark-color: #212121;
+	--grey-color: #757575;
+	--blue-color: #188ce8;
+	--backgr-color: #2f303a;
+	--basic-font: "Roboto", sans-serif;
+}
 /* Заюзати коли розберусь як працює */
 a {
 	text-decoration: none;
@@ -7,60 +16,63 @@ ul {
 }
 body {
 	max-width: 1600px;
-	font-family: "Roboto", sans-serif;
+	font-family: var(--basic-font);
+	letter-spacing: 3%;
 }
 /* нормально розташувати */
-.highline {
+.header {
 	display: flex;
 	flex-direction: row;
 	align-items: center;
 	justify-content: space-between;
 }
-.highline ul {
+.header ul {
 	display: flex;
 	flex-direction: row;
 	gap: 30px;
-	font-size: 14px;
+}
+.header a {
 	font-weight: 500;
-}
-header.highline a {
-	color: #212121;
-	font-size: 16px;
+	color: var(--dark-color);
+	font-size: 14px;
 	line-height: 1.17;
+	letter-spacing: 2%;
 }
-.highline a:hover {
-	color: #188ce8;
+.header a:hover {
+	color: var(--blue-color);
 }
-.highline img {
-	padding: 25px 0;
+.header img {
+	padding: 0px 0 0 251px;
 }
 
-.header {
-	background-color: #2f303a;
-
-	height: 600px;
+.hero {
+	background-color: var(--backgr-color);
 	align-content: center;
 	text-align: center;
 	/* Чого не працює? */
-	background-image: url("./images/main/backgr.jpg");
+	/* background-image: url("./images/main/backgr.jpg");
 	background-size: cover;
 	background-position: center;
-	background-repeat: no-repeat;
+	background-repeat: no-repeat; */
 }
-.header h1 {
-	color: white;
-	font-size: 24px;
+.hero h1 {
+	font-weight: 900;
+	color: var(--wht-color);
+	font-size: 44px;
+	line-height: 1.36;
+	letter-spacing: 6%;
 }
-.header button {
-	background-color: #188ce8;
-	color: white;
+.hero button {
+	background-color: var(--blue-color);
+	font-weight: 700;
+	font-family: var(--basic-font);
+	color: var(--wht-color);
 	font-size: 16px;
-	font-weight: 600;
-	font-family: "Roboto", sans-serif;
-	/* line-height: normal; */
+	line-height: 1.875;
+	letter-spacing: 6%;
 }
+
 .special {
-	height: 98px;
 	padding-bottom: 40px;
 	align-content: center;
 }
@@ -70,23 +82,27 @@ header.highline a {
 	/* Міняти */
 	gap: 20px;
 }
-.special h3 {
+.special h2 {
+	font-weight: 700;
+	color: var(--dark-color);
 	font-size: 14px;
 	line-height: 1.17;
 }
 .special p {
+	font-weight: 400;
+	color: var(--grey-color);
 	font-size: 14px;
-	line-height: 1.7;
-	color: #757575;
-	letter-spacing: 3%;
+	line-height: 1.71;
 }
 
-.whatDoing {
-}
-.whatDoing h2 {
+.whatDoing h3 {
 	display: flex;
-	font-size: 36px;
 	justify-content: center;
+
+	font-weight: 700;
+	color: var(--dark-color);
+	font-size: 36px;
+	line-height: 1.17;
 }
 .whatDoing ul {
 	display: flex;
@@ -95,20 +111,25 @@ header.highline a {
 	justify-content: center;
 }
 
+/* вирівняти по вертикалі */
+
+/* вирівняти по вертикалі */
+
 .team {
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
 	align-content: center;
-
-	height: 648px;
-	background-color: #f5f4fa;
+	background-color: var(--nowht-color);
 }
-/* вирівняти по вертикалі */
-.team h2 {
+.team h4 {
 	display: flex;
-	font-size: 36px;
 	justify-content: center;
+
+	font-weight: 700;
+	color: var(--dark-color);
+	font-size: 36px;
+	line-height: 1.17;
 }
 .team ul {
 	display: flex;
@@ -116,141 +137,159 @@ header.highline a {
 	gap: 30px;
 	justify-content: center;
 }
-/* вирівняти по вертикалі */
-.team img {
-	width: 270px;
-	height: 260px;
-}
 .team div {
-	background-color: white;
+	background-color: var(--wht-color);
 	align-content: center;
 	box-shadow: 0px 2px 1px rgba(0, 0, 0, 0.2);
 	border-radius: 5px;
-	/* опціонально */
-	padding-bottom: 10px;
 }
-.team h3 {
+.team h5 {
 	display: flex;
 	justify-content: center;
+
 	font-weight: 500;
+	color: var(--dark-color);
+	font-size: 16px;
+	line-height: 1.17;
 }
 .team p {
 	display: flex;
 	justify-content: center;
-	color: #757575;
-	line-height: 1.3;
+
+	font-weight: 400;
+	color: var(--grey-color);
+	font-size: 16px;
+	line-height: 1.17;
 }
 /* social media button test */
 .team button {
 	border-radius: 10px;
 	border-width: 0;
 	background-color: white;
-	font-family: "Roboto", sans-serif;
 }
 .team button:hover {
 	background-color: #188ce8;
 }
-.team img {
-	background-color: #212121;
-}
-/* новий блок з лаб 4 */
-.clients {
-	display: flex;
-	flex-direction: column;
-	justify-content: center;
-	align-content: center;
 
-	height: 400px;
-}
-.clients h4 {
+/* новий блок з лаб 4 */
+.clients h6 {
 	display: flex;
 	flex-direction: column;
-	justify-content: center;
 	align-items: center;
+
+	font-weight: 700;
+	color: var(--dark-color);
 	font-size: 36px;
+	line-height: 1.17;
 }
 .clients ul {
 	display: flex;
 	flex-direction: row;
 	justify-content: center;
+	gap: 30px;
 }
 
-/* Відступ зліва */
 .fter {
-	height: 251px;
-	background-color: #2f303a;
-	align-content: center;
+	background-color: var(--backgr-color);
+	padding: 60px 0 0 251px;
 }
-.fter p {
-	padding-left: 251px;
+.fter address {
+	font-style: normal;
+}
+.fter address > p {
+	font-weight: 400;
 	font-size: 14px;
-	color: white;
-	line-height: 16px;
+	color: var(--wht-color);
+	line-height: 1.17;
 }
-.fter a {
-	padding-left: 251px;
+.fter address > a {
 	font-size: 14px;
 	color: white;
 	opacity: 60%;
 	line-height: 16px;
 }
-/* виправити положення */
 .fter ul {
 	display: flex;
 	flex-direction: row;
 }
+.fter p {
+	font-weight: 700;
+	font-size: 14px;
+	color: var(--wht-color);
+	line-height: 1.17;
+	letter-spacing: 2%;
+}
+/* колір фону + радіус */
+.fter button {
+	border-radius: 10px;
+	border-width: 0;
+	background-color: var(--grey-color);
+}
+.fter button:hover {
+	background-color: var(--blue-color);
+}
 
 /* Портфоліо */
 
-.filter {
+.portfolio {
+	display: flex;
+	flex-direction: column; /* Кнопки та галерея в колонку */
+	align-items: center;
+	gap: 20px;
+}
+.filter ul {
 	display: flex;
 	flex-direction: row;
 	justify-content: center;
-	align-content: center;
 	gap: 10px;
+	margin: 0 0 20px;
 }
 .filter button {
-	font-size: 16px;
-	font-weight: 400;
-	border-radius: 4px;
 	border-width: 0px;
-	background-color: #f5f4fa;
-	font-family: "Roboto", sans-serif;
-	color: black;
-	line-height: 26px;
-	padding: 5px, 15px, 5px, 15px;
+	background-color: var(--nowht-color);
+	padding: 10px 20px;
+	border-radius: 5px;
+
 	transition: color 0.3s ease;
+
+	font-family: var(--basic-font);
+	font-weight: 500;
+	font-size: 16px;
+	line-height: 1.625;
 }
 .filter button:hover {
-	background-color: #188ce8;
-	color: white;
+	background-color: var(--blue-color);
+	color: var(--wht-color);
 }
-
-.portfolio {
-}
-.portfolio ul {
+/* Як це гамно пофіксити? */
+.portfolio-items ul {
 	display: flex;
 	flex-direction: row;
-	justify-content: center;
-	align-content: center;
-	gap: 30px;
+	justify-items: center;
 }
-/* border? */
-.portfolio li {
+.portfolio-items li {
 	border-width: 10px;
-	border-color: black;
+	border-color: var(--dark-color);
 }
-.portfolio li:hover {
+.portfolio-items li:hover {
 	box-shadow: 1px 3px 5px rgba(0, 0, 0, 0.2);
 	transition: color 1s ease;
 }
+/* розібратись */
+.portfolio-items div {
+	padding: 0 0 0 10px;
+	box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.2);
+}
 .portfolio h3 {
+	font-weight: 700;
+	color: var(--dark-color);
 	font-size: 18px;
-	line-height: 36px;
+	line-height: 2;
+	letter-spacing: 6%;
 }
 .portfolio p {
-	font-size: 16px;
+	color: var(--grey-color);
 	font-weight: 400;
-	color: #757575;
-	line-height: 30px;
+	font-size: 16px;
+	line-height: 1.875;
 }
