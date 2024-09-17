@@ -124,6 +124,8 @@ header.highline a {
 	background-color: white;
 	height: 108px;
 	align-content: center;
+	box-shadow: 0px 2px 1px rgba(0, 0, 0, 0.2);
+	border-radius: 5px;
 }
 .team h3 {
 	display: flex;
@@ -232,6 +234,10 @@ header.highline a {
 .portfolio li {
 	border-width: 10px;
 	border-color: black;
+}
+.portfolio li:hover {
+	box-shadow: 1px 3px 5px rgba(0, 0, 0, 0.2);
+	transition: color 1s ease;
 }
 .portfolio h3 {
 	font-size: 18px;
