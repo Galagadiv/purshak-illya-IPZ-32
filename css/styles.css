@@ -42,7 +42,7 @@ body {
 	color: var(--blue-color);
 }
 .header img {
-	padding-left: 25px 0;
+	padding: 0px 0 0 251px;
 }
 
 .hero {
@@ -235,7 +235,6 @@ body {
 	display: flex;
 	flex-direction: column; /* Кнопки та галерея в колонку */
 	align-items: center;
-	background-color: #188ce8;
 	gap: 20px;
 }
 .filter ul {
