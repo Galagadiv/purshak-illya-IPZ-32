@@ -17,7 +17,7 @@ ul {
 body {
 	max-width: 1600px;
 	font-family: var(--basic-font);
-	letter-spacing: 3%;
+	letter-spacing: 0.03em;
 }
 /* нормально розташувати */
 .header {
@@ -36,13 +36,16 @@ body {
 	color: var(--dark-color);
 	font-size: 14px;
 	line-height: 1.17;
-	letter-spacing: 2%;
+	letter-spacing: 0.02em;
 }
 .header a:hover {
 	color: var(--blue-color);
 }
 .header img {
 	padding: 0px 0 0 251px;
+}
+.contacts a {
+	color: var(--grey-color);
 }
 
 .hero {
@@ -60,7 +63,7 @@ body {
 	color: var(--wht-color);
 	font-size: 44px;
 	line-height: 1.36;
-	letter-spacing: 6%;
+	letter-spacing: 0.06em;
 }
 .hero button {
 	background-color: var(--blue-color);
@@ -69,7 +72,7 @@ body {
 	color: var(--wht-color);
 	font-size: 16px;
 	line-height: 1.875;
-	letter-spacing: 6%;
+	letter-spacing: 0.06em;
 }
 
 .special {
@@ -82,7 +85,7 @@ body {
 	/* Міняти */
 	gap: 20px;
 }
-.special h2 {
+.special h3 {
 	font-weight: 700;
 	color: var(--dark-color);
 	font-size: 14px;
@@ -95,7 +98,7 @@ body {
 	line-height: 1.71;
 }
 
-.whatDoing h3 {
+.whatDoing h2 {
 	display: flex;
 	justify-content: center;
 
@@ -122,7 +125,7 @@ body {
 	align-content: center;
 	background-color: var(--nowht-color);
 }
-.team h4 {
+.team h2 {
 	display: flex;
 	justify-content: center;
 
@@ -143,7 +146,7 @@ body {
 	box-shadow: 0px 2px 1px rgba(0, 0, 0, 0.2);
 	border-radius: 5px;
 }
-.team h5 {
+.team h3 {
 	display: flex;
 	justify-content: center;
 
@@ -172,7 +175,7 @@ body {
 }
 
 /* новий блок з лаб 4 */
-.clients h6 {
+.clients h2 {
 	display: flex;
 	flex-direction: column;
 	align-items: center;
@@ -206,7 +209,7 @@ body {
 	font-size: 14px;
 	color: white;
 	opacity: 60%;
-	line-height: 16px;
+	line-height: 1.17;
 }
 .fter ul {
 	display: flex;
@@ -217,7 +220,7 @@ body {
 	font-size: 14px;
 	color: var(--wht-color);
 	line-height: 1.17;
-	letter-spacing: 2%;
+	letter-spacing: 0.02em;
 }
 /* колір фону + радіус */
 .fter button {
@@ -285,7 +288,7 @@ body {
 	color: var(--dark-color);
 	font-size: 18px;
 	line-height: 2;
-	letter-spacing: 6%;
+	letter-spacing: 0.06em;
 }
 .portfolio p {
 	color: var(--grey-color);
