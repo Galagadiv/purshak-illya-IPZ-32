@@ -24,16 +24,20 @@ body {
 	width: 1200px;
 }
 .section {
-	padding: 94px;
+	padding: 94px 0 94px;
 }
 /* нормально розташувати */
 .header {
 	display: flex;
-	flex-direction: row;
-	align-items: center;
-	justify-content: space-between;
+	justify-content: center;
 	border-width: 1px;
-	border-color: var(--border-color);
+	border-bottom-color: var(--border-color);
+	.container {
+		display: flex;
+		flex-direction: row;
+		align-items: center;
+		justify-content: center;
+	}
 }
 .header ul {
 	display: flex;
@@ -50,22 +54,20 @@ body {
 .header a:hover {
 	color: var(--blue-color);
 }
-.header img {
-	padding: 0px 0 0 251px;
-}
 .contacts a {
 	color: var(--grey-color);
 }
 
 .hero {
+	display: flex;
 	background-color: var(--backgr-color);
-	align-content: center;
+	justify-content: center;
 	text-align: center;
-	/* Чого не працює? */
-	/* background-image: url("./images/main/backgr.jpg");
-	background-size: cover;
-	background-position: center;
-	background-repeat: no-repeat; */
+	.container {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+	}
 }
 .hero h1 {
 	font-weight: 900;
@@ -83,10 +85,21 @@ body {
 	line-height: 1.875;
 	letter-spacing: 0.06em;
 }
+/* Розібратися */
+.hero button:hover {
+	padding: 0 20px 0 20px;
+	background-color: #188ce8;
+}
 
 .special {
-	padding-bottom: 40px;
+	display: flex;
+	justify-content: center;
 	align-content: center;
+	.container {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+	}
 }
 .special ul {
 	display: flex;
@@ -107,6 +120,16 @@ body {
 	line-height: 1.71;
 }
 
+.whatDoing {
+	display: flex;
+	justify-content: center;
+	.container {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		justify-content: center;
+	}
+}
 .whatDoing h2 {
 	display: flex;
 	justify-content: center;
@@ -123,16 +146,16 @@ body {
 	justify-content: center;
 }
 
-/* вирівняти по вертикалі */
-
-/* вирівняти по вертикалі */
-
 .team {
 	display: flex;
-	flex-direction: column;
 	justify-content: center;
-	align-content: center;
 	background-color: var(--nowht-color);
+	.container {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		justify-content: center;
+	}
 }
 .team h2 {
 	display: flex;
@@ -149,7 +172,7 @@ body {
 	gap: 30px;
 	justify-content: center;
 }
-.team div {
+.team li > div {
 	background-color: var(--wht-color);
 	align-content: center;
 	box-shadow: 0px 2px 1px rgba(0, 0, 0, 0.2);
@@ -184,6 +207,16 @@ body {
 }
 
 /* новий блок з лаб 4 */
+.clients {
+	display: flex;
+	justify-content: center;
+	.container {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		justify-content: center;
+	}
+}
 .clients h2 {
 	display: flex;
 	flex-direction: column;
@@ -204,6 +237,12 @@ body {
 .fter {
 	background-color: var(--backgr-color);
 	padding: 60px 0 0 251px;
+	.container {
+		display: flex;
+		flex-direction: column;
+		flex-wrap: wrap;
+		justify-content: space-between;
+	}
 }
 .fter address {
 	font-style: normal;
@@ -222,7 +261,7 @@ body {
 }
 .fter ul {
 	display: flex;
-	flex-direction: row;
+	gap: 15px;
 }
 .fter p {
 	font-weight: 700;
@@ -233,9 +272,9 @@ body {
 }
 /* колір фону + радіус */
 .fter button {
-	border-radius: 10px;
+	border-radius: 50%;
 	border-width: 0;
-	background-color: var(--grey-color);
+	background-color: var(--backgr-color);
 }
 .fter button:hover {
 	background-color: var(--blue-color);
@@ -244,15 +283,21 @@ body {
 /* Портфоліо */
 
 .portfolio {
-	display: flex;
-	flex-direction: column; /* Кнопки та галерея в колонку */
+	display: flex; /* Кнопки та галерея в колонку */
 	align-items: center;
+	justify-content: center;
 	gap: 20px;
+	.container {
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+	}
 }
-.filter ul {
+.filter {
 	display: flex;
 	flex-direction: row;
 	justify-content: center;
+	align-content: center;
 	gap: 10px;
 }
 .filter button {
@@ -273,23 +318,23 @@ body {
 	color: var(--wht-color);
 }
 /* Як це гамно пофіксити? */
-.portfolio-items ul {
+.portfolio-items {
 	display: flex;
-	flex-direction: row;
-	justify-items: center;
+	flex-wrap: wrap;
+	justify-content: space-between;
+	gap: 30xp;
 }
 .portfolio-items li {
-	border-width: 10px;
-	border-color: var(--dark-color);
+	margin-bottom: 30px;
+	border: 1px solid;
+	border-color: #eeeeee;
 }
 .portfolio-items li:hover {
-	box-shadow: 1px 3px 5px rgba(0, 0, 0, 0.2);
+	box-shadow: 1px 5px 5px rgba(0, 0, 0, 0.2);
 	transition: color 1s ease;
 }
-/* розібратись */
 .portfolio-items div {
 	padding: 0 0 0 10px;
-	box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.2);
 }
 .portfolio h3 {
 	font-weight: 700;
