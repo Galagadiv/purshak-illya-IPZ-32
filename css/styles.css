@@ -4,6 +4,7 @@
 	--dark-color: #212121;
 	--grey-color: #757575;
 	--blue-color: #188ce8;
+	--more-blue-color: #2196f3;
 	--backgr-color: #2f303a;
 	--border-color: #ececec;
 	--cl--border-color: #afb1b8;
@@ -257,6 +258,7 @@ body {
 	border-color: var(--cl--border-color);
 }
 .clients button:hover {
+	border-color: var(--more-blue-color);
 }
 
 .fter {
@@ -347,7 +349,6 @@ body {
 	display: flex;
 	flex-wrap: wrap;
 	justify-content: space-between;
-	gap: 30xp;
 }
 .portfolio-items li {
 	margin-bottom: 30px;
