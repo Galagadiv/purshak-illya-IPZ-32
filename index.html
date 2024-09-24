@@ -24,7 +24,7 @@
 	<body>
 		<header class="header">
 			<div class="container">
-				<a href="index.html"
+				<a href="index.html" class="logo"
 					><img
 						src="./images/logobl.svg"
 						alt="WebStudio"
@@ -33,7 +33,7 @@
 					/>
 				</a>
 				<nav>
-					<ul class="header_nav_link">
+					<ul>
 						<li><a href="#">Студія</a></li>
 						<li><a href="./portfolio.html">Портфоліо</a></li>
 						<li><a href="#">Контакти</a></li>
@@ -61,19 +61,21 @@
 		</header>
 
 		<main>
-			<section class="hero section">
+			<section class="hero">
 				<div class="container">
-					<h1>ЕФЕКТИВНІ РІШЕННЯ ДЛЯ<br />ВАШОГО БІЗНЕСУ</h1>
+					<h1>ЕФЕКТИВНІ РІШЕННЯ ДЛЯ ВАШОГО БІЗНЕСУ</h1>
 					<button type="button">Замовити послугу</button>
 				</div>
 			</section>
 
-			<section class="special section">
+			<section class="special">
 				<div class="container">
 					<!-- Правильно розташувати блоки -->
 					<ul>
 						<li>
-							<img src="./images/main/special/antenna.jpg" alt="Антена" />
+							<div>
+								<img src="./images/main/special/antenna.jpg" alt="Антена" />
+							</div>
 							<h3>УВАГА ДО ДЕТАЛЕЙ</h3>
 							<p>
 								Ідейні міркування, і навіть початок повсякденної роботи з
@@ -82,7 +84,9 @@
 						</li>
 
 						<li>
-							<img src="./images/main/special/clock.jpg" alt="Годинник" />
+							<div>
+								<img src="./images/main/special/clock.jpg" alt="Годинник" />
+							</div>
 							<h3>ПУНКТУАЛЬНІСТЬ</h3>
 							<p>
 								Завдання організації, особливо рамки і місце навчання кадрів
@@ -91,7 +95,9 @@
 						</li>
 
 						<li>
-							<img src="./images/main/special/notebook.jpg" alt="Ноутбук" />
+							<div>
+								<img src="./images/main/special/notebook.jpg" alt="Ноутбук" />
+							</div>
 							<h3>ПЛАНУВАННЯ</h3>
 							<p>
 								Так само консультація з широким активом значною мірою зумовлює.
@@ -99,7 +105,12 @@
 						</li>
 
 						<li>
-							<img src="./images/main/special/astronaut.jpg" alt="Космонавт" />
+							<div>
+								<img
+									src="./images/main/special/astronaut.jpg"
+									alt="Космонавт"
+								/>
+							</div>
 							<h3>СУЧАСНІ ТЕХНОЛОГІЇ</h3>
 							<p>
 								Значимість цих проблем настільки очевидна, що реалізація
@@ -110,7 +121,7 @@
 				</div>
 			</section>
 
-			<section class="whatDoing section">
+			<section class="whatDoing">
 				<div class="container">
 					<h2>Чим ми займаємося</h2>
 					<ul>
@@ -142,10 +153,10 @@
 				</div>
 			</section>
 
-			<section class="team section">
+			<section class="team">
 				<div class="container">
 					<h2>Наша команда</h2>
-					<ul>
+					<ul class="team-list">
 						<li>
 							<img
 								src="images/main/people/Igor.jpg"
@@ -153,7 +164,7 @@
 								width="270"
 								height="260"
 							/>
-							<div>
+							<div class="team-item-inner">
 								<h3>Ігор Дем'яненко</h3>
 								<p>Droduct Designer</p>
 								<!-- test social media buttons -->
@@ -374,7 +385,7 @@
 			</section>
 			<!-- Нова секція з лаб 4 -->
 
-			<section class="clients section">
+			<section class="clients">
 				<div class="container">
 					<h2>Постійні клієнти</h2>
 					<ul>
@@ -416,8 +427,8 @@
 			</section>
 		</main>
 
-		<footer class="fter section">
-			<div class="conteiner">
+		<footer class="fter">
+			<div class="container">
 				<a href="index.html"
 					><img src="./images/logowht.svg" alt="WebStudio" />
 				</a>
