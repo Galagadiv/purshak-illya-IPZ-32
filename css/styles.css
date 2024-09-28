@@ -8,6 +8,7 @@
 	--backgr-color: #2f303a;
 	--border-color: #ececec;
 	--cl--border-color: #afb1b8;
+	--fter-btn-backgr-color: rgba(255, 255, 255, 0.1);
 	--basic-font: "Roboto", sans-serif;
 }
 /* Заюзати коли розберусь як працює */
@@ -90,16 +91,27 @@ section {
 		}
 	}
 }
+/* Background */
 .hero {
 	padding: 200px 0;
-	background-color: var(--backgr-color);
+	background-color: #c4c4c4;
+
 	text-align: center;
+	background-image: linear-gradient(
+			rgba(47, 48, 58, 0.4),
+			rgba(47, 48, 58, 0.4)
+		),
+		url("../images/main/backgr.jpg");
+
+	background-size: cover;
+	background-position: center;
+	background-repeat: no-repeat;
 	.container {
 		display: flex;
 		flex-direction: column;
 		align-items: center;
 	}
-	h1 {
+	.hero-title {
 		max-width: 700px;
 		margin-bottom: 30px;
 		font-weight: 900;
@@ -108,7 +120,7 @@ section {
 		line-height: 1.36;
 		letter-spacing: 0.06em;
 	}
-	button {
+	.hero-button {
 		padding: 10px 24px;
 		background-color: var(--blue-color);
 		border-radius: 4px;
@@ -129,7 +141,7 @@ section {
 		align-items: center;
 		justify-content: center;
 	}
-	ul {
+	.special-list {
 		display: flex;
 		flex-direction: row;
 		gap: 30px;
@@ -161,7 +173,7 @@ section {
 		align-items: center;
 		justify-content: center;
 	}
-	h2 {
+	.whatDoing-title {
 		display: flex;
 		justify-content: center;
 
@@ -170,7 +182,7 @@ section {
 		font-size: 36px;
 		line-height: 1.17;
 	}
-	ul {
+	.whatDoing-list {
 		display: flex;
 		justify-content: center;
 		gap: 30px;
@@ -185,7 +197,7 @@ section {
 		align-items: center;
 		justify-content: center;
 	}
-	h2 {
+	.team-title {
 		display: flex;
 		justify-content: center;
 
@@ -196,45 +208,67 @@ section {
 	}
 	ul {
 		display: flex;
-		flex-direction: row;
-		gap: 30px;
 		justify-content: center;
 	}
-	.team-list > li {
-		background-color: var(--wht-color);
-		box-shadow: 0px 2px 1px rgba(0, 0, 0, 0.2);
-		border-radius: 5px;
-		div {
-			padding: 30px 32px;
-			text-align: center;
-			h3 {
-				display: flex;
-				justify-content: center;
+	.team-list {
+		gap: 30px;
+		.team-list-item {
+			background-color: var(--wht-color);
+			box-shadow: 0px 2px 1px rgba(0, 0, 0, 0.2);
+			border-radius: 5px;
+			div {
+				padding: 30px 32px;
+				text-align: center;
+				h3 {
+					display: flex;
+					justify-content: center;
 
-				font-weight: 500;
-				color: var(--dark-color);
-				font-size: 16px;
-				line-height: 1.17;
-			}
-			p {
-				color: var(--grey-color);
-				font-size: 16px;
-				line-height: 1.17;
-
-				padding-top: 10px;
-				padding-bottom: 16px;
-			}
-			ul {
-				gap: 10px;
-				button {
-					padding: 12px;
-					border-radius: 50%;
-
-					border-width: 0;
-					background-color: var(--wht-color);
+					font-weight: 500;
+					color: var(--dark-color);
+					font-size: 16px;
+					line-height: 1.17;
 				}
-				button:hover {
-					background-color: #188ce8;
+				p {
+					color: var(--grey-color);
+					font-size: 16px;
+					line-height: 1.17;
+
+					padding-top: 10px;
+					padding-bottom: 16px;
+				}
+				.team-media-list {
+					gap: 10px;
+					button {
+						padding: 12px;
+						border-radius: 50%;
+
+						border-width: 0;
+						background-color: var(--wht-color);
+					}
+					.facebook:hover {
+						background-color: #188ce8;
+						img {
+							content: url("../images/social/facebook-white.svg");
+						}
+					}
+					.instagram:hover {
+						background-color: #188ce8;
+						img {
+							content: url("../images/social/instagram-white.svg");
+						}
+					}
+					.twitter:hover {
+						background-color: #188ce8;
+						img {
+							content: url("../images/social/twitter-white.svg");
+						}
+					}
+					.linkedin:hover {
+						background-color: #188ce8;
+						img {
+							content: url("../images/social/linkedin-white.svg");
+						}
+					}
 				}
 			}
 		}
@@ -272,14 +306,13 @@ section {
 /* Правки в <a> */
 .fter {
 	background-color: var(--backgr-color);
-	padding: 60px;
+	padding: 60px 215px;
 	.container {
 		display: flex;
-		flex-direction: column;
-		flex-wrap: wrap;
-		justify-content: space-between;
 	}
-	address {
+	.address-block {
+		display: flex;
+		flex-direction: column;
 		font-style: normal;
 		padding-top: 28px;
 		.address-a {
@@ -287,8 +320,8 @@ section {
 			color: white;
 			opacity: 60%;
 			line-height: 1.17;
-			/* Чому не працює */
-			/* padding-bottom: 12px; */
+
+			padding-bottom: 12px;
 		}
 		.address-p {
 			font-size: 14px;
@@ -297,25 +330,31 @@ section {
 			padding-bottom: 12px;
 		}
 	}
+	.media-block {
+		padding-left: 70px;
+		.media-p {
+			font-weight: 700;
+			font-size: 14px;
+			color: var(--wht-color);
+			line-height: 1.17;
+			letter-spacing: 0.02em;
 
-	p {
-		font-weight: 700;
-		font-size: 14px;
-		color: var(--wht-color);
-		line-height: 1.17;
-		letter-spacing: 0.02em;
-	}
-	ul {
-		display: flex;
-		flex-direction: row;
-		button {
-			padding: 12px;
-			border-radius: 50%;
-			border-width: 0;
-			background-color: var(--backgr-color);
+			margin-bottom: 20px;
 		}
-		button:hover {
-			background-color: var(--blue-color);
+		.media-list {
+			display: flex;
+			flex-direction: row;
+			gap: 10px;
+			button {
+				padding: 12px;
+				border-radius: 50%;
+				border-width: 0;
+
+				background-color: var(--fter-btn-backgr-color);
+			}
+			button:hover {
+				background-color: var(--blue-color);
+			}
 		}
 	}
 }
@@ -329,7 +368,6 @@ section {
 	}
 	.filter {
 		display: flex;
-		flex-direction: row;
 		justify-content: center;
 		align-content: center;
 		gap: 10px;
