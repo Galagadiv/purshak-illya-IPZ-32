@@ -66,6 +66,27 @@ section {
 		display: flex;
 		flex-direction: row;
 		gap: 50px;
+		li {
+			position: relative;
+			a {
+				position: relative;
+			}
+			a::after {
+				content: ""; /* Створює псевдоелемент */
+				display: block; /* Встановлює блочний елемент */
+				width: 100%; /* Ширина риски дорівнює ширині тексту */
+				height: 4px; /* Висота риски */
+				background-color: var(--more-blue-color); /* Колір риски */
+				position: absolute; /* Абсолютне позиціонування */
+				/* Вирівнювання по лівому краю */
+				bottom: -28px; /* Відстань від тексту до риски */
+				transform: scaleX(0); /* Початкове значення для анімації */
+				transition: transform 0.3s ease; /* Анімація */
+			}
+			a:hover::after {
+				transform: scaleX(1); /* Змінює масштаб риски при наведенні */
+			}
+		}
 	}
 	a {
 		font-weight: 500;
@@ -186,6 +207,27 @@ section {
 		display: flex;
 		justify-content: center;
 		gap: 30px;
+		li {
+			position: relative;
+			div {
+				position: absolute;
+				bottom: 0;
+				left: 0;
+				width: 100%;
+
+				background-color: var(--backgr-color);
+				opacity: 0.8;
+				padding: 27px;
+
+				font-size: 14px;
+				font-weight: 700;
+				line-height: 1.17;
+				text-align: center;
+				text-transform: uppercase;
+
+				color: var(--wht-color);
+			}
+		}
 	}
 }
 /* social media button img changing */
@@ -395,16 +437,40 @@ section {
 		flex-wrap: wrap;
 		gap: 30px;
 		li {
+			position: relative;
 			max-width: 370px;
 			margin-bottom: 30px;
 			border: 1px solid;
 			border-color: #eeeeee;
+			.portfolio-item-overlay {
+				display: flex;
+				height: 0;
+				padding: 0 24px;
+				position: absolute;
+				overflow: hidden;
+				width: 100%;
+
+				background-color: var(--more-blue-color);
+				opacity: 0.9;
+				top: 0;
+
+				color: var(--wht-color);
+				font-size: 18px;
+				line-height: 1.55;
+				transition: height 0.5s ease-out, padding 0.5s ease-out;
+			}
 		}
 		li:hover {
 			box-shadow: 1px 5px 5px rgba(0, 0, 0, 0.2);
 			transition: color 1s ease;
+
+			.portfolio-item-overlay {
+				padding: 63px 24px;
+				height: 294px;
+			}
 		}
-		div {
+
+		.portfolio-item-textblock {
 			padding: 20px 24px;
 			h3 {
 				font-weight: 700;
