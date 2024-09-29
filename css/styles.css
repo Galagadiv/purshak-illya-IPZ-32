@@ -51,6 +51,7 @@ body {
 section {
 	padding: 94px 0;
 }
+/* Заготовка для зміни кольору contacts */
 .header {
 	padding: 24px 0;
 	border-bottom: 1px solid var(--border-color);
@@ -98,6 +99,13 @@ section {
 	a:hover,
 	.contacts a:hover {
 		color: var(--blue-color);
+		transition: color 0.5s ease;
+		.mail-img {
+			content: url("../images/social/twitter-grey.svg");
+		}
+		.phone-img {
+			content: url("../images/social/facebook-grey.svg");
+		}
 	}
 	.contacts {
 		display: flex;
