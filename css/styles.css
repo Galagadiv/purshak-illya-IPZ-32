@@ -32,7 +32,7 @@ p {
 	margin: 0;
 }
 h2 {
-	padding-bottom: 50px;
+	margin-bottom: 50px;
 }
 body {
 	margin-left: auto;
@@ -60,33 +60,31 @@ section {
 		align-items: center;
 	}
 	.header-logo {
-		/* на майбутнє */
 		margin-right: 93px;
 	}
+	/* Підкреслення як  у дебіла? */
 	.header-nav-list {
 		display: flex;
 		flex-direction: row;
 		gap: 50px;
-		li {
+		a {
 			position: relative;
-			a {
-				position: relative;
-			}
-			a::after {
-				content: ""; /* Створює псевдоелемент */
-				display: block; /* Встановлює блочний елемент */
-				width: 100%; /* Ширина риски дорівнює ширині тексту */
-				height: 4px; /* Висота риски */
-				background-color: var(--more-blue-color); /* Колір риски */
-				position: absolute; /* Абсолютне позиціонування */
-				/* Вирівнювання по лівому краю */
-				bottom: -28px; /* Відстань від тексту до риски */
-				transform: scaleX(0); /* Початкове значення для анімації */
-				transition: transform 0.3s ease; /* Анімація */
-			}
-			a:hover::after {
-				transform: scaleX(1); /* Змінює масштаб риски при наведенні */
-			}
+		}
+		a::after {
+			content: ""; /* Створює псевдоелемент */
+			display: block; /* Встановлює блочний елемент */
+			width: 100%; /* Ширина риски дорівнює ширині тексту */
+			height: 4px; /* Висота риски */
+			background-color: var(--more-blue-color); /* Колір риски */
+			position: absolute; /* Абсолютне позиціонування */
+			/* Вирівнювання по лівому краю */
+			bottom: -28px; /* Відстань від тексту до риски */
+			transform: scaleX(0); /* Початкове значення для анімації */
+			transition: transform 0.3s ease; /* Анімація */
+		}
+		/* as active */
+		a:hover::after {
+			transform: scaleX(1); /* Змінює масштаб риски при наведенні */
 		}
 	}
 	a {
@@ -96,16 +94,10 @@ section {
 		line-height: 1.17;
 		letter-spacing: 0.02em;
 	}
-	a:hover,
-	.contacts a:hover {
-		color: var(--blue-color);
-		transition: color 0.5s ease;
-		.mail-img {
-			content: url("../images/social/twitter-grey.svg");
-		}
-		.phone-img {
-			content: url("../images/social/facebook-grey.svg");
-		}
+	.header-nav-list > li > a:hover,
+	.contacts > li > a:hover {
+		filter: invert(43%) sepia(72%) saturate(2700%) hue-rotate(186deg)
+			brightness(96%) contrast(89%);
 	}
 	.contacts {
 		display: flex;
@@ -165,11 +157,6 @@ section {
 }
 .special {
 	padding-bottom: 0;
-	.container {
-		display: flex;
-		align-items: center;
-		justify-content: center;
-	}
 	.special-list {
 		display: flex;
 		flex-direction: row;
@@ -186,6 +173,7 @@ section {
 				color: var(--dark-color);
 				font-size: 14px;
 				line-height: 1.17;
+				padding-bottom: 10px;
 			}
 			p {
 				color: var(--grey-color);
@@ -283,8 +271,8 @@ section {
 					font-size: 16px;
 					line-height: 1.17;
 
-					padding-top: 10px;
-					padding-bottom: 16px;
+					margin-top: 10px;
+					margin-bottom: 16px;
 				}
 				.team-media-list {
 					gap: 10px;
@@ -295,28 +283,10 @@ section {
 						border-width: 0;
 						background-color: var(--wht-color);
 					}
-					.facebook:hover {
-						background-color: #188ce8;
+					button:hover {
+						background-color: var(--blue-color);
 						img {
-							content: url("../images/social/facebook-white.svg");
-						}
-					}
-					.instagram:hover {
-						background-color: #188ce8;
-						img {
-							content: url("../images/social/instagram-white.svg");
-						}
-					}
-					.twitter:hover {
-						background-color: #188ce8;
-						img {
-							content: url("../images/social/twitter-white.svg");
-						}
-					}
-					.linkedin:hover {
-						background-color: #188ce8;
-						img {
-							content: url("../images/social/linkedin-white.svg");
+							filter: brightness(0) invert(1);
 						}
 					}
 				}
@@ -350,13 +320,16 @@ section {
 		}
 		button:hover {
 			border-color: var(--more-blue-color);
+			img {
+				color: var(--blue-color);
+			}
 		}
 	}
 }
 /* Правки в <a> */
 .fter {
 	background-color: var(--backgr-color);
-	padding: 60px 215px;
+	padding: 60px;
 	.container {
 		display: flex;
 	}
@@ -364,20 +337,19 @@ section {
 		display: flex;
 		flex-direction: column;
 		font-style: normal;
-		padding-top: 28px;
+		margin-top: 28px;
 		.address-a {
 			font-size: 14px;
-			color: white;
+			color: var(--wht-color);
 			opacity: 60%;
 			line-height: 1.17;
 
-			padding-bottom: 12px;
+			margin-top: 12px;
 		}
 		.address-p {
 			font-size: 14px;
 			color: var(--wht-color);
 			line-height: 1.17;
-			padding-bottom: 12px;
 		}
 	}
 	.media-block {
@@ -421,11 +393,11 @@ section {
 		justify-content: center;
 		align-content: center;
 		gap: 10px;
-		padding-bottom: 34px;
+		margin-bottom: 34px;
 		.filter-button {
 			border-width: 0px;
 			background-color: var(--nowht-color);
-			padding: 10px 20px;
+			padding: 6px 22px;
 			border-radius: 5px;
 
 			transition: color 0.3s ease;
@@ -447,7 +419,7 @@ section {
 		li {
 			position: relative;
 			max-width: 370px;
-			margin-bottom: 30px;
+
 			border: 1px solid;
 			border-color: #eeeeee;
 			.portfolio-item-overlay {
