@@ -69,6 +69,9 @@ section {
 		a {
 			position: relative;
 		}
+		a:hover {
+			color: var(--blue-color);
+		}
 		a::after {
 			content: "";
 			display: block;
@@ -81,9 +84,13 @@ section {
 			transform: scaleX(0);
 			transition: transform 0.3s ease;
 		}
-		/* as active */
-		a:hover::after {
+		a:hover::after,
+		a.active::after {
 			transform: scaleX(1);
+		}
+		/* для перведення підкреслення */
+		a.active.hover-out::after {
+			transform: scaleX(0);
 		}
 	}
 	a {
@@ -93,10 +100,7 @@ section {
 		line-height: 1.17;
 		letter-spacing: 0.02em;
 	}
-	.header-nav-list > li > a:hover,
-	.contacts > li > a:hover {
-		color: var(--blue-color);
-	}
+
 	.contacts {
 		display: flex;
 		gap: 40px;
@@ -104,10 +108,10 @@ section {
 		a {
 			display: flex;
 			color: var(--grey-color);
-			img {
-				padding-right: 10px;
-				color: var(--grey-color);
-			}
+			gap: 10px;
+		}
+		a:hover {
+			color: var(--blue-color);
 		}
 	}
 }
@@ -272,6 +276,7 @@ section {
 					button:hover {
 						background-color: var(--blue-color);
 						img {
+							/* color: var(--wht-color); */
 							filter: brightness(0) invert(1);
 						}
 					}
