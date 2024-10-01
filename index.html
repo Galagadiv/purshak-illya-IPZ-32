@@ -4,6 +4,8 @@
 		<title>Головна</title>
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link rel="stylesheet" href="./css/modern-normalize.css" />
+
 		<link rel="stylesheet" href="css/styles.css" />
 
 		<link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -21,426 +23,472 @@
 
 	<body>
 		<header class="header">
-			<a href="index.html"
-				><img
-					src="./images/logobl.svg"
-					alt="WebStudio"
-					width="148"
-					height=" 31"
-				/>
-			</a>
-			<nav>
-				<ul class="header_nav_link">
-					<li><a href="#">Студія</a></li>
-					<li><a href="./portfolio.html">Портфоліо</a></li>
-					<li><a href="#">Контакти</a></li>
+			<div class="container">
+				<a href="index.html" class="header-logo"
+					><img
+						src="./images/logobl.svg"
+						alt="WebStudio"
+						width="148"
+						height="31"
+					/>
+				</a>
+				<nav>
+					<ul class="header-nav-list">
+						<li><a href="#">Студія</a></li>
+						<li><a href="./portfolio.html">Портфоліо</a></li>
+						<li><a href="#">Контакти</a></li>
+					</ul>
+				</nav>
+				<ul class="contacts">
+					<li>
+						<a href="mailto:info@devstrudio.com"
+							><img
+								src="./images/social/mail.svg"
+								alt="mail picture"
+							/>info@devstrudio.com</a
+						>
+					</li>
+					<li>
+						<a href="tel:+380994814090"
+							><img
+								src="./images/social/smartphone.svg"
+								alt="phone number"
+							/>+38 099 481 40 90</a
+						>
+					</li>
 				</ul>
-			</nav>
-			<ul class="contacts">
-				<li>
-					<a href="mailto:info@devstrudio.com"
-						><img
-							src="./images/social/mail.jpg"
-							alt="mail picture"
-						/>info@devstrudio.com</a
-					>
-				</li>
-				<li>
-					<a href="tel:+380994814090"
-						><img src="./images/social/smartphone.jpg" alt="phone number" />+38
-						099 481 40 90</a
-					>
-				</li>
-			</ul>
+			</div>
 		</header>
 
 		<main>
 			<section class="hero">
-				<h1>ЕФЕКТИВНІ РІШЕННЯ ДЛЯ<br />ВАШОГО БІЗНЕСУ</h1>
-				<button type="button">Замовити послугу</button>
+				<div class="container">
+					<h1 class="hero-title">ЕФЕКТИВНІ РІШЕННЯ ДЛЯ ВАШОГО БІЗНЕСУ</h1>
+					<button type="button" class="hero-button">Замовити послугу</button>
+				</div>
 			</section>
 
 			<section class="special">
-				<!-- Правильно розташувати блоки -->
-				<ul>
-					<li>
-						<img src="#" alt=".images/main/antena.jpg" />
-						<h3>УВАГА ДО ДЕТАЛЕЙ</h3>
-						<p>
-							Ідейні міркування, і навіть початок повсякденної роботи з
-							формування позиції.
-						</p>
-					</li>
+				<div class="container">
+					<ul class="special-list">
+						<li>
+							<div>
+								<img src="./images/main/special/antenna.png" alt="Антена" />
+							</div>
+							<h3>УВАГА ДО ДЕТАЛЕЙ</h3>
+							<p>
+								Ідейні міркування, і навіть початок повсякденної роботи з
+								формування позиції.
+							</p>
+						</li>
 
-					<li>
-						<img src="#" alt=".images/main/timer.jpg" />
-						<h3>ПУНКТУАЛЬНІСТЬ</h3>
-						<p>
-							Завдання організації, особливо рамки і місце навчання кадрів тягне
-							у себе.
-						</p>
-					</li>
+						<li>
+							<div>
+								<img src="./images/main/special/clock.png" alt="Годинник" />
+							</div>
+							<h3>ПУНКТУАЛЬНІСТЬ</h3>
+							<p>
+								Завдання організації, особливо рамки і місце навчання кадрів
+								тягне у себе.
+							</p>
+						</li>
 
-					<li>
-						<img src="#" alt=".images/main/notebook.jpg" />
-						<h3>ПЛАНУВАННЯ</h3>
-						<p>
-							Так само консультація з широким активом значною мірою зумовлює.
-						</p>
-					</li>
+						<li>
+							<div>
+								<img src="./images/main/special/notebook.png" alt="Ноутбук" />
+							</div>
+							<h3>ПЛАНУВАННЯ</h3>
+							<p>
+								Так само консультація з широким активом значною мірою зумовлює.
+							</p>
+						</li>
 
-					<li>
-						<img src="#" alt=".images/main/cosmonaut.jpg" />
-						<h3>СУЧАСНІ ТЕХНОЛОГІЇ</h3>
-						<p>
-							Значимість цих проблем настільки очевидна, що реалізація планових
-							завдань.
-						</p>
-					</li>
-				</ul>
+						<li>
+							<div>
+								<img
+									src="./images/main/special/astronaut.png"
+									alt="Космонавт"
+								/>
+							</div>
+							<h3>СУЧАСНІ ТЕХНОЛОГІЇ</h3>
+							<p>
+								Значимість цих проблем настільки очевидна, що реалізація
+								планових завдань.
+							</p>
+						</li>
+					</ul>
+				</div>
 			</section>
 
 			<section class="whatDoing">
-				<h2>Чим ми займаємося</h2>
-				<ul>
-					<li>
-						<img
-							src="images/main/doing/tablet.jpg"
-							alt="Чоловік програмує з планшетом"
-							width="370"
-							height="294"
-						/>
-					</li>
-					<li>
-						<img
-							src="images/main/doing/phone.jpg"
-							alt="Чоловік з телефоном"
-							width="370"
-							height="294"
-						/>
-					</li>
-					<li>
-						<img
-							src="images/main/doing/tablet_pallet.jpg"
-							alt="Жінка вибирає колір на планшеті"
-							width="370"
-							height="294"
-						/>
-					</li>
-				</ul>
+				<div class="container">
+					<h2 class="whatDoing-title">Чим ми займаємося</h2>
+					<ul class="whatDoing-list">
+						<li>
+							<img
+								src="images/main/doing/tablet.jpg"
+								alt="Чоловік програмує з планшетом"
+								width="370"
+								height="294"
+							/>
+							<div>Десктопні додатки</div>
+						</li>
+						<li>
+							<img
+								src="images/main/doing/phone.jpg"
+								alt="Чоловік з телефоном"
+								width="370"
+								height="294"
+							/>
+							<div>Мобільні додатки</div>
+						</li>
+						<li>
+							<img
+								src="images/main/doing/tablet_pallet.jpg"
+								alt="Жінка вибирає колір на планшеті"
+								width="370"
+								height="294"
+							/>
+							<div>Дизайнерські рішення</div>
+						</li>
+					</ul>
+				</div>
 			</section>
 
 			<section class="team">
-				<h2>Наша команда</h2>
-				<ul>
-					<li>
-						<img
-							src="images/main/people/Igor.jpg"
-							alt="Ігор Дем'яненко"
-							width="270"
-							height="260"
-						/>
-						<div>
-							<h3>Ігор Дем'яненко</h3>
-							<p>Droduct Designer</p>
-							<!-- test social media buttons -->
-							<ul>
-								<li>
-									<button type="button">
-										<img
-											src="./images/social/instagram.png"
-											alt="instagram"
-											width="20"
-											height="20"
-										/>
-									</button>
-								</li>
-								<li>
-									<button type="button">
-										<img
-											src="./images/social/Group.png"
-											alt="instagram"
-											width="20"
-											height="20"
-										/>
-									</button>
-								</li>
-								<li>
-									<button type="button">
-										<img
-											src="./images/social/facebook.png"
-											alt="instagram"
-											width="20"
-											height="20"
-										/>
-									</button>
-								</li>
-								<li>
-									<button type="button">
-										<img
-											src="./images/social/linkedin.png"
-											alt="instagram"
-											width="20"
-											height="20"
-										/>
-									</button>
-								</li>
-							</ul>
-						</div>
-					</li>
+				<div class="container">
+					<h2 class="team-title">Наша команда</h2>
+					<ul class="team-list">
+						<li class="team-list-item">
+							<img
+								src="images/main/people/Igor.jpg"
+								alt="Ігор Дем'яненко"
+								width="270"
+								height="260"
+							/>
+							<div>
+								<h3>Ігор Дем'яненко</h3>
+								<p>Droduct Designer</p>
+								<!-- test social media buttons -->
+								<ul class="team-media-list">
+									<li class="team-media-list">
+										<button type="button" class="instagram">
+											<img
+												src="./images/social/instagram-grey.svg"
+												alt="instagram"
+												width="20"
+												height="20"
+											/>
+										</button>
+									</li>
+									<li class="team-media-list">
+										<button type="button" class="twitter">
+											<img
+												src="./images/social/twitter-grey.svg"
+												alt="instagram"
+												width="20"
+												height="20"
+											/>
+										</button>
+									</li>
+									<li class="team-media-list">
+										<button type="button" class="facebook">
+											<img
+												src="./images/social/facebook-grey.svg"
+												alt="instagram"
+												width="20"
+												height="20"
+											/>
+										</button>
+									</li>
+									<li class="team-media-list">
+										<button type="button" class="linkedin">
+											<img
+												src="./images/social/linkedin-grey.svg"
+												alt="instagram"
+												width="20"
+												height="20"
+											/>
+										</button>
+									</li>
+								</ul>
+							</div>
+						</li>
 
-					<li>
-						<img
-							src="images/main/people/Olga.jpg"
-							alt="Ольга Рєпіна"
-							width="270"
-							height="260"
-						/>
-						<div>
-							<h3>Ольга Рєпіна</h3>
-							<p>Frontend Developer</p>
-							<ul>
-								<li>
-									<button type="button">
-										<img
-											src="./images/social/instagram.png"
-											alt="instagram"
-											width="20"
-											height="20"
-										/>
-									</button>
-								</li>
-								<li>
-									<button type="button">
-										<img
-											src="./images/social/Group.png"
-											alt="instagram"
-											width="20"
-											height="20"
-										/>
-									</button>
-								</li>
-								<li>
-									<button type="button">
-										<img
-											src="./images/social/facebook.png"
-											alt="instagram"
-											width="20"
-											height="20"
-										/>
-									</button>
-								</li>
-								<li>
-									<button type="button">
-										<img
-											src="./images/social/linkedin.png"
-											alt="instagram"
-											width="20"
-											height="20"
-										/>
-									</button>
-								</li>
-							</ul>
-						</div>
-					</li>
+						<li class="team-list-item">
+							<img
+								src="images/main/people/Olga.jpg"
+								alt="Ольга Рєпіна"
+								width="270"
+								height="260"
+							/>
+							<div>
+								<h3>Ольга Рєпіна</h3>
+								<p>Frontend Developer</p>
+								<ul class="team-media-list">
+									<li class="team-media-list">
+										<button type="button" class="instagram">
+											<img
+												src="./images/social/instagram-grey.svg"
+												alt="instagram"
+												width="20"
+												height="20"
+											/>
+										</button>
+									</li>
+									<li class="team-media-list">
+										<button type="button" class="twitter">
+											<img
+												src="./images/social/twitter-grey.svg"
+												alt="instagram"
+												width="20"
+												height="20"
+											/>
+										</button>
+									</li>
+									<li class="team-media-list">
+										<button type="button" class="facebook">
+											<img
+												src="./images/social/facebook-grey.svg"
+												alt="instagram"
+												width="20"
+												height="20"
+											/>
+										</button>
+									</li>
+									<li class="team-media-list">
+										<button type="button" class="linkedin">
+											<img
+												src="./images/social/linkedin-grey.svg"
+												alt="instagram"
+												width="20"
+												height="20"
+											/>
+										</button>
+									</li>
+								</ul>
+							</div>
+						</li>
 
-					<li>
-						<img
-							src="images/main/people/Mykola.jpg"
-							alt="Микола Тарасок"
-							width="270"
-							height="260"
-						/>
-						<div>
-							<h3>Микола Тарасок</h3>
-							<p>Marketing</p>
-							<ul>
-								<li>
-									<button type="button">
-										<img
-											src="./images/social/instagram.png"
-											alt="instagram"
-											width="20"
-											height="20"
-										/>
-									</button>
-								</li>
+						<li class="team-list-item">
+							<img
+								src="images/main/people/Mykola.jpg"
+								alt="Микола Тарасок"
+								width="270"
+								height="260"
+							/>
+							<div>
+								<h3>Микола Тарасок</h3>
+								<p>Marketing</p>
+								<ul class="team-media-list">
+									<li class="team-media-list">
+										<button type="button" class="instagram">
+											<img
+												src="./images/social/instagram-grey.svg"
+												alt="instagram"
+												width="20"
+												height="20"
+											/>
+										</button>
+									</li>
+									<li class="team-media-list">
+										<button type="button" class="twitter">
+											<img
+												src="./images/social/twitter-grey.svg"
+												alt="instagram"
+												width="20"
+												height="20"
+											/>
+										</button>
+									</li>
+									<li class="team-media-list">
+										<button type="button" class="facebook">
+											<img
+												src="./images/social/facebook-grey.svg"
+												alt="instagram"
+												width="20"
+												height="20"
+											/>
+										</button>
+									</li>
+									<li class="team-media-list">
+										<button type="button" class="linkedin">
+											<img
+												src="./images/social/linkedin-grey.svg"
+												alt="instagram"
+												width="20"
+												height="20"
+											/>
+										</button>
+									</li>
+								</ul>
+							</div>
+						</li>
 
-								<li>
-									<button type="button">
-										<img
-											src="./images/social/Group.png"
-											alt="instagram"
-											width="20"
-											height="20"
-										/>
-									</button>
-								</li>
-
-								<li>
-									<button type="button">
-										<img
-											src="./images/social/facebook.png"
-											alt="instagram"
-											width="20"
-											height="20"
-										/>
-									</button>
-								</li>
-
-								<li>
-									<button type="button">
-										<img
-											src="./images/social/linkedin.png"
-											alt="instagram"
-											width="20"
-											height="20"
-										/>
-									</button>
-								</li>
-							</ul>
-						</div>
-					</li>
-
-					<li>
-						<img
-							src="images/main/people/Myhaylo.jpg"
-							alt="Михайло Єрмаков"
-							width="270"
-							height="260"
-						/>
-						<div>
-							<h3>Михайло Єрмаков</h3>
-							<p>UI Designer</p>
-							<ul>
-								<li>
-									<button type="button">
-										<img
-											src="./images/social/instagram.png"
-											alt="instagram"
-											width="20"
-											height="20"
-										/>
-									</button>
-								</li>
-								<li>
-									<button type="button">
-										<img
-											src="./images/social/Group.png"
-											alt="instagram"
-											width="20"
-											height="20"
-										/>
-									</button>
-								</li>
-								<li>
-									<button type="button">
-										<img
-											src="./images/social/facebook.png"
-											alt="instagram"
-											width="20"
-											height="20"
-										/>
-									</button>
-								</li>
-								<li>
-									<button type="button">
-										<img
-											src="./images/social/linkedin.png"
-											alt="instagram"
-											width="20"
-											height="20"
-										/>
-									</button>
-								</li>
-							</ul>
-						</div>
-					</li>
-				</ul>
+						<li class="team-list-item">
+							<img
+								src="images/main/people/Myhaylo.jpg"
+								alt="Михайло Єрмаков"
+								width="270"
+								height="260"
+							/>
+							<div>
+								<h3>Михайло Єрмаков</h3>
+								<p>UI Designer</p>
+								<ul class="team-media-list">
+									<li class="team-media-list">
+										<button type="button" class="instagram">
+											<img
+												src="./images/social/instagram-grey.svg"
+												alt="instagram"
+												width="20"
+												height="20"
+											/>
+										</button>
+									</li>
+									<li class="team-media-list">
+										<button type="button" class="twitter">
+											<img
+												src="./images/social/twitter-grey.svg"
+												alt="instagram"
+												width="20"
+												height="20"
+											/>
+										</button>
+									</li>
+									<li class="team-media-list">
+										<button type="button" class="facebook">
+											<img
+												src="./images/social/facebook-grey.svg"
+												alt="instagram"
+												width="20"
+												height="20"
+											/>
+										</button>
+									</li>
+									<li class="team-media-list">
+										<button type="button" class="linkedin">
+											<img
+												src="./images/social/linkedin-grey.svg"
+												alt="instagram"
+												width="20"
+												height="20"
+											/>
+										</button>
+									</li>
+								</ul>
+							</div>
+						</li>
+					</ul>
+				</div>
 			</section>
 
-			<!-- Нова секція з лаб 4 -->
 			<section class="clients">
-				<h2>Постійні клієнти</h2>
-				<ul>
-					<li>
-						<button type="button"><img src="#" alt="" />button 1</button>
-					</li>
-					<li>
-						<button type="button"><img src="#" alt="" />button 2</button>
-					</li>
-					<li>
-						<button type="button"><img src="#" alt="" />button 3</button>
-					</li>
-					<li>
-						<button type="button"><img src="#" alt="" />button 4</button>
-					</li>
-					<li>
-						<button type="button"><img src="#" alt="" />button 5</button>
-					</li>
-					<li>
-						<button type="button"><img src="#" alt="" />button 6</button>
-					</li>
-				</ul>
+				<div class="container">
+					<h2>Постійні клієнти</h2>
+					<ul>
+						<li>
+							<button type="button">
+								<img src="./images/main/clients/Logo_1.svg" alt="YA & Co" />
+							</button>
+						</li>
+						<li>
+							<button type="button">
+								<img src="./images/main/clients/Logo_2.svg" alt="Company" />
+							</button>
+						</li>
+						<li>
+							<button type="button">
+								<img src="./images/main/clients/Logo_3.svg" alt="Company" />
+							</button>
+						</li>
+						<li>
+							<button type="button">
+								<img
+									src="./images/main/clients/Logo_4.svg"
+									alt="Foster Peters"
+								/>
+							</button>
+						</li>
+						<li>
+							<button type="button">
+								<img src="./images/main/clients/Logo_5.svg" alt="Brand" />
+							</button>
+						</li>
+						<li>
+							<button type="button">
+								<img src="./images/main/clients/Logo_6.svg" alt="" />
+							</button>
+						</li>
+					</ul>
+				</div>
 			</section>
 		</main>
 
 		<footer class="fter">
-			<a href="index.html"
-				><img src="./images/logowht.svg" alt="WebStudio" />
-			</a>
-			<address>
-				<p>м. Київ, пр-т Лесі Українки, 26</p>
-				<a href="mailto:info@devstrudio.com">info@devstrudio.com<br /></a>
-				<a href="tel:+380994814090">+38 099 481 40 90</a>
-			</address>
-			<!-- Додати контейнер? -->
-			<p>Приєднуйтесь</p>
-			<ul>
-				<li>
-					<button type="button">
-						<img
-							src="./images/social/instagram.png"
-							alt="instagram"
-							width="20"
-							height="20"
-						/>
-					</button>
-				</li>
+			<div class="container">
+				<div>
+					<a href="index.html"
+						><img src="./images/logowht.svg" alt="WebStudio" />
+					</a>
+					<address class="address-block">
+						<p class="address-p">м. Київ, пр-т Лесі Українки, 26</p>
+						<a class="address-a" href="mailto:info@devstrudio.com"
+							>info@devstrudio.com<br
+						/></a>
+						<a class="address-a" href="tel:+380994814090">+38 099 481 40 90</a>
+					</address>
+				</div>
+				<!-- Додати контейнер? -->
+				<div class="media-block">
+					<p class="media-p">Приєднуйтесь</p>
+					<ul class="media-list">
+						<li>
+							<button type="button">
+								<img
+									src="./images/social/instagram-white.svg"
+									alt="instagram"
+									width="20"
+									height="20"
+								/>
+							</button>
+						</li>
 
-				<li>
-					<button type="button">
-						<img
-							src="./images/social/Group.png"
-							alt="instagram"
-							width="20"
-							height="20"
-						/>
-					</button>
-				</li>
+						<li>
+							<button type="button">
+								<img
+									src="./images/social/twitter-white.svg"
+									alt="instagram"
+									width="20"
+									height="20"
+								/>
+							</button>
+						</li>
 
-				<li>
-					<button type="button">
-						<img
-							src="./images/social/facebook.png"
-							alt="instagram"
-							width="20"
-							height="20"
-						/>
-					</button>
-				</li>
+						<li>
+							<button type="button">
+								<img
+									src="./images/social/facebook-white.svg"
+									alt="instagram"
+									width="20"
+									height="20"
+								/>
+							</button>
+						</li>
 
-				<li>
-					<button type="button">
-						<img
-							src="./images/social/linkedin.png"
-							alt="instagram"
-							width="20"
-							height="20"
-						/>
-					</button>
-				</li>
-			</ul>
+						<li>
+							<button type="button">
+								<img
+									src="./images/social/linkedin-white.svg"
+									alt="instagram"
+									width="20"
+									height="20"
+								/>
+							</button>
+						</li>
+					</ul>
+				</div>
+			</div>
 		</footer>
 	</body>
 </html>
