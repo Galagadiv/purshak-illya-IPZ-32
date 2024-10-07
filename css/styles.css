@@ -7,7 +7,7 @@
 	--more-blue-color: #2196f3;
 	--backgr-color: #2f303a;
 	--border-color: #ececec;
-	--cl--border-color: #afb1b8;
+	--btn-grey-color: #afb1b8;
 	--fter-btn-backgr-color: rgba(255, 255, 255, 0.1);
 	--basic-font: "Roboto", sans-serif;
 }
@@ -112,6 +112,9 @@ section {
 		}
 		a:hover {
 			color: var(--blue-color);
+			svg {
+				color: var(--blue-color);
+			}
 		}
 	}
 }
@@ -128,6 +131,7 @@ section {
 		url("../images/main/backgr.jpg");
 
 	background-size: cover;
+	background-size: 1600px;
 	background-position: center;
 	background-repeat: no-repeat;
 	.container {
@@ -269,16 +273,17 @@ section {
 					button {
 						padding: 12px;
 						border-radius: 50%;
-
+						/* Кнопка без обмежень стає випуклою */
+						max-width: 44px;
+						max-height: 44px;
 						border-width: 0;
 						background-color: var(--wht-color);
+						transition: color 0.5s ease;
+						color: var(--btn-grey-color);
 					}
 					button:hover {
 						background-color: var(--blue-color);
-						img {
-							/* color: var(--wht-color); */
-							filter: brightness(0) invert(1);
-						}
+						color: var(--wht-color);
 					}
 				}
 			}
@@ -302,16 +307,13 @@ section {
 			padding: 16px 32px;
 			border: 1px solid;
 			border-radius: 5px;
-			border-color: var(--cl--border-color);
-			img {
-				color: var(--grey-color);
-			}
+			border-color: var(--btn-grey-color);
+			color: var(--btn-grey-color);
+			transition: color 0.5s ease;
 		}
 		button:hover {
 			border-color: var(--more-blue-color);
-			img {
-				color: var(--blue-color);
-			}
+			color: var(--blue-color);
 		}
 	}
 }
@@ -360,11 +362,40 @@ section {
 				padding: 12px;
 				border-radius: 50%;
 				border-width: 0;
-
+				max-width: 44px;
+				max-height: 44px;
 				background-color: var(--fter-btn-backgr-color);
+				color: var(--wht-color);
 			}
 			button:hover {
 				background-color: var(--blue-color);
+			}
+		}
+	}
+	.subscribe-block {
+		.subscribe-block-title {
+			font-weight: 700;
+			font-size: 14px;
+			color: var(--wht-color);
+			line-height: 1.17;
+			letter-spacing: 0.02em;
+
+			margin-bottom: 20px;
+		}
+		button {
+			display: flex;
+			align-content: center;
+			padding: 10px 28px;
+			background-color: var(--more-blue-color);
+			border: 0;
+			border-radius: 4px;
+			gap: 10px;
+			p {
+				font-weight: 700;
+				font-size: 14px;
+				color: var(--wht-color);
+				line-height: 1.17;
+				letter-spacing: 0.02em;
 			}
 		}
 	}
