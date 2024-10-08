@@ -349,6 +349,17 @@ section {
 		display: flex;
 		gap: 94px;
 	}
+	.fter-logo {
+		display: inline-block;
+		font-weight: 700;
+		font-size: 26px;
+		color: var(--wht-color);
+		line-height: 1.17;
+		font-family: "Raleway", sans-serif;
+		span {
+			color: var(--more-blue-color);
+		}
+	}
 	.address-block {
 		display: flex;
 		flex-direction: column;
@@ -435,6 +446,7 @@ section {
 				border: 0;
 				border-radius: 4px;
 				gap: 10px;
+				cursor: pointer;
 				p {
 					font-weight: 700;
 					font-size: 16px;
