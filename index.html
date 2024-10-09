@@ -19,6 +19,7 @@
 			href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap"
 			rel="stylesheet"
 		/>
+		<script src="./JS/nav_underline.js"></script>
 	</head>
 
 	<body>
@@ -34,27 +35,36 @@
 				</a>
 				<nav>
 					<ul class="header-nav-list">
-						<li><a href="#">Студія</a></li>
-						<li><a href="./portfolio.html">Портфоліо</a></li>
+						<li><a href="index.html">Студія</a></li>
+						<li><a href="portfolio.html">Портфоліо</a></li>
 						<li><a href="#">Контакти</a></li>
 					</ul>
 				</nav>
+				<!-- Просраний розмір svg -->
 				<ul class="contacts">
 					<li>
-						<a href="mailto:info@devstrudio.com"
-							><img
-								src="./images/social/mail.svg"
-								alt="mail picture"
-							/>info@devstrudio.com</a
-						>
+						<a href="mailto:info@devstrudio.com">
+							<svg width="16" height="12">
+								<use href="./images/social/social-icons.svg#icon-mail"></use>
+							</svg>
+							info@devstrudio.com
+						</a>
 					</li>
 					<li>
-						<a href="tel:+380994814090"
-							><img
+						<a href="tel:+380994814090">
+							<!-- <img
 								src="./images/social/smartphone.svg"
 								alt="phone number"
-							/>+38 099 481 40 90</a
-						>
+								width="10"
+								height="16"
+							/> -->
+							<svg width="10" height="16">
+								<use
+									href="./images/social/social-icons.svg#icon-smartphone"
+								></use>
+							</svg>
+							+38 099 481 40 90
+						</a>
 					</li>
 				</ul>
 			</div>
@@ -73,7 +83,7 @@
 					<ul class="special-list">
 						<li>
 							<div>
-								<img src="./images/main/special/antenna.png" alt="Антена" />
+								<img src="./images/main/special/antenna.svg" alt="Антена" />
 							</div>
 							<h3>УВАГА ДО ДЕТАЛЕЙ</h3>
 							<p>
@@ -84,7 +94,7 @@
 
 						<li>
 							<div>
-								<img src="./images/main/special/clock.png" alt="Годинник" />
+								<img src="./images/main/special/clock.svg" alt="Годинник" />
 							</div>
 							<h3>ПУНКТУАЛЬНІСТЬ</h3>
 							<p>
@@ -95,7 +105,7 @@
 
 						<li>
 							<div>
-								<img src="./images/main/special/notebook.png" alt="Ноутбук" />
+								<img src="./images/main/special/notebook.svg" alt="Ноутбук" />
 							</div>
 							<h3>ПЛАНУВАННЯ</h3>
 							<p>
@@ -106,7 +116,7 @@
 						<li>
 							<div>
 								<img
-									src="./images/main/special/astronaut.png"
+									src="./images/main/special/astronaut.svg"
 									alt="Космонавт"
 								/>
 							</div>
@@ -172,44 +182,40 @@
 								<!-- test social media buttons -->
 								<ul class="team-media-list">
 									<li class="team-media-list">
-										<button type="button" class="instagram">
-											<img
-												src="./images/social/instagram-grey.svg"
-												alt="instagram"
-												width="20"
-												height="20"
-											/>
-										</button>
+										<a href="https://www.instagram.com/">
+											<svg width="20" height="20">
+												<use
+													href="./images/social/social-icons.svg#icon-instagram"
+												></use>
+											</svg>
+										</a>
 									</li>
 									<li class="team-media-list">
-										<button type="button" class="twitter">
-											<img
-												src="./images/social/twitter-grey.svg"
-												alt="instagram"
-												width="20"
-												height="20"
-											/>
-										</button>
+										<a href="https://x.com/">
+											<svg width="20" height="20">
+												<use
+													href="./images/social/social-icons.svg#icon-twitter"
+												></use>
+											</svg>
+										</a>
 									</li>
 									<li class="team-media-list">
-										<button type="button" class="facebook">
-											<img
-												src="./images/social/facebook-grey.svg"
-												alt="instagram"
-												width="20"
-												height="20"
-											/>
-										</button>
+										<a href="https://www.facebook.com/">
+											<svg width="20" height="20">
+												<use
+													href="./images/social/social-icons.svg#icon-facebook"
+												></use>
+											</svg>
+										</a>
 									</li>
 									<li class="team-media-list">
-										<button type="button" class="linkedin">
-											<img
-												src="./images/social/linkedin-grey.svg"
-												alt="instagram"
-												width="20"
-												height="20"
-											/>
-										</button>
+										<a href="https://ua.linkedin.com/">
+											<svg width="20" height="20">
+												<use
+													href="./images/social/social-icons.svg#icon-linkedin"
+												></use>
+											</svg>
+										</a>
 									</li>
 								</ul>
 							</div>
@@ -227,44 +233,40 @@
 								<p>Frontend Developer</p>
 								<ul class="team-media-list">
 									<li class="team-media-list">
-										<button type="button" class="instagram">
-											<img
-												src="./images/social/instagram-grey.svg"
-												alt="instagram"
-												width="20"
-												height="20"
-											/>
-										</button>
+										<a href="https://www.instagram.com/">
+											<svg width="20" height="20">
+												<use
+													href="./images/social/social-icons.svg#icon-instagram"
+												></use>
+											</svg>
+										</a>
 									</li>
 									<li class="team-media-list">
-										<button type="button" class="twitter">
-											<img
-												src="./images/social/twitter-grey.svg"
-												alt="instagram"
-												width="20"
-												height="20"
-											/>
-										</button>
+										<a href="https://x.com/">
+											<svg width="20" height="20">
+												<use
+													href="./images/social/social-icons.svg#icon-twitter"
+												></use>
+											</svg>
+										</a>
 									</li>
 									<li class="team-media-list">
-										<button type="button" class="facebook">
-											<img
-												src="./images/social/facebook-grey.svg"
-												alt="instagram"
-												width="20"
-												height="20"
-											/>
-										</button>
+										<a href="https://www.facebook.com/">
+											<svg width="20" height="20">
+												<use
+													href="./images/social/social-icons.svg#icon-facebook"
+												></use>
+											</svg>
+										</a>
 									</li>
 									<li class="team-media-list">
-										<button type="button" class="linkedin">
-											<img
-												src="./images/social/linkedin-grey.svg"
-												alt="instagram"
-												width="20"
-												height="20"
-											/>
-										</button>
+										<a href="https://ua.linkedin.com/">
+											<svg width="20" height="20">
+												<use
+													href="./images/social/social-icons.svg#icon-linkedin"
+												></use>
+											</svg>
+										</a>
 									</li>
 								</ul>
 							</div>
@@ -282,44 +284,40 @@
 								<p>Marketing</p>
 								<ul class="team-media-list">
 									<li class="team-media-list">
-										<button type="button" class="instagram">
-											<img
-												src="./images/social/instagram-grey.svg"
-												alt="instagram"
-												width="20"
-												height="20"
-											/>
-										</button>
+										<a href="https://www.instagram.com/">
+											<svg width="20" height="20">
+												<use
+													href="./images/social/social-icons.svg#icon-instagram"
+												></use>
+											</svg>
+										</a>
 									</li>
 									<li class="team-media-list">
-										<button type="button" class="twitter">
-											<img
-												src="./images/social/twitter-grey.svg"
-												alt="instagram"
-												width="20"
-												height="20"
-											/>
-										</button>
+										<a href="https://x.com/">
+											<svg width="20" height="20">
+												<use
+													href="./images/social/social-icons.svg#icon-twitter"
+												></use>
+											</svg>
+										</a>
 									</li>
 									<li class="team-media-list">
-										<button type="button" class="facebook">
-											<img
-												src="./images/social/facebook-grey.svg"
-												alt="instagram"
-												width="20"
-												height="20"
-											/>
-										</button>
+										<a href="https://www.facebook.com/">
+											<svg width="20" height="20">
+												<use
+													href="./images/social/social-icons.svg#icon-facebook"
+												></use>
+											</svg>
+										</a>
 									</li>
 									<li class="team-media-list">
-										<button type="button" class="linkedin">
-											<img
-												src="./images/social/linkedin-grey.svg"
-												alt="instagram"
-												width="20"
-												height="20"
-											/>
-										</button>
+										<a href="https://ua.linkedin.com/">
+											<svg width="20" height="20">
+												<use
+													href="./images/social/social-icons.svg#icon-linkedin"
+												></use>
+											</svg>
+										</a>
 									</li>
 								</ul>
 							</div>
@@ -337,44 +335,40 @@
 								<p>UI Designer</p>
 								<ul class="team-media-list">
 									<li class="team-media-list">
-										<button type="button" class="instagram">
-											<img
-												src="./images/social/instagram-grey.svg"
-												alt="instagram"
-												width="20"
-												height="20"
-											/>
-										</button>
+										<a href="https://www.instagram.com/">
+											<svg width="20" height="20">
+												<use
+													href="./images/social/social-icons.svg#icon-instagram"
+												></use>
+											</svg>
+										</a>
 									</li>
 									<li class="team-media-list">
-										<button type="button" class="twitter">
-											<img
-												src="./images/social/twitter-grey.svg"
-												alt="instagram"
-												width="20"
-												height="20"
-											/>
-										</button>
+										<a href="https://x.com/">
+											<svg width="20" height="20">
+												<use
+													href="./images/social/social-icons.svg#icon-twitter"
+												></use>
+											</svg>
+										</a>
 									</li>
 									<li class="team-media-list">
-										<button type="button" class="facebook">
-											<img
-												src="./images/social/facebook-grey.svg"
-												alt="instagram"
-												width="20"
-												height="20"
-											/>
-										</button>
+										<a href="https://www.facebook.com/">
+											<svg width="20" height="20">
+												<use
+													href="./images/social/social-icons.svg#icon-facebook"
+												></use>
+											</svg>
+										</a>
 									</li>
 									<li class="team-media-list">
-										<button type="button" class="linkedin">
-											<img
-												src="./images/social/linkedin-grey.svg"
-												alt="instagram"
-												width="20"
-												height="20"
-											/>
-										</button>
+										<a href="https://ua.linkedin.com/">
+											<svg width="20" height="20">
+												<use
+													href="./images/social/social-icons.svg#icon-linkedin"
+												></use>
+											</svg>
+										</a>
 									</li>
 								</ul>
 							</div>
@@ -388,37 +382,58 @@
 					<h2>Постійні клієнти</h2>
 					<ul>
 						<li>
-							<button type="button">
-								<img src="./images/main/clients/Logo_1.svg" alt="YA & Co" />
-							</button>
+							<a href="#">
+								<svg width="106" height="60">
+									<use
+										href="./images/social/social-icons.svg#icon-Logo_1"
+									></use>
+								</svg>
+							</a>
 						</li>
 						<li>
-							<button type="button">
-								<img src="./images/main/clients/Logo_2.svg" alt="Company" />
-							</button>
+							<a href="#">
+								<svg width="106" height="60">
+									<use
+										href="./images/social/social-icons.svg#icon-Logo_2"
+									></use>
+								</svg>
+							</a>
 						</li>
 						<li>
-							<button type="button">
-								<img src="./images/main/clients/Logo_3.svg" alt="Company" />
-							</button>
+							<a href="#">
+								<svg width="106" height="60">
+									<use
+										href="./images/social/social-icons.svg#icon-Logo_3"
+									></use>
+								</svg>
+							</a>
 						</li>
 						<li>
-							<button type="button">
-								<img
-									src="./images/main/clients/Logo_4.svg"
-									alt="Foster Peters"
-								/>
-							</button>
+							<a href="#">
+								<svg width="106" height="60">
+									<use
+										href="./images/social/social-icons.svg#icon-Logo_4"
+									></use>
+								</svg>
+							</a>
 						</li>
 						<li>
-							<button type="button">
-								<img src="./images/main/clients/Logo_5.svg" alt="Brand" />
-							</button>
+							<a href="#">
+								<svg width="106" height="60">
+									<use
+										href="./images/social/social-icons.svg#icon-Logo_5"
+									></use>
+								</svg>
+							</a>
 						</li>
 						<li>
-							<button type="button">
-								<img src="./images/main/clients/Logo_6.svg" alt="" />
-							</button>
+							<a href="#">
+								<svg width="106" height="60">
+									<use
+										href="./images/social/social-icons.svg#icon-Logo_6"
+									></use>
+								</svg>
+							</a>
 						</li>
 					</ul>
 				</div>
@@ -428,9 +443,7 @@
 		<footer class="fter">
 			<div class="container">
 				<div>
-					<a href="index.html"
-						><img src="./images/logowht.svg" alt="WebStudio" />
-					</a>
+					<a href="index.html" class="fter-logo"> <span>Web</span>Studio </a>
 					<address class="address-block">
 						<p class="address-p">м. Київ, пр-т Лесі Українки, 26</p>
 						<a class="address-a" href="mailto:info@devstrudio.com"
@@ -439,54 +452,66 @@
 						<a class="address-a" href="tel:+380994814090">+38 099 481 40 90</a>
 					</address>
 				</div>
-				<!-- Додати контейнер? -->
+
 				<div class="media-block">
 					<p class="media-p">Приєднуйтесь</p>
 					<ul class="media-list">
 						<li>
-							<button type="button">
-								<img
-									src="./images/social/instagram-white.svg"
-									alt="instagram"
-									width="20"
-									height="20"
-								/>
-							</button>
+							<a href="https://www.instagram.com/">
+								<svg width="20" height="20">
+									<use
+										href="./images/social/social-icons.svg#icon-instagram"
+									></use>
+								</svg>
+							</a>
 						</li>
-
 						<li>
-							<button type="button">
-								<img
-									src="./images/social/twitter-white.svg"
-									alt="instagram"
-									width="20"
-									height="20"
-								/>
-							</button>
+							<a href="https://x.com/">
+								<svg width="20" height="20">
+									<use
+										href="./images/social/social-icons.svg#icon-twitter"
+									></use>
+								</svg>
+							</a>
 						</li>
-
 						<li>
-							<button type="button">
-								<img
-									src="./images/social/facebook-white.svg"
-									alt="instagram"
-									width="20"
-									height="20"
-								/>
-							</button>
+							<a href="https://www.facebook.com/">
+								<svg width="20" height="20">
+									<use
+										href="./images/social/social-icons.svg#icon-facebook"
+									></use>
+								</svg>
+							</a>
 						</li>
-
 						<li>
-							<button type="button">
-								<img
-									src="./images/social/linkedin-white.svg"
-									alt="instagram"
-									width="20"
-									height="20"
-								/>
-							</button>
+							<a href="https://ua.linkedin.com/">
+								<svg width="20" height="20">
+									<use
+										href="./images/social/social-icons.svg#icon-linkedin"
+									></use>
+								</svg>
+							</a>
 						</li>
 					</ul>
+				</div>
+
+				<div class="subscribe-block">
+					<p class="subscribe-block-title">Підпишіться на розсилку</p>
+					<div>
+						<input
+							class="subscribe-block-input"
+							type="email"
+							placeholder="E-mail"
+						/>
+						<button>
+							<p>Підписатися</p>
+							<svg width="24" height="24">
+								<use
+									href="./images/social/social-icons.svg#icon-telegram"
+								></use>
+							</svg>
+						</button>
+					</div>
 				</div>
 			</div>
 		</footer>
