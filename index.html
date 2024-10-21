@@ -19,7 +19,6 @@
 			href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap"
 			rel="stylesheet"
 		/>
-		<script src="./JS/nav_underline.js"></script>
 	</head>
 
 	<body>
@@ -74,7 +73,64 @@
 			<section class="hero">
 				<div class="container">
 					<h1 class="hero-title">ЕФЕКТИВНІ РІШЕННЯ ДЛЯ ВАШОГО БІЗНЕСУ</h1>
-					<button type="button" class="hero-button">Замовити послугу</button>
+					<button type="button" class="hero-button" data-modal-open>
+						Замовити послугу
+					</button>
+				</div>
+
+				<div class="backdrop is-hidden" data-modal>
+					<div class="modal">
+						<button class="close-btn" data-modal-close>&times;</button>
+						<h2>Залиште свої дані, ми вам передзвонимо</h2>
+						<ul>
+							<li class="input-wrapper">
+								<p>Ім'я</p>
+								<div class="input-container">
+									<input type="text" class="input-with-icon" />
+									<svg class="icon" width="12" height="12">
+										<use
+											href="./images/social/social-icons.svg#icon-modal-img1"
+										></use>
+									</svg>
+								</div>
+							</li>
+
+							<li class="input-wrapper">
+								<p>Телефон</p>
+								<div class="input-container">
+									<input type="tel" class="input-with-icon" />
+									<svg class="icon" width="13" height="13">
+										<use
+											href="./images/social/social-icons.svg#icon-modal-img2"
+										></use>
+									</svg>
+								</div>
+							</li>
+
+							<li class="input-wrapper">
+								<p>Пошта</p>
+								<div class="input-container">
+									<input type="email" class="input-with-icon" />
+									<svg class="icon" width="15" height="12">
+										<use
+											href="./images/social/social-icons.svg#icon-modal-img3"
+										></use>
+									</svg>
+								</div>
+							</li>
+
+							<li>
+								<p>Коментар</p>
+								<!-- <input
+									type="text"
+									placeholder="Введіть текст"
+									class="comment-block"
+								/> -->
+								<textarea rows="4" placeholder="Введіть текст"></textarea>
+							</li>
+						</ul>
+						<button type="button" class="send-btn">Відправити</button>
+					</div>
 				</div>
 			</section>
 
@@ -515,5 +571,23 @@
 				</div>
 			</div>
 		</footer>
+
+		<script src="./JS/nav_underline.js"></script>
+		<script src="./JS/modal.js"></script>
+		<script>
+			const inputContainers = document.querySelectorAll(".input-container");
+
+			inputContainers.forEach((container) => {
+				const input = container.querySelector(".input-with-icon");
+
+				input.addEventListener("focus", () => {
+					container.classList.add("input-focused");
+				});
+
+				input.addEventListener("blur", () => {
+					container.classList.remove("input-focused");
+				});
+			});
+		</script>
 	</body>
 </html>

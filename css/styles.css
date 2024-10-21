@@ -25,6 +25,8 @@ img {
 	display: block;
 }
 h1,
+a,
+svg,
 h2,
 h3,
 p {
@@ -86,7 +88,7 @@ section {
 		border-radius: 2px;
 		bottom: -32px;
 		transform: scaleX(0);
-		transition: transform 0.3s ease;
+		transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
 	}
 	/* Вкл/Викл підкреслення */
 	.header-nav-list a:hover::after,
@@ -175,6 +177,137 @@ section {
 		font-size: 16px;
 		line-height: 1.875;
 		letter-spacing: 0.06em;
+	}
+	.backdrop {
+		position: fixed;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		background-color: rgba(0, 0, 0, 0.5);
+		visibility: hidden; /* Приховано спочатку */
+		opacity: 0; /* Прозоре */
+		pointer-events: none;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		transition: opacity 0.3s ease; /* Плавна поява */
+
+		h2 {
+			font-weight: 700;
+			color: var(--dark-color);
+			font-size: 20px;
+			line-height: 1.17;
+		}
+		input {
+			width: 448px;
+			height: 40px;
+			padding: 0 30px;
+			border: 1px solid rgba(0, 0, 0, 0.1);
+			border-radius: 4px;
+			transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+		}
+		input:focus,
+		input:hover,
+		textarea:focus,
+		textarea:hover {
+			outline: 1px solid var(--more-blue-color);
+			transition: outline 250ms cubic-bezier(0.4, 0, 0.2, 1);
+		}
+		input:hover + .icon,
+		input:focus + .icon {
+			color: var(--more-blue-color);
+		}
+		.input-container.input-focused .icon {
+			fill: var(--more-blue-color); /* Синій колір для іконки */
+		}
+		textarea {
+			width: 448px;
+			height: 120px;
+			padding: 11px 12px;
+			border: 1px solid rgba(0, 0, 0, 0.1);
+			border-radius: 4px;
+			resize: none;
+			transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+		}
+		.input-container {
+			position: relative;
+		}
+		.icon {
+			position: absolute;
+			left: 12px; /* Відступ від лівого краю */
+			top: 50%;
+			transform: translateY(-50%);
+			pointer-events: none; /* Щоб SVG не блокував введення тексту */
+			color: var(--dark-color);
+			transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1); /* Зміна кольору іконки */
+		}
+		.send-btn {
+			padding: 10px 52px;
+			background-color: var(--blue-color);
+			border-radius: 4px;
+			border: none;
+			cursor: pointer;
+
+			font-weight: 700;
+			font-family: var(--basic-font);
+			color: var(--wht-color);
+			font-size: 16px;
+			line-height: 2;
+			letter-spacing: 0.06em;
+		}
+	}
+
+	/* Клас, який прибирає прихованість */
+	.backdrop.is-hidden {
+		visibility: visible; /* Робить видимим */
+		opacity: 1; /* Встановлює непрозорість */
+		pointer-events: auto;
+	}
+
+	/* Модальне вікно */
+	.modal {
+		background-color: white;
+		padding: 40px;
+		border-radius: 8px;
+		width: 528px;
+		height: 581px;
+		box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.2);
+		transform: scale(0.8); /* Початковий масштаб */
+		transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+		h2 {
+			margin-bottom: 12px;
+		}
+		p {
+			text-align: left;
+			font-size: 12px;
+			letter-spacing: 0.01em;
+			color: var(--grey-color);
+			line-height: 1.17;
+		}
+		ul {
+			gap: 10px;
+		}
+	}
+
+	/* Плавний ефект для зростання модального вікна */
+	.backdrop:not(.is-hidden) .modal {
+		transform: scale(1); /* Збільшення до нормального розміру */
+	}
+
+	/* Кнопка закриття */
+	.close-btn {
+		position: absolute;
+		top: 10px;
+		right: 10px;
+		background: none;
+		border: 1px solid rgba(0, 0, 0, 0.1);
+		border-radius: 5em;
+		width: 30px;
+		height: 30px;
+		font-size: 24px;
+		cursor: pointer;
+		line-height: 1em;
 	}
 }
 /* img svg */
@@ -327,7 +460,7 @@ section {
 			border-radius: 5px;
 			border-color: var(--btn-grey-color);
 			background-color: var(--wht-color);
-			transition: color 0.5s ease;
+			transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 			svg {
 				color: var(--btn-grey-color);
 			}
@@ -336,7 +469,7 @@ section {
 			border-color: var(--more-blue-color);
 			svg {
 				color: var(--more-blue-color);
-				transition: color 0.5s ease;
+				transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 			}
 		}
 	}
@@ -403,7 +536,7 @@ section {
 				max-height: 44px;
 				border-width: 0;
 				background-color: var(--fter-btn-backgr-color);
-				transition: color 0.5s ease;
+				transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 				svg {
 					color: var(--wht-color);
 				}
@@ -478,7 +611,7 @@ section {
 			padding: 6px 22px;
 			border-radius: 5px;
 
-			transition: color 0.3s ease;
+			transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 
 			font-family: var(--basic-font);
 			font-weight: 500;
@@ -489,7 +622,7 @@ section {
 			background-color: var(--blue-color);
 			color: var(--wht-color);
 			box-shadow: 1px 5px 5px rgba(0, 0, 0, 0.2);
-			transition: color 0.5s ease;
+			transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 		}
 	}
 	.portfolio-list {
@@ -517,12 +650,12 @@ section {
 				color: var(--wht-color);
 				font-size: 18px;
 				line-height: 1.55;
-				transition: height 0.5s ease-out, padding 0.5s ease-out;
+				transition: height 250ms cubic-bezier(0.4, 0, 0.2, 1);
 			}
 		}
 		li:hover {
 			box-shadow: 1px 5px 5px rgba(0, 0, 0, 0.2);
-			transition: color 1s ease;
+			transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 
 			.portfolio-item-overlay {
 				padding: 63px 24px;
