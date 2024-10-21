@@ -132,8 +132,6 @@ section {
 		}
 	}
 }
-/* Background */
-/* cursor pointer */
 .hero {
 	padding: 200px 0;
 	background-color: var(--backgr-color);
@@ -335,18 +333,16 @@ section {
 	}
 
 	/* Клас, який прибирає прихованість */
-	.backdrop.is-hidden {
-		visibility: visible; /* Робить видимим */
-		opacity: 1; /* Встановлює непрозорість */
+	.backdrop.isnt-hidden {
+		visibility: visible;
+		opacity: 1;
 		pointer-events: auto;
 	}
 
-	/* Плавний ефект для зростання модального вікна */
-	.backdrop:not(.is-hidden) .modal {
-		transform: scale(1); /* Збільшення до нормального розміру */
+	.backdrop:not(.isnt-hidden) .modal {
+		transform: scale(1);
 	}
 }
-/* img svg */
 .special {
 	padding-bottom: 0;
 	.special-list {
@@ -411,7 +407,6 @@ section {
 		}
 	}
 }
-/* social media button img changing */
 .team {
 	background-color: var(--nowht-color);
 	.team-title {
@@ -510,7 +505,6 @@ section {
 		}
 	}
 }
-/* Правки в <a> */
 .fter {
 	background-color: var(--backgr-color);
 	padding: 60px;
