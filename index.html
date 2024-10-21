@@ -83,7 +83,7 @@
 						<button class="close-btn" data-modal-close>&times;</button>
 						<h2>Залиште свої дані, ми вам передзвонимо</h2>
 						<ul>
-							<li class="input-wrapper">
+							<li>
 								<p>Ім'я</p>
 								<div class="input-container">
 									<input type="text" class="input-with-icon" />
@@ -95,7 +95,7 @@
 								</div>
 							</li>
 
-							<li class="input-wrapper">
+							<li>
 								<p>Телефон</p>
 								<div class="input-container">
 									<input type="tel" class="input-with-icon" />
@@ -107,7 +107,7 @@
 								</div>
 							</li>
 
-							<li class="input-wrapper">
+							<li>
 								<p>Пошта</p>
 								<div class="input-container">
 									<input type="email" class="input-with-icon" />
@@ -119,7 +119,7 @@
 								</div>
 							</li>
 
-							<li>
+							<li class="input-container">
 								<p>Коментар</p>
 								<!-- <input
 									type="text"
@@ -128,8 +128,18 @@
 								/> -->
 								<textarea rows="4" placeholder="Введіть текст"></textarea>
 							</li>
+
+							<li class="agree-li">
+								<span class="agree-span">
+									<input type="checkbox" />
+									Погоджуюся з розсилкою та приймаю
+									<a href="#">Умови договору</a>
+								</span>
+							</li>
+							<li>
+								<button type="button" class="send-btn">Відправити</button>
+							</li>
 						</ul>
-						<button type="button" class="send-btn">Відправити</button>
 					</div>
 				</div>
 			</section>
@@ -574,20 +584,5 @@
 
 		<script src="./JS/nav_underline.js"></script>
 		<script src="./JS/modal.js"></script>
-		<script>
-			const inputContainers = document.querySelectorAll(".input-container");
-
-			inputContainers.forEach((container) => {
-				const input = container.querySelector(".input-with-icon");
-
-				input.addEventListener("focus", () => {
-					container.classList.add("input-focused");
-				});
-
-				input.addEventListener("blur", () => {
-					container.classList.remove("input-focused");
-				});
-			});
-		</script>
 	</body>
 </html>
