@@ -77,71 +77,6 @@
 						Замовити послугу
 					</button>
 				</div>
-
-				<div class="backdrop" data-modal>
-					<div class="modal">
-						<button class="close-btn" data-modal-close>&times;</button>
-						<h2>Залиште свої дані, ми вам передзвонимо</h2>
-						<ul>
-							<li>
-								<p>Ім'я</p>
-								<div class="input-container">
-									<input type="text" class="input-with-icon" />
-									<svg class="icon" width="12" height="12">
-										<use
-											href="./images/social/social-icons.svg#icon-modal-img1"
-										></use>
-									</svg>
-								</div>
-							</li>
-
-							<li>
-								<p>Телефон</p>
-								<div class="input-container">
-									<input type="tel" class="input-with-icon" />
-									<svg class="icon" width="13" height="13">
-										<use
-											href="./images/social/social-icons.svg#icon-modal-img2"
-										></use>
-									</svg>
-								</div>
-							</li>
-
-							<li>
-								<p>Пошта</p>
-								<div class="input-container">
-									<input type="email" class="input-with-icon" />
-									<svg class="icon" width="15" height="12">
-										<use
-											href="./images/social/social-icons.svg#icon-modal-img3"
-										></use>
-									</svg>
-								</div>
-							</li>
-
-							<li class="input-container">
-								<p>Коментар</p>
-								<!-- <input
-									type="text"
-									placeholder="Введіть текст"
-									class="comment-block"
-								/> -->
-								<textarea rows="4" placeholder="Введіть текст"></textarea>
-							</li>
-
-							<li class="agree-li">
-								<span class="agree-span">
-									<input type="checkbox" />
-									Погоджуюся з розсилкою та приймаю
-									<a href="#">Умови договору</a>
-								</span>
-							</li>
-							<li>
-								<button type="button" class="send-btn">Відправити</button>
-							</li>
-						</ul>
-					</div>
-				</div>
 			</section>
 
 			<section class="special">
@@ -581,6 +516,61 @@
 				</div>
 			</div>
 		</footer>
+
+		<div class="backdrop" data-modal>
+			<div class="modal">
+				<button class="close-btn" data-modal-close>&times;</button>
+				<h2>Залиште свої дані, ми вам передзвонимо</h2>
+				<ul>
+					<li>
+						<p>Ім'я</p>
+						<div class="input-container">
+							<input type="text" class="input-with-icon" />
+							<svg class="icon" width="12" height="12">
+								<use
+									href="./images/social/social-icons.svg#icon-modal-img1"
+								></use>
+							</svg>
+						</div>
+					</li>
+
+					<li>
+						<p>Телефон</p>
+						<div class="input-container">
+							<input type="tel" class="input-with-icon" />
+							<svg class="icon" width="13" height="13">
+								<use
+									href="./images/social/social-icons.svg#icon-modal-img2"
+								></use>
+							</svg>
+						</div>
+					</li>
+
+					<li>
+						<p>Пошта</p>
+						<div class="input-container">
+							<input type="email" class="input-with-icon" />
+							<svg class="icon" width="15" height="12">
+								<use
+									href="./images/social/social-icons.svg#icon-modal-img3"
+								></use>
+							</svg>
+						</div>
+					</li>
+
+					<li class="txt-area-cont">
+						<p>Коментар</p>
+						<textarea rows="5" placeholder="Введіть текст"></textarea>
+					</li>
+				</ul>
+				<div class="agree-div">
+					<input type="checkbox" />
+					<p>Погоджуюся з розсилкою та приймаю</p>
+					<a href="#">Умови договору</a>
+				</div>
+				<button type="button" class="send-btn">Відправити</button>
+			</div>
+		</div>
 
 		<script src="./JS/nav_underline.js"></script>
 		<script src="./JS/modal.js"></script>

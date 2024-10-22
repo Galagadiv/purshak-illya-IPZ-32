@@ -9,10 +9,6 @@ document.addEventListener("DOMContentLoaded", function () {
 		if (link.getAttribute("href") === currentPage) {
 			link.classList.add("active");
 			activeLink = link;
-			// потім видалити
-
-			console.error(link.getAttribute("href"));
-			console.error(currentPage);
 		}
 		link.addEventListener("mouseenter", () => {
 			if (activeLink && activeLink != link) {

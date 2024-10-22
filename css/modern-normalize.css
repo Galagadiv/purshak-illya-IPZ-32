@@ -28,7 +28,10 @@ html {
 Sections
 ========
 */
-
+.my-element {
+	width: auto !important;
+	height: auto !important;
+}
 body {
 	margin: 0; /* Remove the margin in all browsers. */
 }
