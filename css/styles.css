@@ -10,6 +10,7 @@
 	--btn-grey-color: #afb1b8;
 	--fter-btn-backgr-color: rgba(255, 255, 255, 0.1);
 	--basic-font: "Roboto", sans-serif;
+	--tras-settings: 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 a {
@@ -25,6 +26,8 @@ img {
 	display: block;
 }
 h1,
+a,
+svg,
 h2,
 h3,
 p {
@@ -71,6 +74,7 @@ section {
 	.header-nav-list a {
 		position: relative;
 		text-decoration: none;
+		transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 	}
 	.header-nav-list a:hover {
 		color: var(--blue-color);
@@ -86,7 +90,7 @@ section {
 		border-radius: 2px;
 		bottom: -32px;
 		transform: scaleX(0);
-		transition: transform 0.3s ease;
+		transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
 	}
 	/* Вкл/Викл підкреслення */
 	.header-nav-list a:hover::after,
@@ -114,6 +118,7 @@ section {
 
 	.contacts {
 		display: flex;
+		align-items: baseline;
 		gap: 40px;
 		margin-left: auto;
 		a {
@@ -130,8 +135,6 @@ section {
 		}
 	}
 }
-/* Background */
-/* cursor pointer */
 .hero {
 	padding: 200px 0;
 	background-color: var(--backgr-color);
@@ -177,7 +180,6 @@ section {
 		letter-spacing: 0.06em;
 	}
 }
-/* img svg */
 .special {
 	padding-bottom: 0;
 	.special-list {
@@ -238,11 +240,13 @@ section {
 				text-transform: uppercase;
 
 				color: var(--wht-color);
+				p {
+					opacity: 1;
+				}
 			}
 		}
 	}
 }
-/* social media button img changing */
 .team {
 	background-color: var(--nowht-color);
 	.team-title {
@@ -286,21 +290,25 @@ section {
 				.team-media-list {
 					gap: 10px;
 					li {
-						padding: 12px;
-						border-radius: 50%;
 						/* Кнопка без обмежень стає випуклою */
-						max-width: 44px;
-						max-height: 44px;
-						border-width: 0;
-						background-color: var(--wht-color);
+						a {
+							display: flex;
+							justify-content: center;
+							align-items: center;
+							border-radius: 50%;
+							width: 44px;
+							height: 44px;
+							background-color: var(--wht-color);
+						}
+
 						svg {
 							color: var(--btn-grey-color);
 						}
-					}
-					li:hover {
-						background-color: var(--blue-color);
-						svg {
-							color: var(--wht-color);
+						a:hover {
+							background-color: var(--blue-color);
+							svg {
+								color: var(--wht-color);
+							}
 						}
 					}
 				}
@@ -327,7 +335,7 @@ section {
 			border-radius: 5px;
 			border-color: var(--btn-grey-color);
 			background-color: var(--wht-color);
-			transition: color 0.5s ease;
+			transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 			svg {
 				color: var(--btn-grey-color);
 			}
@@ -336,17 +344,17 @@ section {
 			border-color: var(--more-blue-color);
 			svg {
 				color: var(--more-blue-color);
-				transition: color 0.5s ease;
+				transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 			}
 		}
 	}
 }
-/* Правки в <a> */
 .fter {
 	background-color: var(--backgr-color);
 	padding: 60px;
 	.container {
 		display: flex;
+		align-items: baseline;
 		gap: 94px;
 	}
 	.fter-logo {
@@ -396,20 +404,22 @@ section {
 			flex-direction: row;
 			gap: 10px;
 			li {
-				padding: 12px;
-				border-radius: 50%;
-				/* Кнопка без обмежень стає випуклою */
-				max-width: 44px;
-				max-height: 44px;
-				border-width: 0;
-				background-color: var(--fter-btn-backgr-color);
-				transition: color 0.5s ease;
+				a {
+					display: flex;
+					justify-content: center;
+					align-items: center;
+					width: 44px;
+					height: 44px;
+					border-radius: 50%;
+					background-color: var(--fter-btn-backgr-color);
+					transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+				}
+				a:hover {
+					background-color: var(--more-blue-color);
+				}
 				svg {
 					color: var(--wht-color);
 				}
-			}
-			li:hover {
-				background-color: var(--more-blue-color);
 			}
 		}
 	}
@@ -458,6 +468,197 @@ section {
 		}
 	}
 }
+.backdrop {
+	display: none;
+	position: fixed;
+	align-items: center;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background-color: rgba(0, 0, 0, 0.5);
+	visibility: hidden;
+	pointer-events: none;
+	display: flex;
+	justify-content: center;
+	transition: opacity 0.3s ease;
+
+	.modal {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		position: fixed;
+		background-color: white;
+		padding: 40px;
+		width: 528px;
+		border-radius: 8px;
+
+		box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.2);
+		.close-btn {
+			position: absolute;
+			top: 8px;
+			right: 8px;
+			background: none;
+			border: 1px solid rgba(0, 0, 0, 0.1);
+			border-radius: 5em;
+			width: 30px;
+			height: 30px;
+			font-size: 24px;
+			cursor: pointer;
+			line-height: 1em;
+			transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+		}
+		.close-btn:hover {
+			color: var(--more-blue-color);
+			transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+		}
+		h2 {
+			font-weight: 700;
+			color: var(--dark-color);
+			font-size: 20px;
+			text-align: center;
+			margin-bottom: 12px;
+		}
+		ul {
+			width: 100%;
+			li:not(:last-child) {
+				margin-bottom: 10px;
+				.input-container {
+					position: relative;
+					input {
+						width: 100%;
+						height: 40px;
+						padding: 0 35px;
+						border: 1px solid rgba(0, 0, 0, 0.1);
+						border-radius: 4px;
+						transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+					}
+					input:focus,
+					input:hover {
+						outline: 1px solid var(--more-blue-color);
+						transition: outline 250ms cubic-bezier(0.4, 0, 0.2, 1);
+					}
+					input:hover + .icon,
+					input:focus + .icon {
+						color: var(--more-blue-color);
+					}
+					.icon {
+						position: absolute;
+						left: 12px;
+						top: 50%;
+						transform: translateY(-50%);
+						pointer-events: none;
+						color: var(--dark-color);
+						transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+					}
+				}
+			}
+			li:not(:first-child) {
+				margin-top: 10px;
+			}
+			.txt-area-cont {
+				max-height: 138px;
+				textarea:focus,
+				textarea:hover {
+					outline: 1px solid var(--more-blue-color);
+					transition: outline 250ms cubic-bezier(0.4, 0, 0.2, 1);
+				}
+				textarea {
+					width: 100%;
+					height: 120px;
+					padding: 12px 16px;
+					border: 1px solid rgba(0, 0, 0, 0.1);
+					border-radius: 4px;
+					resize: none;
+					transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+					font-size: 12px;
+					letter-spacing: 0.01em;
+					line-height: auto;
+				}
+			}
+			p {
+				text-align: left;
+				font-size: 12px;
+				letter-spacing: 0.01em;
+				color: var(--grey-color);
+				margin-bottom: 4px;
+			}
+		}
+		.agree-div {
+			display: flex;
+			align-items: center;
+			margin-top: 20px;
+			margin-bottom: 30px;
+			input {
+				border: 1px solid var(--dark-color);
+				margin-right: 5px;
+				width: 16px;
+				height: 15px;
+				appearance: none;
+				color: var(--white);
+				border-radius: 2px;
+			}
+			input:hover {
+				cursor: pointer;
+			}
+			input:checked {
+				background: var(--more-blue-color);
+				border: none;
+				color: var(--wht-color);
+			}
+			input:checked::before {
+				content: "✔";
+				display: inline-block;
+				text-align: center;
+				padding-left: 2px;
+			}
+			a {
+				color: var(--more-blue-color);
+				font-size: 14px;
+				margin-left: 4px;
+				line-height: 1.875em;
+				text-decoration: underline var(--more-blue-color);
+			}
+			p {
+				font-size: 14px;
+				color: var(--grey-color);
+				margin: 0;
+				line-height: 1.71em;
+			}
+		}
+		.send-btn {
+			padding: 10px 52px;
+			background-color: var(--blue-color);
+			border-radius: 4px;
+			border: none;
+			cursor: pointer;
+
+			font-weight: 700;
+			font-family: var(--basic-font);
+			color: var(--wht-color);
+			font-size: 16px;
+			line-height: 1.875;
+			letter-spacing: 0.06em;
+			transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
+		}
+		.send-btn:hover {
+			transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
+			box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.2);
+		}
+	}
+}
+
+/* Клас, який прибирає прихованість */
+.backdrop.isnt-hidden {
+	visibility: visible;
+	opacity: 1;
+	pointer-events: auto;
+}
+
+.backdrop:not(.isnt-hidden) .modal {
+	transform: scale(1);
+}
 
 /* Портфоліо */
 .portfolio {
@@ -478,7 +679,7 @@ section {
 			padding: 6px 22px;
 			border-radius: 5px;
 
-			transition: color 0.3s ease;
+			transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 
 			font-family: var(--basic-font);
 			font-weight: 500;
@@ -489,44 +690,41 @@ section {
 			background-color: var(--blue-color);
 			color: var(--wht-color);
 			box-shadow: 1px 5px 5px rgba(0, 0, 0, 0.2);
-			transition: color 0.5s ease;
+			transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 		}
 	}
 	.portfolio-list {
 		display: flex;
 		flex-wrap: wrap;
 		gap: 30px;
-		li {
+		.overlay-container {
 			position: relative;
 			max-width: 370px;
-			img {
-				width: 100%;
-			}
-			.portfolio-item-overlay {
-				display: flex;
-				height: 0;
-				padding: 0 24px;
-				position: absolute;
-				overflow: hidden;
-				width: 100%;
-
-				background-color: var(--more-blue-color);
-				opacity: 0.9;
-				top: 0;
-
-				color: var(--wht-color);
-				font-size: 18px;
-				line-height: 1.55;
-				transition: height 0.5s ease-out, padding 0.5s ease-out;
-			}
+			overflow: hidden;
 		}
+		.portfolio-item-overlay {
+			display: flex;
+			align-items: center;
+			height: 100%;
+			width: 100%;
+			padding: 0 24px;
+			position: absolute;
+
+			background-color: var(--more-blue-color);
+			opacity: 0.9;
+			transform: translateY(100%);
+			color: var(--wht-color);
+			font-size: 18px;
+			line-height: 1.55em;
+			transition: transform var(--tras-settings);
+		}
+		/* зробити анімацію приховування */
 		li:hover {
 			box-shadow: 1px 5px 5px rgba(0, 0, 0, 0.2);
-			transition: color 1s ease;
-
 			.portfolio-item-overlay {
 				padding: 63px 24px;
-				height: 294px;
+				transition: transform var(--tras-settings);
+				transform: translateY(0%);
 			}
 		}
 
