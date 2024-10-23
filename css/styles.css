@@ -10,6 +10,7 @@
 	--btn-grey-color: #afb1b8;
 	--fter-btn-backgr-color: rgba(255, 255, 255, 0.1);
 	--basic-font: "Roboto", sans-serif;
+	--tras-settings: 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 a {
@@ -73,6 +74,7 @@ section {
 	.header-nav-list a {
 		position: relative;
 		text-decoration: none;
+		transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 	}
 	.header-nav-list a:hover {
 		color: var(--blue-color);
@@ -116,6 +118,7 @@ section {
 
 	.contacts {
 		display: flex;
+		align-items: baseline;
 		gap: 40px;
 		margin-left: auto;
 		a {
@@ -237,6 +240,9 @@ section {
 				text-transform: uppercase;
 
 				color: var(--wht-color);
+				p {
+					opacity: 1;
+				}
 			}
 		}
 	}
@@ -284,21 +290,25 @@ section {
 				.team-media-list {
 					gap: 10px;
 					li {
-						padding: 12px;
-						border-radius: 50%;
 						/* Кнопка без обмежень стає випуклою */
-						max-width: 44px;
-						max-height: 44px;
-						border-width: 0;
-						background-color: var(--wht-color);
+						a {
+							display: flex;
+							justify-content: center;
+							align-items: center;
+							border-radius: 50%;
+							width: 44px;
+							height: 44px;
+							background-color: var(--wht-color);
+						}
+
 						svg {
 							color: var(--btn-grey-color);
 						}
-					}
-					li:hover {
-						background-color: var(--blue-color);
-						svg {
-							color: var(--wht-color);
+						a:hover {
+							background-color: var(--blue-color);
+							svg {
+								color: var(--wht-color);
+							}
 						}
 					}
 				}
@@ -344,6 +354,7 @@ section {
 	padding: 60px;
 	.container {
 		display: flex;
+		align-items: baseline;
 		gap: 94px;
 	}
 	.fter-logo {
@@ -393,20 +404,22 @@ section {
 			flex-direction: row;
 			gap: 10px;
 			li {
-				padding: 12px;
-				border-radius: 50%;
-				/* Кнопка без обмежень стає випуклою */
-				max-width: 44px;
-				max-height: 44px;
-				border-width: 0;
-				background-color: var(--fter-btn-backgr-color);
-				transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+				a {
+					display: flex;
+					justify-content: center;
+					align-items: center;
+					width: 44px;
+					height: 44px;
+					border-radius: 50%;
+					background-color: var(--fter-btn-backgr-color);
+					transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+				}
+				a:hover {
+					background-color: var(--more-blue-color);
+				}
 				svg {
 					color: var(--wht-color);
 				}
-			}
-			li:hover {
-				background-color: var(--more-blue-color);
 			}
 		}
 	}
@@ -458,7 +471,7 @@ section {
 .backdrop {
 	display: none;
 	position: fixed;
-	padding-top: 200px;
+	align-items: center;
 	top: 0;
 	left: 0;
 	width: 100%;
@@ -558,6 +571,10 @@ section {
 					border-radius: 4px;
 					resize: none;
 					transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+					font-size: 12px;
+					letter-spacing: 0.01em;
+					line-height: auto;
 				}
 			}
 			p {
@@ -683,30 +700,31 @@ section {
 		.overlay-container {
 			position: relative;
 			max-width: 370px;
+			overflow: hidden;
 		}
 		.portfolio-item-overlay {
 			display: flex;
-			height: 0;
+			align-items: center;
+			height: 100%;
+			width: 100%;
 			padding: 0 24px;
 			position: absolute;
-			overflow: hidden;
-			width: 100%;
-			bottom: 0;
+
 			background-color: var(--more-blue-color);
 			opacity: 0.9;
-
+			transform: translateY(100%);
 			color: var(--wht-color);
 			font-size: 18px;
-			line-height: 1.55;
-			transition: height 250ms cubic-bezier(0.4, 0, 0.2, 1);
+			line-height: 1.55em;
+			transition: transform var(--tras-settings);
 		}
+		/* зробити анімацію приховування */
 		li:hover {
 			box-shadow: 1px 5px 5px rgba(0, 0, 0, 0.2);
-			transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
-
 			.portfolio-item-overlay {
 				padding: 63px 24px;
-				height: 294px;
+				transition: transform var(--tras-settings);
+				transform: translateY(0%);
 			}
 		}
 
