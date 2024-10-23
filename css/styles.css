@@ -118,20 +118,47 @@ section {
 
 	.contacts {
 		display: flex;
-		align-items: baseline;
-		gap: 40px;
+		gap: 60px;
 		margin-left: auto;
-		a {
+		align-items: baseline;
+		.contacts-mail {
 			display: flex;
-			align-items: center;
-			color: var(--grey-color);
+			align-items: baseline;
+			position: relative;
 			gap: 10px;
-		}
-		a:hover {
-			color: var(--blue-color);
-			svg {
-				color: var(--blue-color);
+			a {
+				color: var(--grey-color);
 			}
+			svg {
+				position: absolute;
+				top: 1px;
+				left: -30px;
+				color: var(--grey-color);
+			}
+		}
+		.contacts-mail:hover svg,
+		.contacts-mail:hover a {
+			color: var(--blue-color);
+		}
+		.contacts-tel {
+			display: flex;
+			position: relative;
+			gap: 10px;
+			a {
+				color: var(--grey-color);
+				align-self: baseline;
+			}
+			svg {
+				color: var(--grey-color);
+				align-self: center;
+				position: absolute;
+				top: -1px;
+				left: -20px;
+			}
+		}
+		.contacts-tel:hover svg,
+		.contacts-tel:hover a {
+			color: var(--blue-color);
 		}
 	}
 }
@@ -289,26 +316,23 @@ section {
 				}
 				.team-media-list {
 					gap: 10px;
-					li {
-						/* Кнопка без обмежень стає випуклою */
-						a {
-							display: flex;
-							justify-content: center;
-							align-items: center;
-							border-radius: 50%;
-							width: 44px;
-							height: 44px;
-							background-color: var(--wht-color);
-						}
+					a {
+						display: flex;
+						justify-content: center;
+						align-items: center;
+						border-radius: 50%;
+						width: 44px;
+						height: 44px;
+						background-color: var(--wht-color);
+					}
 
+					svg {
+						color: var(--btn-grey-color);
+					}
+					a:hover {
+						background-color: var(--blue-color);
 						svg {
-							color: var(--btn-grey-color);
-						}
-						a:hover {
-							background-color: var(--blue-color);
-							svg {
-								color: var(--wht-color);
-							}
+							color: var(--wht-color);
 						}
 					}
 				}
