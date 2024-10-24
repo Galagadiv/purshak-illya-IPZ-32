@@ -531,6 +531,7 @@ section {
 			cursor: pointer;
 			line-height: 1em;
 			transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+			color: #000;
 		}
 		.close-btn:hover {
 			color: var(--more-blue-color);
@@ -543,41 +544,42 @@ section {
 			text-align: center;
 			margin-bottom: 12px;
 		}
-		ul {
+		form {
+			display: flex;
+			flex-direction: column;
 			width: 100%;
-			li:not(:last-child) {
-				margin-bottom: 10px;
-				.input-container {
-					position: relative;
-					input {
-						width: 100%;
-						height: 40px;
-						padding: 0 35px;
-						border: 1px solid rgba(0, 0, 0, 0.1);
-						border-radius: 4px;
-						transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
-					}
-					input:focus,
-					input:hover {
-						outline: 1px solid var(--more-blue-color);
-						transition: outline 250ms cubic-bezier(0.4, 0, 0.2, 1);
-					}
-					input:hover + .icon,
-					input:focus + .icon {
-						color: var(--more-blue-color);
-					}
-					.icon {
-						position: absolute;
-						left: 12px;
-						top: 50%;
-						transform: translateY(-50%);
-						pointer-events: none;
-						color: var(--dark-color);
-						transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
-					}
+			.input-container {
+				position: relative;
+				input {
+					width: 100%;
+					height: 40px;
+					padding: 0 35px;
+					border: 1px solid rgba(0, 0, 0, 0.1);
+					border-radius: 4px;
+					transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+				}
+
+				input:focus,
+				input:hover {
+					outline: 1px solid var(--more-blue-color);
+					transition: outline 250ms cubic-bezier(0.4, 0, 0.2, 1);
+				}
+
+				input:hover + .icon,
+				input:focus + .icon {
+					color: var(--more-blue-color);
+				}
+				.icon {
+					position: absolute;
+					left: 12px;
+					top: 50%;
+					transform: translateY(-50%);
+					pointer-events: none;
+					color: var(--dark-color);
+					transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 				}
 			}
-			li:not(:first-child) {
+			label:not(:first-child) {
 				margin-top: 10px;
 			}
 			.txt-area-cont {
