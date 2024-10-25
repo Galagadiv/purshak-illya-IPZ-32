@@ -505,7 +505,9 @@ section {
 	pointer-events: none;
 	display: flex;
 	justify-content: center;
-	transition: opacity 0.3s ease;
+
+	transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1);
+	opacity: 0;
 
 	.modal {
 		display: flex;
@@ -518,6 +520,7 @@ section {
 		border-radius: 8px;
 
 		box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.2);
+
 		.close-btn {
 			position: absolute;
 			top: 8px;
