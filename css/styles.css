@@ -120,45 +120,30 @@ section {
 		display: flex;
 		gap: 60px;
 		margin-left: auto;
-		align-items: baseline;
-		.contacts-mail {
+		align-items: center;
+
+		a {
 			display: flex;
-			align-items: baseline;
-			position: relative;
+			align-items: center;
 			gap: 10px;
-			a {
-				color: var(--grey-color);
-			}
-			svg {
-				position: absolute;
-				top: 1px;
-				left: -30px;
-				color: var(--grey-color);
-			}
+			color: var(--grey-color);
 		}
-		.contacts-mail:hover svg,
-		.contacts-mail:hover a {
+
+		a:hover {
 			color: var(--blue-color);
 		}
-		.contacts-tel {
-			display: flex;
-			position: relative;
-			gap: 10px;
-			a {
-				color: var(--grey-color);
-				align-self: baseline;
-			}
-			svg {
-				color: var(--grey-color);
-				align-self: center;
-				position: absolute;
-				top: -1px;
-				left: -20px;
-			}
-		}
-		.contacts-tel:hover svg,
-		.contacts-tel:hover a {
+
+		a:hover svg {
 			color: var(--blue-color);
+		}
+
+		svg {
+			color: var(--grey-color);
+		}
+
+		a,
+		svg {
+			transition: color var(--tras-settings);
 		}
 	}
 }
