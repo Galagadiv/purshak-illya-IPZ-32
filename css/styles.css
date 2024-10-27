@@ -309,15 +309,19 @@ section {
 						width: 44px;
 						height: 44px;
 						background-color: var(--wht-color);
+						transition: background-color var(--tras-settings);
 					}
 
 					svg {
 						color: var(--btn-grey-color);
+						transition: color var(--tras-settings);
 					}
 					a:hover {
 						background-color: var(--blue-color);
+						transition: background-color var(--tras-settings);
 						svg {
 							color: var(--wht-color);
+							transition: color var(--tras-settings);
 						}
 					}
 				}
@@ -344,16 +348,18 @@ section {
 			border-radius: 5px;
 			border-color: var(--btn-grey-color);
 			background-color: var(--wht-color);
-			transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+			transition: border-color var(--tras-settings);
 			svg {
 				color: var(--btn-grey-color);
+				transition: color var(--tras-settings);
 			}
 		}
 		li:hover {
 			border-color: var(--more-blue-color);
+			transition: border-color var(--tras-settings);
 			svg {
 				color: var(--more-blue-color);
-				transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+				transition: color var(--tras-settings);
 			}
 		}
 	}
@@ -421,13 +427,15 @@ section {
 					height: 44px;
 					border-radius: 50%;
 					background-color: var(--fter-btn-backgr-color);
-					transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+					transition: background-color var(--tras-settings);
 				}
 				a:hover {
 					background-color: var(--more-blue-color);
+					transition: background-color var(--tras-settings);
 				}
 				svg {
 					color: var(--wht-color);
+					transition: color var(--tras-settings);
 				}
 			}
 		}
@@ -477,6 +485,7 @@ section {
 		}
 	}
 }
+
 .backdrop {
 	display: none;
 	position: fixed;
@@ -491,8 +500,8 @@ section {
 	display: flex;
 	justify-content: center;
 
-	transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1);
 	opacity: 0;
+	transition: opacity var(--tras-settings);
 
 	.modal {
 		display: flex;
@@ -518,12 +527,12 @@ section {
 			font-size: 24px;
 			cursor: pointer;
 			line-height: 1em;
-			transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
-			color: #000;
+			color: var(--dark-color);
+			transition: color var(--tras-settings);
 		}
 		.close-btn:hover {
 			color: var(--more-blue-color);
-			transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+			transition: color var(--tras-settings);
 		}
 		h2 {
 			font-weight: 700;
@@ -542,20 +551,22 @@ section {
 					width: 100%;
 					height: 40px;
 					padding: 0 35px;
-					border: 1px solid rgba(0, 0, 0, 0.1);
+					outline: 1px solid rgba(0, 0, 0, 0.1);
+					border: 0;
 					border-radius: 4px;
-					transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+					transition: outline 250ms cubic-bezier(0.4, 0, 0.2, 1);
 				}
 
 				input:focus,
 				input:hover {
 					outline: 1px solid var(--more-blue-color);
-					transition: outline 250ms cubic-bezier(0.4, 0, 0.2, 1);
+					transition: outline var(--tras-settings);
 				}
 
 				input:hover + .icon,
 				input:focus + .icon {
 					color: var(--more-blue-color);
+					transition: color var(--tras-settings);
 				}
 				.icon {
 					position: absolute;
@@ -564,27 +575,26 @@ section {
 					transform: translateY(-50%);
 					pointer-events: none;
 					color: var(--dark-color);
-					transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+					transition: color var(--tras-settings);
 				}
 			}
-			label:not(:first-child) {
-				margin-top: 10px;
-			}
+
 			.txt-area-cont {
 				max-height: 138px;
 				textarea:focus,
 				textarea:hover {
 					outline: 1px solid var(--more-blue-color);
-					transition: outline 250ms cubic-bezier(0.4, 0, 0.2, 1);
+					transition: outline var(--tras-settings);
 				}
 				textarea {
 					width: 100%;
 					height: 120px;
 					padding: 12px 16px;
-					border: 1px solid rgba(0, 0, 0, 0.1);
+					outline: 1px solid rgba(0, 0, 0, 0.1);
+					border: 0;
 					border-radius: 4px;
 					resize: none;
-					transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+					transition: outline var(--tras-settings);
 
 					font-size: 12px;
 					letter-spacing: 0.01em;
@@ -592,22 +602,19 @@ section {
 				}
 			}
 			label {
+				display: block;
 				text-align: left;
 				font-size: 12px;
 				letter-spacing: 0.01em;
 				color: var(--grey-color);
 				margin-bottom: 4px;
 			}
-			.error-message {
-				display: none;
-				color: red;
-			}
-
-			input:invalid + .error-message {
-				display: inline;
-			}
 		}
-		.agree-div {
+		form > div:not(:first-child) {
+			margin-top: 10px;
+		}
+
+		.agree-line {
 			display: flex;
 			align-items: center;
 			margin-top: 20px;
@@ -632,9 +639,11 @@ section {
 			}
 			input:checked::before {
 				content: "✔";
+				width: 16px;
+				height: 16px;
 				display: inline-block;
 				text-align: center;
-				padding-left: 2px;
+				padding-top: 1px;
 			}
 			a {
 				color: var(--more-blue-color);
@@ -648,6 +657,9 @@ section {
 				color: var(--grey-color);
 				margin: 0;
 				line-height: 1.71em;
+			}
+			p:hover {
+				cursor: pointer;
 			}
 		}
 		.send-btn {
@@ -664,24 +676,18 @@ section {
 			font-size: 16px;
 			line-height: 1.875;
 			letter-spacing: 0.06em;
-			transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
+			transition: box-shadow var(--tras-settings);
 		}
 		.send-btn:hover {
-			transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
+			transition: box-shadow var(--tras-settings);
 			box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.2);
 		}
 	}
 }
-
-/* Клас, який прибирає прихованість */
 .backdrop.isnt-hidden {
 	visibility: visible;
 	opacity: 1;
 	pointer-events: auto;
-}
-
-.backdrop:not(.isnt-hidden) .modal {
-	transform: scale(1);
 }
 
 /* Портфоліо */
@@ -703,18 +709,21 @@ section {
 			padding: 6px 22px;
 			border-radius: 5px;
 
-			transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
-
 			font-family: var(--basic-font);
 			font-weight: 500;
 			font-size: 16px;
 			line-height: 1.625;
+
+			transition: color var(--tras-settings), font-color var(--tras-settings),
+				background-color var(--tras-settings), box-shadow var(--tras-settings);
 		}
 		.filter-button:hover {
 			background-color: var(--blue-color);
 			color: var(--wht-color);
 			box-shadow: 1px 5px 5px rgba(0, 0, 0, 0.2);
-			transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+			transition: color var(--tras-settings), font-color var(--tras-settings),
+				background-color var(--tras-settings), box-shadow var(--tras-settings);
 		}
 	}
 	.portfolio-list {
