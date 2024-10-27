@@ -441,6 +441,7 @@ section {
 		}
 	}
 	.subscribe-block {
+		width: 100%;
 		.subscribe-block-title {
 			font-weight: 700;
 			font-size: 14px;
@@ -451,21 +452,20 @@ section {
 
 			margin-bottom: 20px;
 		}
-		.subscribe-block-input {
-			padding: 15px 0;
-			padding-inline-start: 16px;
-			background-color: var(--backgr-color);
-			border-radius: 4px;
-			border: 1px solid var(--grey-color);
-			opacity: 60%;
-			width: 358px;
-			color: var(--wht-color);
-			font-size: 16px;
-			line-height: 1.17;
-		}
-		div {
+		form {
 			display: flex;
 			gap: 12px;
+			.subscribe-block-input {
+				padding-inline-start: 16px;
+				background-color: var(--backgr-color);
+				border-radius: 4px;
+				border: 1px solid var(--grey-color);
+				opacity: 60%;
+				width: 100%;
+				color: var(--wht-color);
+				font-size: 16px;
+				line-height: 1.17;
+			}
 			button {
 				display: flex;
 				padding: 10px 28px;
@@ -745,7 +745,7 @@ section {
 
 			background-color: var(--more-blue-color);
 			opacity: 0.9;
-			transform: translateY(100%);
+			transform: translateY(110%);
 			color: var(--wht-color);
 			font-size: 18px;
 			line-height: 1.55em;
@@ -753,11 +753,12 @@ section {
 		}
 		/* зробити анімацію приховування */
 		li:hover {
-			box-shadow: 1px 5px 5px rgba(0, 0, 0, 0.2);
+			box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.2);
+			transition: box-shadow var(--tras-settings);
 			.portfolio-item-overlay {
 				padding: 63px 24px;
-				transition: transform var(--tras-settings);
 				transform: translateY(0%);
+				transition: transform var(--tras-settings);
 			}
 		}
 
