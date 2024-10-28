@@ -40,7 +40,7 @@
 				</nav>
 				<!-- Просраний розмір svg -->
 				<ul class="contacts">
-					<li>
+					<li class="contacts-mail">
 						<a href="mailto:info@devstrudio.com">
 							<svg width="16" height="12">
 								<use href="./images/social/social-icons.svg#icon-mail"></use>
@@ -48,7 +48,7 @@
 							info@devstrudio.com
 						</a>
 					</li>
-					<li>
+					<li class="contacts-tel">
 						<a href="tel:+380994814090">
 							<svg width="10" height="16">
 								<use
@@ -282,7 +282,7 @@
 					<ul class="media-list">
 						<li>
 							<a href="https://www.instagram.com/">
-								<svg width="20" height="20">
+								<svg width="22" height="22">
 									<use
 										href="./images/social/social-icons.svg#icon-instagram"
 									></use>
@@ -291,7 +291,7 @@
 						</li>
 						<li>
 							<a href="https://x.com/">
-								<svg width="20" height="20">
+								<svg width="22" height="22">
 									<use
 										href="./images/social/social-icons.svg#icon-twitter"
 									></use>
@@ -300,7 +300,7 @@
 						</li>
 						<li>
 							<a href="https://www.facebook.com/">
-								<svg width="20" height="20">
+								<svg width="22" height="22">
 									<use
 										href="./images/social/social-icons.svg#icon-facebook"
 									></use>
@@ -309,7 +309,7 @@
 						</li>
 						<li>
 							<a href="https://ua.linkedin.com/">
-								<svg width="20" height="20">
+								<svg width="22" height="22">
 									<use
 										href="./images/social/social-icons.svg#icon-linkedin"
 									></use>
@@ -321,11 +321,13 @@
 
 				<div class="subscribe-block">
 					<p class="subscribe-block-title">Підпишіться на розсилку</p>
-					<div>
+					<form>
+						<label for="sub-email"></label>
 						<input
 							class="subscribe-block-input"
 							type="email"
 							placeholder="E-mail"
+							name="sub-email"
 						/>
 						<button>
 							<p>Підписатися</p>
@@ -335,10 +337,11 @@
 								></use>
 							</svg>
 						</button>
-					</div>
+					</form>
 				</div>
 			</div>
 		</footer>
-		<script src="./JS/nav_underline.js"></script>
+
+		<script src="./js/nav_underline.js"></script>
 	</body>
 </html>

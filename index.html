@@ -39,9 +39,9 @@
 						<li><a href="#">Контакти</a></li>
 					</ul>
 				</nav>
-				<!-- Просраний розмір svg -->
+
 				<ul class="contacts">
-					<li>
+					<li class="contacts-mail">
 						<a href="mailto:info@devstrudio.com">
 							<svg width="16" height="12">
 								<use href="./images/social/social-icons.svg#icon-mail"></use>
@@ -49,14 +49,8 @@
 							info@devstrudio.com
 						</a>
 					</li>
-					<li>
+					<li class="contacts-tel">
 						<a href="tel:+380994814090">
-							<!-- <img
-								src="./images/social/smartphone.svg"
-								alt="phone number"
-								width="10"
-								height="16"
-							/> -->
 							<svg width="10" height="16">
 								<use
 									href="./images/social/social-icons.svg#icon-smartphone"
@@ -211,7 +205,7 @@
 									</li>
 									<li class="team-media-list">
 										<a href="https://ua.linkedin.com/">
-											<svg width="22" height="22">
+											<svg width="21" height="21">
 												<use
 													href="./images/social/social-icons.svg#icon-linkedin"
 												></use>
@@ -262,7 +256,7 @@
 									</li>
 									<li class="team-media-list">
 										<a href="https://ua.linkedin.com/">
-											<svg width="22" height="22">
+											<svg width="21" height="21">
 												<use
 													href="./images/social/social-icons.svg#icon-linkedin"
 												></use>
@@ -313,7 +307,7 @@
 									</li>
 									<li class="team-media-list">
 										<a href="https://ua.linkedin.com/">
-											<svg width="22" height="22">
+											<svg width="21" height="21">
 												<use
 													href="./images/social/social-icons.svg#icon-linkedin"
 												></use>
@@ -364,7 +358,7 @@
 									</li>
 									<li class="team-media-list">
 										<a href="https://ua.linkedin.com/">
-											<svg width="22" height="22">
+											<svg width="21" height="21">
 												<use
 													href="./images/social/social-icons.svg#icon-linkedin"
 												></use>
@@ -498,11 +492,13 @@
 
 				<div class="subscribe-block">
 					<p class="subscribe-block-title">Підпишіться на розсилку</p>
-					<div>
+					<form>
+						<label for="sub-email"></label>
 						<input
 							class="subscribe-block-input"
 							type="email"
 							placeholder="E-mail"
+							name="sub-email"
 						/>
 						<button>
 							<p>Підписатися</p>
@@ -512,74 +508,73 @@
 								></use>
 							</svg>
 						</button>
-					</div>
+					</form>
 				</div>
 			</div>
 		</footer>
 
-		<!-- id для label і input однакові -->
 		<div class="backdrop" data-modal>
 			<div class="modal">
 				<button class="close-btn" data-modal-close>&times;</button>
 				<h2>Залиште свої дані, ми вам передзвонимо</h2>
-				<ul>
-					<li>
-						<label for="Ім'я">
-							<p>Ім'я</p>
-							<div class="input-container">
-								<input type="text" class="input-with-icon" />
-								<svg class="icon" width="12" height="12">
-									<use
-										href="./images/social/social-icons.svg#icon-modal-img1"
-									></use>
-								</svg>
-							</div>
+				<form>
+					<div>
+						<label for="user_name">
+							Ім'я <span class="error-message"></span>
 						</label>
-					</li>
+						<div class="input-container">
+							<input type="text" id="user_name" name="name" required />
 
-					<li>
-						<label for="Телефон">
-							<p>Телефон</p>
-							<div class="input-container">
-								<input type="tel" class="input-with-icon" />
-								<svg class="icon" width="13" height="13">
-									<use
-										href="./images/social/social-icons.svg#icon-modal-img2"
-									></use>
-								</svg>
-							</div>
-						</label>
-					</li>
+							<svg class="icon" width="12" height="12">
+								<use
+									href="./images/social/social-icons.svg#icon-modal-img1"
+								></use>
+							</svg>
+						</div>
+					</div>
 
-					<li>
-						<label for="Пошта">
-							<p>Пошта</p>
-							<div class="input-container">
-								<input type="email" class="input-with-icon" />
-								<svg class="icon" width="15" height="12">
-									<use
-										href="./images/social/social-icons.svg#icon-modal-img3"
-									></use>
-								</svg>
-							</div>
-						</label>
-					</li>
+					<div class="txt-area-cont">
+						<label for="user_phone_num">Телефон</label>
+						<div class="input-container">
+							<input type="tel" id="user_phone_num" name="phone_num" required />
+							<svg class="icon" width="13" height="13">
+								<use
+									href="./images/social/social-icons.svg#icon-modal-img2"
+								></use>
+							</svg>
+						</div>
+					</div>
 
-					<li class="txt-area-cont">
-						<label for="Коментар">
-							<p>Коментар</p>
-							<textarea rows="5" placeholder="Введіть текст"></textarea>
-						</label>
-					</li>
-				</ul>
-				<div class="agree-div">
-					<label for="checkbox">
-						<input type="checkbox" />
+					<div class="txt-area-cont">
+						<label for="user_mail">Пошта</label>
+						<div class="input-container">
+							<input type="email" id="user_mail" name="mail" required />
+							<svg class="icon" width="15" height="12">
+								<use
+									href="./images/social/social-icons.svg#icon-modal-img3"
+								></use>
+							</svg>
+						</div>
+					</div>
+
+					<div class="txt-area-cont">
+						<label for="user_comment">Коментар</label>
+						<textarea
+							rows="5"
+							placeholder="Введіть текст"
+							id="user_comment"
+							name="Comment"
+						></textarea>
+					</div>
+
+					<label for="checkbox" class="agree-line">
+						<input type="checkbox" id="checkbox" required />
+						<p>Погоджуюся з розсилкою та приймаю</p>
+						<a href="#">Умови договору</a>
 					</label>
-					<p>Погоджуюся з розсилкою та приймаю</p>
-					<a href="#">Умови договору</a>
-				</div>
-				<button type="button" class="send-btn">Відправити</button>
+
+					<button type="submit" class="send-btn">Відправити</button>
+				</form>
 			</div>
 		</div>
 
