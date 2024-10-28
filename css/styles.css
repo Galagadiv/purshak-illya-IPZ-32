@@ -241,8 +241,7 @@ section {
 				left: 0;
 				width: 100%;
 
-				background-color: var(--backgr-color);
-				opacity: 0.8;
+				background-color: rgba(47, 48, 58, 0.8);
 				padding: 27px;
 
 				font-size: 14px;
@@ -465,11 +464,12 @@ section {
 				padding-inline-start: 16px;
 				background-color: var(--backgr-color);
 				border-radius: 4px;
-				border: 1px solid var(--grey-color);
-				opacity: 60%;
+				border: 1px solid rgba(117, 117, 117, 0.6);
+				outline: 0;
 				color: var(--wht-color);
 				font-size: 16px;
 				line-height: 1.17;
+				transition: border var(--tras-settings);
 			}
 			button {
 				display: flex;
