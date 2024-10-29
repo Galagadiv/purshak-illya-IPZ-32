@@ -1,0 +1,41 @@
+@import "../../../utility/utility";
+
+.hero {
+	padding: 200px 0;
+	background-color: $backgr-color;
+
+	text-align: center;
+	background-image: linear-gradient(
+			rgba(47, 48, 58, 0.4),
+			rgba(47, 48, 58, 0.4)
+		),
+		url("../../../../../images/main/backgr.jpg");
+
+	background-size: 1600px;
+	background-position: center;
+	background-repeat: no-repeat;
+	&__title {
+		max-width: 700px;
+		margin-bottom: 30px;
+		font-weight: 900;
+		color: $wht-color;
+		font-size: 44px;
+		line-height: 1.36;
+		letter-spacing: 0.06em;
+		text-transform: uppercase;
+		justify-self: center;
+	}
+	&__button {
+		padding: 10px 24px;
+		background-color: $blue-color;
+		border-radius: 4px;
+		border: none;
+		cursor: pointer;
+		font-weight: 700;
+		font-family: $basic-font;
+		color: $wht-color;
+		font-size: 16px;
+		line-height: 1.875;
+		letter-spacing: 0.06em;
+	}
+}

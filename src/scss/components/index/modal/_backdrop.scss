@@ -1,0 +1,195 @@
+@import "../../../utility/utility";
+
+.backdrop {
+	display: none;
+	position: fixed;
+	align-items: center;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background-color: rgba(0, 0, 0, 0.5);
+	visibility: hidden;
+	pointer-events: none;
+	display: flex;
+	justify-content: center;
+
+	opacity: 0;
+	transition: opacity var(--tras-settings);
+	&__modal {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		position: fixed;
+		background-color: white;
+		padding: 40px;
+		width: 528px;
+		border-radius: 8px;
+		box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.2);
+		&__close-btn {
+			position: absolute;
+			top: 8px;
+			right: 8px;
+			background: none;
+			border: 1px solid rgba(0, 0, 0, 0.1);
+			border-radius: 5em;
+			width: 30px;
+			height: 30px;
+			font-size: 24px;
+			cursor: pointer;
+			line-height: 1em;
+			color: $dark-color;
+			transition: color $tras-settings;
+		}
+		&__close-btn:hover {
+			color: $more-blue-color;
+			transition: color $tras-settings;
+		}
+		&__title {
+			font-weight: 700;
+			color: $dark-color;
+			font-size: 20px;
+			text-align: center;
+			margin-bottom: 12px;
+		}
+		&__form {
+			display: flex;
+			flex-direction: column;
+			width: 100%;
+		}
+		&__form__input-container {
+			position: relative;
+		}
+		&__form__input-container__input {
+			width: 100%;
+			height: 40px;
+			padding: 0 35px;
+			outline: 1px solid rgba(0, 0, 0, 0.1);
+			border: 0;
+			border-radius: 4px;
+			transition: outline 250ms cubic-bezier(0.4, 0, 0.2, 1);
+		}
+		&__form__input-container__input:focus,
+		&__form__input-container__input:hover {
+			outline: 1px solid $more-blue-color;
+			transition: outline $tras-settings;
+		}
+		&__form__icon {
+			position: absolute;
+			left: 12px;
+			top: 50%;
+			transform: translateY(-50%);
+			pointer-events: none;
+			color: $dark-color;
+			transition: color $tras-settings;
+		}
+		&__form__input-container__input:hover + &__form__icon,
+		&__form__input-container__input:focus + &__form__icon {
+			color: $more-blue-color;
+			transition: color $tras-settings;
+		}
+
+		&__form__textarea-container__textarea {
+			width: 100%;
+			height: 120px;
+			padding: 12px 16px;
+			outline: 1px solid rgba(0, 0, 0, 0.1);
+			border: 0;
+			border-radius: 4px;
+			resize: none;
+			transition: outline $tras-settings;
+			font-size: 12px;
+			letter-spacing: 0.01em;
+			line-height: auto;
+
+			&:focus,
+			&:hover {
+				outline: 1px solid $more-blue-color;
+				transition: outline $tras-settings;
+			}
+		}
+
+		&__form__item:not(:first-child) {
+			margin-top: 10px;
+		}
+		&__form__item__label {
+			display: block;
+			text-align: left;
+			font-size: 12px;
+			letter-spacing: 0.01em;
+			color: $grey-color;
+			margin-bottom: 4px;
+		}
+		&__form__agree-line {
+			display: flex;
+			align-items: center;
+			margin-top: 20px;
+			margin-bottom: 30px;
+			align-self: center;
+		}
+		&__form__agree-line__checkbox {
+			border: 1px solid $dark-color;
+			margin-right: 5px;
+			width: 16px;
+			height: 15px;
+			appearance: none;
+			color: white;
+			border-radius: 2px;
+		}
+		&__form__agree-line__checkbox:hover {
+			cursor: pointer;
+		}
+		&__form__agree-line__checkbox:checked {
+			background: $more-blue-color;
+			border: none;
+			color: $wht-color;
+		}
+		&__form__agree-line__checkbox:checked::before {
+			content: "✔";
+			width: 16px;
+			height: 16px;
+			display: inline-block;
+			text-align: center;
+		}
+		&__form__agree-line__link {
+			color: $more-blue-color;
+			font-size: 14px;
+			margin-left: 4px;
+			line-height: 1.71em;
+			text-decoration: underline $more-blue-color;
+		}
+		&__form__agree-line__text {
+			font-size: 14px;
+			color: $grey-color;
+			margin: 0;
+			line-height: 1.71em;
+		}
+		&__form__agree-line__text:hover {
+			cursor: pointer;
+		}
+		&__form__send-btn {
+			padding: 10px 52px;
+			background-color: $blue-color;
+			border-radius: 4px;
+			border: none;
+			cursor: pointer;
+			align-self: center;
+			font-weight: 700;
+			font-family: $basic-font;
+			color: $wht-color;
+			font-size: 16px;
+			line-height: 1.875;
+			letter-spacing: 0.06em;
+			transition: box-shadow $tras-settings;
+		}
+		&__form__send-btn:hover {
+			box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.2);
+			transition: box-shadow $tras-settings;
+		}
+	}
+}
+.visible {
+	visibility: visible;
+	opacity: 1;
+	pointer-events: auto;
+}

@@ -1,8 +1,11 @@
+@import "../../utility/utility";
+@import "../../default/default";
+
 .footer {
-	background-color: var(--backgr-color);
+	background-color: $backgr-color;
 	padding: 60px 0px;
 
-	&__container {
+	.container {
 		display: flex;
 		align-items: baseline;
 		gap: 94px;
@@ -12,13 +15,12 @@
 		display: inline-block;
 		font-weight: 700;
 		font-size: 26px;
-		color: var(--wht-color);
+		color: $wht-color;
 		line-height: 1.17;
 		font-family: "Raleway", sans-serif;
-	}
-
-	&__logo span {
-		color: var(--more-blue-color);
+		& span {
+			color: $more-blue-color;
+		}
 	}
 
 	&__address-block {
@@ -30,7 +32,7 @@
 
 	&__address-a {
 		font-size: 14px;
-		color: var(--wht-color);
+		color: $wht-color;
 		opacity: 60%;
 		line-height: 1.17;
 		margin-top: 12px;
@@ -39,7 +41,7 @@
 	&__address-p {
 		display: inline-block;
 		font-size: 14px;
-		color: var(--wht-color);
+		color: $wht-color;
 		line-height: 1.17;
 		flex-wrap: nowrap;
 	}
@@ -47,7 +49,7 @@
 	&__media-block &__media-p {
 		font-weight: 700;
 		font-size: 14px;
-		color: var(--wht-color);
+		color: $wht-color;
 		line-height: 1.17;
 		letter-spacing: 0.02em;
 		text-transform: uppercase;
@@ -67,18 +69,18 @@
 		width: 44px;
 		height: 44px;
 		border-radius: 50%;
-		background-color: var(--fter-btn-backgr-color);
-		transition: background-color var(--tras-settings);
+		background-color: $fter-btn-backgr-color;
+		transition: background-color $tras-settings;
 	}
 
 	&__media-list li a:hover {
-		background-color: var(--more-blue-color);
-		transition: background-color var(--tras-settings);
+		background-color: $more-blue-color;
+		transition: background-color $tras-settings;
 	}
 
 	&__media-list li svg {
-		color: var(--wht-color);
-		transition: color var(--tras-settings);
+		color: $wht-color;
+		transition: color $tras-settings;
 	}
 
 	&__subscribe-block {
@@ -88,7 +90,7 @@
 	&__subscribe-block-title {
 		font-weight: 700;
 		font-size: 14px;
-		color: var(--wht-color);
+		color: $wht-color;
 		line-height: 1.17;
 		letter-spacing: 0.02em;
 		text-transform: uppercase;
@@ -107,20 +109,20 @@
 	&__subscribe-block-input {
 		flex-grow: 1;
 		padding-inline-start: 16px;
-		background-color: var(--backgr-color);
+		background-color: $backgr-color;
 		border-radius: 4px;
 		border: 1px solid rgba(117, 117, 117, 0.6);
 		outline: 0;
-		color: var(--wht-color);
+		color: $wht-color;
 		font-size: 16px;
 		line-height: 1.17;
-		transition: border var(--tras-settings);
+		transition: border $tras-settings;
 	}
 
 	&__subscribe-block button {
 		display: flex;
 		padding: 10px 28px;
-		background-color: var(--more-blue-color);
+		background-color: $more-blue-color;
 		border: 0;
 		border-radius: 4px;
 		gap: 10px;
@@ -130,7 +132,7 @@
 	&__subscribe-block button p {
 		font-weight: 700;
 		font-size: 16px;
-		color: var(--wht-color);
+		color: $wht-color;
 		line-height: 1.875;
 		letter-spacing: 0.09em;
 	}

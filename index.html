@@ -4,9 +4,9 @@
 		<title>Головна</title>
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<link rel="stylesheet" href="./modern-normalize.css" />
+		<link rel="stylesheet" href="./src/css/modern-normalize.css" />
 
-		<link rel="stylesheet" href="./src/scss/styles.scss" />
+		<link rel="stylesheet" href="./src/css/styles.css" />
 
 		<link rel="preconnect" href="https://fonts.googleapis.com" />
 		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -23,7 +23,7 @@
 
 	<body>
 		<header class="header">
-			<div class="header__container container">
+			<div class="container">
 				<a href="index.html" class="header__logo">
 					<img
 						src="./images/logobl.svg"
@@ -81,60 +81,60 @@
 			<section class="special">
 				<div class="container">
 					<ul class="special__list">
-						<li class="special__item">
-							<div class="special__icon-wrapper">
+						<li class="special__list__item">
+							<div class="special__list__item__icon-wrapper">
 								<img
 									src="./images/main/special/antenna.svg"
 									alt="Антена"
-									class="special__icon"
+									class="special__list__item__icon-wrapper__icon"
 								/>
 							</div>
-							<h3 class="special__title">УВАГА ДО ДЕТАЛЕЙ</h3>
-							<p class="special__description">
+							<h3 class="special__list__item__title">УВАГА ДО ДЕТАЛЕЙ</h3>
+							<p class="special__list__item__description">
 								Ідейні міркування, і навіть початок повсякденної роботи з
 								формування позиції.
 							</p>
 						</li>
 
-						<li class="special__item">
-							<div class="special__icon-wrapper">
+						<li class="special__list__item">
+							<div class="special__list__item__icon-wrapper">
 								<img
 									src="./images/main/special/clock.svg"
 									alt="Годинник"
-									class="special__icon"
+									class="special__list__item__icon-wrapper__icon"
 								/>
 							</div>
-							<h3 class="special__title">ПУНКТУАЛЬНІСТЬ</h3>
-							<p class="special__description">
+							<h3 class="special__list__item__title">ПУНКТУАЛЬНІСТЬ</h3>
+							<p class="special__list__item__description">
 								Завдання організації, особливо рамки і місце навчання кадрів
 								тягне у себе.
 							</p>
 						</li>
 
-						<li class="special__item">
-							<div class="special__icon-wrapper">
+						<li class="special__list__item">
+							<div class="special__list__item__icon-wrapper">
 								<img
 									src="./images/main/special/notebook.svg"
 									alt="Ноутбук"
-									class="special__icon"
+									class="special__list__item__icon-wrapper__icon"
 								/>
 							</div>
-							<h3 class="special__title">ПЛАНУВАННЯ</h3>
-							<p class="special__description">
+							<h3 class="special__list__item__title">ПЛАНУВАННЯ</h3>
+							<p class="special__list__item__description">
 								Так само консультація з широким активом значною мірою зумовлює.
 							</p>
 						</li>
 
-						<li class="special__item">
-							<div class="special__icon-wrapper">
+						<li class="special__list__item">
+							<div class="special__list__item__icon-wrapper">
 								<img
 									src="./images/main/special/astronaut.svg"
 									alt="Космонавт"
-									class="special__icon"
+									class="special__list__item__icon-wrapper__icon"
 								/>
 							</div>
-							<h3 class="special__title">СУЧАСНІ ТЕХНОЛОГІЇ</h3>
-							<p class="special__description">
+							<h3 class="special__list__item__title">СУЧАСНІ ТЕХНОЛОГІЇ</h3>
+							<p class="special__list__item__description">
 								Значимість цих проблем настільки очевидна, що реалізація
 								планових завдань.
 							</p>
@@ -188,7 +188,7 @@
 			</section>
 
 			<section class="team">
-				<div class="team__container container">
+				<div class="container">
 					<h2 class="team__title">Наша команда</h2>
 					<ul class="team__list">
 						<li class="team__list-item">
@@ -424,7 +424,7 @@
 			</section>
 
 			<section class="clients">
-				<div class="clients__container">
+				<div class="container">
 					<h2 class="clients__title">Постійні клієнти</h2>
 					<ul class="clients__list">
 						<li class="clients__item">
@@ -487,7 +487,7 @@
 		</main>
 
 		<footer class="footer">
-			<div class="footer__container">
+			<div class="container">
 				<div>
 					<a href="index.html" class="footer__logo"> <span>Web</span>Studio </a>
 					<address class="footer__address-block">
@@ -567,22 +567,28 @@
 		</footer>
 
 		<div class="backdrop" data-modal>
-			<div class="modal">
-				<button class="modal__close-btn" data-modal-close>&times;</button>
-				<h2 class="modal__title">Залиште свої дані, ми вам передзвонимо</h2>
-				<form class="modal__form">
-					<div class="modal__form__item">
-						<label for="user_name" class="modal__form__label">Ім'я</label>
-						<div class="modal__form__input-container">
+			<div class="backdrop__modal">
+				<button class="backdrop__modal__close-btn" data-modal-close>
+					&times;
+				</button>
+				<h2 class="backdrop__modal__title">
+					Залиште свої дані, ми вам передзвонимо
+				</h2>
+				<form class="backdrop__modal__form">
+					<div class="backdrop__modal__form__item">
+						<label for="user_name" class="backdrop__modal__form__item__label"
+							>Ім'я
+						</label>
+						<div class="backdrop__modal__form__input-container">
 							<input
 								type="text"
 								id="user_name"
 								name="name"
-								class="modal__form__input-container__input"
+								class="backdrop__modal__form__input-container__input"
 								required
 							/>
 
-							<svg class="modal__form__icon" width="12" height="12">
+							<svg class="backdrop__modal__form__icon" width="12" height="12">
 								<use
 									href="./images/social/social-icons.svg#icon-modal-img1"
 								></use>
@@ -590,19 +596,21 @@
 						</div>
 					</div>
 
-					<div class="modal__form__item">
-						<label for="user_phone_num" class="modal__form__label"
-							>Телефон</label
-						>
-						<div class="modal__form__input-container">
+					<div class="backdrop__modal__form__item">
+						<label
+							for="user_phone_num"
+							class="backdrop__modal__form__item__label"
+							>Телефон
+						</label>
+						<div class="backdrop__modal__form__input-container">
 							<input
 								type="tel"
 								id="user_phone_num"
 								name="phone_num"
-								class="modal__form__input-container__input"
+								class="backdrop__modal__form__input-container__input"
 								required
 							/>
-							<svg class="modal__form__icon" width="13" height="13">
+							<svg class="backdrop__modal__form__icon" width="13" height="13">
 								<use
 									href="./images/social/social-icons.svg#icon-modal-img2"
 								></use>
@@ -610,17 +618,19 @@
 						</div>
 					</div>
 
-					<div class="modal__form__item">
-						<label for="user_mail" class="modal__form__label">Пошта</label>
-						<div class="modal__form__input-container">
+					<div class="backdrop__modal__form__item">
+						<label for="user_mail" class="backdrop__modal__form__item__label"
+							>Пошта
+						</label>
+						<div class="backdrop__modal__form__input-container">
 							<input
 								type="email"
 								id="user_mail"
 								name="mail"
-								class="modal__form__input-container__input"
+								class="backdrop__modal__form__input-container__input"
 								required
 							/>
-							<svg class="modal__form__icon" width="15" height="12">
+							<svg class="backdrop__modal__form__icon" width="15" height="12">
 								<use
 									href="./images/social/social-icons.svg#icon-modal-img3"
 								></use>
@@ -628,8 +638,8 @@
 						</div>
 					</div>
 
-					<div class="modal__form__item">
-						<label for="user_comment" class="modal__form__label"
+					<div class="backdrop__modal__form__item">
+						<label for="user_comment" class="backdrop__modal__form__item__label"
 							>Коментар
 						</label>
 						<textarea
@@ -637,26 +647,31 @@
 							placeholder="Введіть текст"
 							id="user_comment"
 							name="Comment"
-							class="modal__form__textarea-container_textarea"
+							class="backdrop__modal__form__textarea-container__textarea"
 						></textarea>
 					</div>
 
-					<div class="modal__form__agree-line">
+					<div class="backdrop__modal__form__agree-line">
 						<input
 							type="checkbox"
 							id="checkbox"
-							class="modal__form__agree-line__checkbox"
+							class="backdrop__modal__form__agree-line__checkbox"
 							required
 						/>
-						<label for="checkbox" class="modal__form__agree-line__label">
-							<p class="modal__form__agree-line__text">
+						<label
+							for="checkbox"
+							class="backdrop__modal__form__agree-line__label"
+						>
+							<p class="backdrop__modal__form__agree-line__text">
 								Погоджуюся з розсилкою та приймаю
 							</p>
 						</label>
-						<a href="#" class="modal__form__agree-line__link">Умови договору</a>
+						<a href="#" class="backdrop__modal__form__agree-line__link"
+							>Умови договору
+						</a>
 					</div>
 
-					<button type="submit" class="modal__form__agree-line__send-btn">
+					<button type="submit" class="backdrop__modal__form__send-btn">
 						Відправити
 					</button>
 				</form>
