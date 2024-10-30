@@ -47,6 +47,10 @@ section {
   padding: 94px 0;
 }
 
+button {
+  cursor: pointer;
+}
+
 .header {
   padding: 24px 0;
   border-bottom: 1px solid #ececec;
@@ -71,7 +75,7 @@ section {
   transition: color 250ms 250ms cubic-bezier(0.4, 0, 0.2, 1);
   font-weight: 500;
   color: #212121;
-  font-size: 14px;
+  font-size: 16px;
   line-height: 1.17;
   letter-spacing: 0.02em;
 }
@@ -86,15 +90,12 @@ section {
   background-color: #2196f3;
   position: absolute;
   border-radius: 2px;
-  bottom: -33px;
+  bottom: -32px;
   transform: scaleX(0);
   transition: transform 250ms 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .header__nav-link:hover::after, .header__nav-link--active::after {
   transform: scaleX(1);
-}
-.header__nav-link--hover-out::after {
-  transform: scaleX(0);
 }
 .header__nav-link--active {
   color: #188ce8;
@@ -112,6 +113,10 @@ section {
   display: flex;
   align-items: center;
   gap: 10px;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.17;
+  letter-spacing: 0.02em;
   color: #757575;
   transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
@@ -129,7 +134,7 @@ section {
   padding: 200px 0;
   background-color: #2f303a;
   text-align: center;
-  background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url("../../../../../images/main/backgr.jpg");
+  background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url("../../images/main/backgr.jpg");
   background-size: 1600px;
   background-position: center;
   background-repeat: no-repeat;
@@ -205,6 +210,10 @@ body {
 
 section {
   padding: 94px 0;
+}
+
+button {
+  cursor: pointer;
 }
 
 .special {
@@ -286,6 +295,10 @@ body {
 
 section {
   padding: 94px 0;
+}
+
+button {
+  cursor: pointer;
 }
 
 .what-doing__title {
@@ -370,6 +383,10 @@ body {
 
 section {
   padding: 94px 0;
+}
+
+button {
+  cursor: pointer;
 }
 
 .team__title {
@@ -477,6 +494,10 @@ body {
 
 section {
   padding: 94px 0;
+}
+
+button {
+  cursor: pointer;
 }
 
 .clients__title {
@@ -763,7 +784,7 @@ section {
   padding: 0 24px;
   position: absolute;
   background-color: rgba(33, 150, 243, 0.9);
-  transform: translateY(100%);
+  transform: translateY(101%);
   color: #ffffff;
   font-size: 18px;
   line-height: 1.55em;
@@ -785,7 +806,7 @@ section {
 .portfolio__list__item__item-textblock__category {
   color: #757575;
   font-size: 16px;
-  line-height: 1.875;
+  line-height: 1.875em;
 }
 
 a {
@@ -836,6 +857,10 @@ section {
   padding: 94px 0;
 }
 
+button {
+  cursor: pointer;
+}
+
 .footer {
   background-color: #2f303a;
   padding: 60px 0px;
@@ -868,6 +893,11 @@ section {
   opacity: 60%;
   line-height: 1.17;
   margin-top: 12px;
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1), opacity 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+.footer__address-a:hover {
+  color: #188ce8;
+  opacity: 1;
 }
 .footer__address-p {
   display: inline-block;
@@ -948,7 +978,7 @@ section {
   gap: 10px;
   cursor: pointer;
 }
-.footer__subscribe-block button p {
+.footer__subscribe-block button span {
   font-weight: 700;
   font-size: 16px;
   color: #ffffff;
@@ -1002,4 +1032,8 @@ body {
 
 section {
   padding: 94px 0;
+}
+
+button {
+  cursor: pointer;
 }/*# sourceMappingURL=styles.css.map */

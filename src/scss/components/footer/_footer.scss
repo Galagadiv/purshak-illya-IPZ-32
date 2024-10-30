@@ -36,6 +36,11 @@
 		opacity: 60%;
 		line-height: 1.17;
 		margin-top: 12px;
+		transition: color $tras-settings, opacity $tras-settings;
+		&:hover {
+			color: $blue-color;
+			opacity: 1;
+		}
 	}
 
 	&__address-p {
@@ -129,7 +134,7 @@
 		cursor: pointer;
 	}
 
-	&__subscribe-block button p {
+	&__subscribe-block button span {
 		font-weight: 700;
 		font-size: 16px;
 		color: $wht-color;

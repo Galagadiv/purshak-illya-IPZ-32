@@ -22,7 +22,7 @@
 		transition: color 250ms $tras-settings;
 		font-weight: 500;
 		color: $dark-color;
-		font-size: 14px;
+		font-size: 16px;
 		line-height: 1.17;
 		letter-spacing: 0.02em;
 	}
@@ -37,16 +37,13 @@
 		background-color: $more-blue-color;
 		position: absolute;
 		border-radius: 2px;
-		bottom: -33px;
+		bottom: -32px;
 		transform: scaleX(0);
 		transition: transform 250ms $tras-settings;
 	}
 	&__nav-link:hover::after,
 	&__nav-link--active::after {
 		transform: scaleX(1);
-	}
-	&__nav-link--hover-out::after {
-		transform: scaleX(0);
 	}
 	/* Зміна кольору тексту на активних посиланнях */
 	&__nav-link--active {
@@ -66,6 +63,11 @@
 		display: flex;
 		align-items: center;
 		gap: 10px;
+		font-weight: 500;
+		font-size: 16px;
+		line-height: 1.17;
+		letter-spacing: 0.02em;
+
 		color: $grey-color;
 		transition: color $tras-settings;
 	}

@@ -10,16 +10,5 @@ document.addEventListener("DOMContentLoaded", function () {
 			link.classList.add("header__nav-link--active");
 			activeLink = link;
 		}
-		link.addEventListener("mouseenter", () => {
-			if (activeLink && activeLink !== link) {
-				activeLink.classList.add("header__nav-link--hover-out");
-			}
-		});
-
-		link.addEventListener("mouseleave", () => {
-			if (activeLink && activeLink !== link) {
-				activeLink.classList.remove("header__nav-link--hover-out");
-			}
-		});
 	});
 });
