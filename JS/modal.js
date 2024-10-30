@@ -9,7 +9,6 @@
 	refs.closeModalBtn.addEventListener("click", toggleModal);
 
 	function toggleModal() {
-		refs.modal.classList.toggle("isnt-hidden");
+		refs.modal.classList.toggle("visible");
 	}
-	// acasc
 })();

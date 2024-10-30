@@ -1,0 +1,46 @@
+@import "../../../utility/utility";
+@import "../../../default/default";
+
+.what-doing {
+	.container {
+	}
+	&__title {
+		text-align: center;
+
+		font-weight: 700;
+		color: $dark-color;
+		font-size: 36px;
+		line-height: 1.17;
+	}
+
+	&__list {
+		display: flex;
+		justify-content: center;
+		gap: 30px;
+	}
+	&__item {
+		position: relative;
+	}
+	&__image {
+		width: 100%;
+		height: auto;
+	}
+
+	&__caption {
+		position: absolute;
+		bottom: 0;
+		left: 0;
+		width: 100%;
+		background-color: rgba(47, 48, 58, 0.8);
+		padding: 27px;
+		text-align: center;
+	}
+
+	&__text {
+		font-size: 14px;
+		font-weight: 700;
+		line-height: 1.17;
+		text-transform: uppercase;
+		color: $wht-color;
+	}
+}
