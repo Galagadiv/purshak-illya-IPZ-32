@@ -11,15 +11,19 @@
 		),
 		url("../../images/main/backgr.jpg");
 
-	background-size: 1600px;
+	background-size: 1600px 600px;
 	background-position: center;
 	background-repeat: no-repeat;
+
+	@include mobile {
+		padding: 118px 0;
+	}
 	&__title {
 		max-width: 700px;
 		margin-bottom: 30px;
 		font-weight: 900;
 		color: $wht-color;
-		font-size: 44px;
+		font-size: 26px;
 		line-height: 1.36;
 		letter-spacing: 0.06em;
 		text-transform: uppercase;
@@ -30,7 +34,6 @@
 		background-color: $blue-color;
 		border-radius: 4px;
 		border: none;
-		cursor: pointer;
 		font-weight: 700;
 		font-family: $basic-font;
 		color: $wht-color;
