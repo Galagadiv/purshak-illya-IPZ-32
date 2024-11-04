@@ -17,17 +17,29 @@
 
 	@include mobile {
 		padding: 118px 0;
+		height: auto;
+		// @media (min-device-pixel-ratio: 1),
+		// 	(min-resolution: 192dpi),
+		// 	(min-resolution: 2dppx) {
+		// 	.box {
+		// 		background-image: url("backgr@2x.png");
+		// 	}
+		// }
 	}
 	&__title {
 		max-width: 700px;
 		margin-bottom: 30px;
 		font-weight: 900;
 		color: $wht-color;
-		font-size: 26px;
+		font-size: 44px;
 		line-height: 1.36;
 		letter-spacing: 0.06em;
 		text-transform: uppercase;
 		justify-self: center;
+		@include mobile {
+			font-size: 26px;
+			max-width: 360px;
+		}
 	}
 	&__button {
 		padding: 10px 24px;

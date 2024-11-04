@@ -5,56 +5,68 @@
 		display: flex;
 		flex-wrap: wrap;
 		gap: 30px;
+		@include mobile {
+			justify-content: center;
+		}
 		&__item {
 			position: relative;
 			max-width: 370px;
-		}
-		&__item:hover {
-			box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.2);
-			transition: box-shadow $tras-settings;
-		}
-		&__item:hover &__item__overlay-container__overlay {
-			padding: 63px 24px;
-			transform: translateY(0%);
-			transition: transform $tras-settings;
-		}
+			@include mobile {
+				max-width: 450px;
+				width: 100%;
+			}
+			&:hover {
+				box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.2);
+				transition: box-shadow $tras-settings;
+			}
+			&:hover &__overlay-container__overlay {
+				padding: 63px 24px;
+				transform: translateY(0%);
+				transition: transform $tras-settings;
+			}
+			&__overlay-container {
+				position: relative;
+				overflow: hidden;
+				&__overlay {
+					display: flex;
+					align-items: center;
+					height: 100%;
+					padding: 0 24px;
+					position: absolute;
 
-		&__item__overlay-container {
-			position: relative;
-			overflow: hidden;
-		}
-		&__item__overlay-container__overlay {
-			display: flex;
-			align-items: center;
-			height: 100%;
-			padding: 0 24px;
-			position: absolute;
+					background-color: rgba(33, 150, 243, 0.9);
+					transform: translateY(101%);
 
-			background-color: rgba(33, 150, 243, 0.9);
-			transform: translateY(101%);
-
-			color: $wht-color;
-			font-size: 18px;
-			line-height: 1.55em;
-			transition: transform $tras-settings;
-		}
-		&__item__item-textblock {
-			padding: 20px 24px;
-			border: 1px solid;
-			border-top: 0;
-			border-color: $border-color;
-		}
-		&__item__item-textblock__title {
-			font-weight: 700;
-			color: $dark-color;
-			font-size: 18px;
-			line-height: 2;
-			letter-spacing: 0.06em;
-		}
-		&__item__item-textblock__category {
-			color: $grey-color;
-			font-size: 16px;
-			line-height: 1.875em;
+					color: $wht-color;
+					font-size: 18px;
+					line-height: 1.55em;
+					transition: transform $tras-settings;
+				}
+				@include mobile {
+					img {
+						width: 100%;
+						height: auto;
+					}
+				}
+			}
+			&__textblock {
+				padding: 20px 24px;
+				border: 1px solid;
+				border-top: 0;
+				border-color: $border-color;
+				&__title {
+					font-weight: 700;
+					color: $dark-color;
+					font-size: 18px;
+					line-height: 2;
+					letter-spacing: 0.06em;
+				}
+				&__category {
+					color: $grey-color;
+					font-size: 16px;
+					line-height: 1.875em;
+				}
+			}
 		}
 	}
 }

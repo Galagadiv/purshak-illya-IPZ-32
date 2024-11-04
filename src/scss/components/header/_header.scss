@@ -15,69 +15,78 @@
 		display: flex;
 		flex-direction: row;
 		gap: 50px;
+		&__item__link {
+			position: relative;
+			text-decoration: none;
+			transition: color 250ms $tras-settings;
+			font-weight: 500;
+			color: $dark-color;
+			font-size: 16px;
+			line-height: 1.17;
+			letter-spacing: 0.02em;
+			&:hover {
+				color: $blue-color;
+			}
+			&::after {
+				content: "";
+				display: block;
+				width: 100%;
+				height: 4px;
+				background-color: $more-blue-color;
+				position: absolute;
+				border-radius: 2px;
+				bottom: -32px;
+				transform: scaleX(0);
+				transition: transform 250ms $tras-settings;
+			}
+			&--active {
+				color: $blue-color;
+			}
+			&:hover::after,
+			&--active::after {
+				transform: scaleX(1);
+			}
+		}
 	}
-	&__nav-link {
-		position: relative;
-		text-decoration: none;
-		transition: color 250ms $tras-settings;
-		font-weight: 500;
-		color: $dark-color;
-		font-size: 16px;
-		line-height: 1.17;
-		letter-spacing: 0.02em;
-	}
-	&__nav-link:hover {
-		color: $blue-color;
-	}
-	&__nav-link::after {
-		content: "";
-		display: block;
-		width: 100%;
-		height: 4px;
-		background-color: $more-blue-color;
-		position: absolute;
-		border-radius: 2px;
-		bottom: -32px;
-		transform: scaleX(0);
-		transition: transform 250ms $tras-settings;
-	}
-	&__nav-link:hover::after,
-	&__nav-link--active::after {
-		transform: scaleX(1);
-	}
-	/* Зміна кольору тексту на активних посиланнях */
-	&__nav-link--active {
-		color: $blue-color;
-	}
-	/* текст чорний після переведення */
-	&__nav-link--hover-out {
-		color: #000;
-	}
+
 	&__contacts {
 		display: flex;
 		gap: 60px;
 		margin-left: auto;
 		align-items: center;
-	}
-	&__contacts-link {
-		display: flex;
-		align-items: center;
-		gap: 10px;
-		font-weight: 500;
-		font-size: 16px;
-		line-height: 1.17;
-		letter-spacing: 0.02em;
+		&__item svg {
+			color: $grey-color;
+		}
+		&__link {
+			display: flex;
+			align-items: center;
+			gap: 10px;
+			font-weight: 500;
+			font-size: 16px;
+			line-height: 1.17;
+			letter-spacing: 0.02em;
 
-		color: $grey-color;
-		transition: color $tras-settings;
+			color: $grey-color;
+			transition: color $tras-settings;
+		}
+		&__link:hover {
+			color: $blue-color;
+		}
+		&__link:hover svg {
+			color: $blue-color;
+		}
 	}
-	&__contacts-link:hover {
-		color: $blue-color;
-	}
-	&__contacts-link:hover svg {
-		color: $blue-color;
-	}
-	&__contacts-item svg {
-		color: $grey-color;
+	@include mobile {
+		padding: 16px 0;
+		&__nav,
+		&__contacts {
+			display: none;
+		}
+		&__logo {
+			margin: 0;
+
+			// max-width: 134px;
+			// max-height: 28px;
+		}
 	}
 }

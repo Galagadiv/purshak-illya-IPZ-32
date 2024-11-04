@@ -2,7 +2,11 @@
 @import "../../../default/default";
 
 .what-doing {
-	.container {
+	@include mobile {
+		display: none;
+	}
+	@include tablet {
+		display: none;
 	}
 	&__title {
 		text-align: center;
