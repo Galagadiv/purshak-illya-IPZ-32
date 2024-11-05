@@ -1,4 +1,4 @@
-@import "../../../utility/utility";
+@import "../../utility/utility";
 
 .mob-menu {
 	position: fixed;
@@ -7,7 +7,7 @@
 	height: 100%;
 	padding: 48px 40px;
 	background-color: $wht-color;
-	transform: translateY(-100%);
+	transform: translateY(-110%);
 	transition: transform $tras-settings;
 	&__close-btn {
 		position: absolute;
