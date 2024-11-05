@@ -2,11 +2,15 @@
 @import "../../default/default";
 
 .header {
+	display: flex;
 	padding: 24px 0;
 	border-bottom: 1px solid $border-color;
 	.container {
 		display: flex;
 		align-items: center;
+		@include mobile {
+			justify-content: space-between;
+		}
 	}
 	&__logo {
 		margin-right: 93px;
@@ -48,7 +52,6 @@
 			}
 		}
 	}
-
 	&__contacts {
 		display: flex;
 		gap: 60px;
@@ -76,14 +79,25 @@
 			color: $blue-color;
 		}
 	}
+	&__menu-btn {
+		display: none;
+		background: none;
+		border: 0;
+		padding: 12px 8px;
+		transition: color $tras-settings;
+		&:hover {
+			color: $blue-color;
+			transition: color $tras-settings;
+		}
+	}
 	@include mobile {
 		padding: 16px 0;
 		&__nav,
 		&__contacts {
 			display: none;
 		}
-		&__logo {
-			margin: 0;
+		&__menu-btn {
+			display: flex;
 		}
 	}
 }
