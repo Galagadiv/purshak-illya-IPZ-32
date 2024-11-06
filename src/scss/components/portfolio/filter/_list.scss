@@ -15,6 +15,10 @@
 				max-width: 450px;
 				width: 100%;
 			}
+			@include tablet {
+				max-width: 350px;
+				width: 100%;
+			}
 			&:hover {
 				box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.2);
 				transition: box-shadow $tras-settings;
@@ -42,7 +46,19 @@
 					line-height: 1.55em;
 					transition: transform $tras-settings;
 				}
+				@include desktop {
+					img {
+						width: 100%;
+						height: auto;
+					}
+				}
 				@include mobile {
+					img {
+						width: 100%;
+						height: auto;
+					}
+				}
+				@include tablet {
 					img {
 						width: 100%;
 						height: auto;

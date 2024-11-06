@@ -882,6 +882,11 @@ button {
     padding: 93px 15px;
   }
 }
+@media screen and (min-width: 768px) and (max-width: 1999px) {
+  .backdrop {
+    padding: 208px 159px;
+  }
+}
 .backdrop__modal {
   display: flex;
   flex-direction: column;
@@ -891,6 +896,11 @@ button {
   max-width: 528px;
   border-radius: 8px;
   box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.2);
+}
+@media screen and (min-width: 768px) and (max-width: 1999px) {
+  .backdrop__modal {
+    max-width: 450px;
+  }
 }
 .backdrop__modal__close-btn {
   position: absolute;
@@ -991,6 +1001,11 @@ button {
   letter-spacing: 0.03em;
 }
 @media screen and (max-width: 767px) {
+  .backdrop__modal__form__agree-line {
+    font-size: 12px;
+  }
+}
+@media screen and (min-width: 768px) and (max-width: 1999px) {
   .backdrop__modal__form__agree-line {
     font-size: 12px;
   }
@@ -1120,6 +1135,12 @@ button {
     width: 100%;
   }
 }
+@media screen and (min-width: 768px) and (max-width: 1999px) {
+  .portfolio__list__item {
+    max-width: 350px;
+    width: 100%;
+  }
+}
 .portfolio__list__item:hover {
   box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.2);
   transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
@@ -1146,7 +1167,19 @@ button {
   line-height: 1.55em;
   transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
+@media screen and (min-width: 1200px) {
+  .portfolio__list__item__overlay-container img {
+    width: 100%;
+    height: auto;
+  }
+}
 @media screen and (max-width: 767px) {
+  .portfolio__list__item__overlay-container img {
+    width: 100%;
+    height: auto;
+  }
+}
+@media screen and (min-width: 768px) and (max-width: 1999px) {
   .portfolio__list__item__overlay-container img {
     width: 100%;
     height: auto;
