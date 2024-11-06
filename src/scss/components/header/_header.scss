@@ -22,12 +22,13 @@
 		&__item__link {
 			position: relative;
 			text-decoration: none;
-			transition: color 250ms $tras-settings;
+			transition: color $tras-settings;
 			font-weight: 500;
 			color: $dark-color;
-			font-size: 16px;
+			font-size: 14px;
 			line-height: 1.17;
 			letter-spacing: 0.02em;
+
 			&:hover {
 				color: $blue-color;
 			}
@@ -42,6 +43,9 @@
 				bottom: -32px;
 				transform: scaleX(0);
 				transition: transform 250ms $tras-settings;
+				@include tablet {
+					bottom: -36px;
+				}
 			}
 			&--active {
 				color: $blue-color;
@@ -65,12 +69,15 @@
 			align-items: center;
 			gap: 10px;
 			font-weight: 500;
-			font-size: 16px;
+			font-size: 14px;
 			line-height: 1.17;
 			letter-spacing: 0.02em;
 
 			color: $grey-color;
 			transition: color $tras-settings;
+			@include tablet {
+				font-size: 12px;
+			}
 		}
 		&__link:hover {
 			color: $blue-color;
@@ -98,6 +105,26 @@
 		}
 		&__menu-btn {
 			display: flex;
+		}
+		&__logo {
+			img {
+				width: 134px;
+				height: 28px;
+			}
+		}
+	}
+	@include tablet {
+		&__contacts {
+			flex-direction: column;
+			align-items: flex-start;
+			gap: 10px;
+		}
+		&__logo {
+			margin-right: 88px;
+			img {
+				width: 134px;
+				height: 28px;
+			}
 		}
 	}
 }

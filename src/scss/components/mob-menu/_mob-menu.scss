@@ -2,6 +2,7 @@
 @import "../../utility/utility";
 
 .mob-menu {
+	display: none;
 	position: fixed;
 	top: 0;
 	width: 100%;
@@ -30,7 +31,7 @@
 		display: flex;
 		flex-direction: column;
 		gap: 32px;
-		margin-bottom: 306px;
+		margin-bottom: 300px;
 		&__item__link {
 			position: relative;
 			text-decoration: none;
@@ -106,5 +107,10 @@
 	&__visible {
 		transform: translateY(0%);
 		transition: transform $tras-settings;
+	}
+	@include mobile {
+		display: flex;
+		flex-direction: column;
+		// visibility: visible;
 	}
 }

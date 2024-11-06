@@ -18,13 +18,12 @@
 	@include mobile {
 		padding: 118px 0;
 		height: auto;
-		// @media (min-device-pixel-ratio: 1),
-		// 	(min-resolution: 192dpi),
-		// 	(min-resolution: 2dppx) {
-		// 	.box {
-		// 		background-image: url("backgr@2x.png");
-		// 	}
-		// }
+		background-size: cover;
+	}
+	@include tablet {
+		padding: 118px 0;
+		height: auto;
+		background-size: cover;
 	}
 	&__title {
 		max-width: 700px;
@@ -37,6 +36,10 @@
 		text-transform: uppercase;
 		justify-self: center;
 		@include mobile {
+			font-size: 26px;
+			max-width: 360px;
+		}
+		@include tablet {
 			font-size: 26px;
 			max-width: 360px;
 		}

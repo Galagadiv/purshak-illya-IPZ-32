@@ -15,6 +15,13 @@
 			align-items: center;
 			gap: 60px;
 		}
+		@include tablet {
+			justify-content: space-between;
+			flex-wrap: wrap;
+			align-items: flex-start;
+			padding-left: 76px;
+			padding-right: 76px;
+		}
 	}
 	&__logo {
 		display: inline-block;
@@ -24,6 +31,11 @@
 		line-height: 1.17;
 		font-family: "Raleway", sans-serif;
 		@include mobile {
+			display: flex;
+			justify-content: center;
+			align-items: center;
+		}
+		@include tablet {
 			display: flex;
 			justify-content: center;
 			align-items: center;
@@ -39,6 +51,9 @@
 		font-style: normal;
 		margin-top: 28px;
 		@include mobile {
+			align-items: center;
+		}
+		@include tablet {
 			align-items: center;
 		}
 		&__contact {
@@ -74,6 +89,9 @@
 			@include mobile {
 				text-align: center;
 			}
+			@include tablet {
+				text-align: center;
+			}
 		}
 		&__list {
 			display: flex;
@@ -107,6 +125,10 @@
 		@include mobile {
 			width: 100%;
 		}
+		@include tablet {
+			// align-content: center;
+			width: 100%;
+		}
 		&__title {
 			font-weight: 700;
 			font-size: 14px;
@@ -118,6 +140,9 @@
 			@include mobile {
 				text-align: center;
 			}
+			@include tablet {
+				text-align: center;
+			}
 		}
 		&__form {
 			display: flex;
@@ -127,6 +152,14 @@
 				flex-direction: column;
 				align-items: center;
 				gap: 20px;
+			}
+			@include tablet {
+				flex-direction: column;
+				align-items: center;
+				gap: 20px;
+				max-width: 450px;
+				margin-left: auto;
+				margin-right: auto;
 			}
 			& label {
 				display: none;

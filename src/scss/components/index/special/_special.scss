@@ -16,6 +16,9 @@
 			@include mobile {
 				max-width: 100%;
 			}
+			@include tablet {
+				max-width: 354px;
+			}
 			&__icon-wrapper {
 				padding: 25px 100px;
 				margin-bottom: 30px;
