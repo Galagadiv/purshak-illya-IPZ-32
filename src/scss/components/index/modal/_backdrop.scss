@@ -15,7 +15,7 @@
 	justify-content: center;
 
 	opacity: 0;
-	transition: opacity var(--tras-settings);
+	transition: opacity $tras-settings;
 	&__modal {
 		display: flex;
 		flex-direction: column;
