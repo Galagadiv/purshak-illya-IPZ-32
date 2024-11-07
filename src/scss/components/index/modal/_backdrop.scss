@@ -67,7 +67,7 @@
 			outline: 1px solid rgba(0, 0, 0, 0.1);
 			border: 0;
 			border-radius: 4px;
-			transition: outline 250ms cubic-bezier(0.4, 0, 0.2, 1);
+			transition: outline $tras-settings;
 		}
 		&__form__input-container__input:focus,
 		&__form__input-container__input:hover {
