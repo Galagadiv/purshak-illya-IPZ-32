@@ -34,11 +34,15 @@
 				</a>
 				<nav class="header__nav">
 					<ul class="header__nav-list">
-						<li class="header__nav-item">
-							<a href="index.html" class="header__nav-link">Студія</a>
+						<li class="header__nav-list__item">
+							<a href="index.html" class="header__nav-list__item__link"
+								>Студія
+							</a>
 						</li>
 						<li class="header__nav-item">
-							<a href="portfolio.html" class="header__nav-link">Портфоліо</a>
+							<a href="portfolio.html" class="header__nav-list__item__link"
+								>Портфоліо
+							</a>
 						</li>
 						<li class="header__nav-item">
 							<a href="#" class="header__nav-link">Контакти</a>
@@ -65,6 +69,80 @@
 						</a>
 					</li>
 				</ul>
+
+				<button class="header__menu-btn" mob-menu-open>
+					<svg width="24" height="16">
+						<use href="./images/social/social-icons.svg#icon-humb-menu"></use>
+					</svg>
+				</button>
+			</div>
+
+			<div class="mob-menu" mob-menu>
+				<button class="mob-menu__close-btn" mob-menu-close>&times;</button>
+				<nav class="mob-menu__nav">
+					<ul class="mob-menu__nav-list">
+						<li class="mob-menu__nav-list__item">
+							<a href="index.html" class="mob-menu__nav-list__item__link"
+								>Студія
+							</a>
+						</li>
+						<li class="mob-menu__nav-item">
+							<a href="portfolio.html" class="mob-menu__nav-list__item__link"
+								>Портфоліо
+							</a>
+						</li>
+						<li class="mob-menu__nav-item">
+							<a href="#" class="mob-menu__nav-list__item__link">Контакти</a>
+						</li>
+					</ul>
+				</nav>
+				<ul class="mob-menu__contacts">
+					<li class="mob-menu__contacts__item">
+						<a href="tel:+380994814090" class="mob-menu__contacts__link tel">
+							+38 099 481 40 90
+						</a>
+					</li>
+					<li class="mob-menu__contacts__item">
+						<a
+							href="mailto:info@devstrudio.com"
+							class="mob-menu__contacts__link"
+						>
+							info@devstrudio.com
+						</a>
+					</li>
+				</ul>
+
+				<ul class="mob-menu__socials">
+					<li class="mob-menu__socials__item">
+						<a
+							href="https://www.instagram.com/"
+							class="mob-menu__socials__item__link"
+						>
+							instagram
+						</a>
+					</li>
+					<li class="mob-menu__socials__item">
+						<a href="https://x.com/" class="mob-menu__socials__item__link"
+							>twitter
+						</a>
+					</li>
+					<li class="mob-menu__socials__item">
+						<a
+							href="https://www.facebook.com/"
+							class="mob-menu__socials__item__link"
+						>
+							facebook
+						</a>
+					</li>
+					<li class="mob-menu__socials__item">
+						<a
+							href="https://ua.linkedin.com/"
+							class="mob-menu__socials__item__link"
+						>
+							linkedin
+						</a>
+					</li>
+				</ul>
 			</div>
 		</header>
 
@@ -78,29 +156,45 @@
 							</button>
 						</li>
 						<li class="portfolio__filter__item">
-							<button type="button" class="portfolio__filter__item__button">
+							<button
+								type="button"
+								class="portfolio__filter__item__button"
+								data-name="website"
+							>
 								Веб-сайти
 							</button>
 						</li>
 						<li class="portfolio__filter__item">
-							<button type="button" class="portfolio__filter__item__button">
+							<button
+								type="button"
+								class="portfolio__filter__item__button"
+								data-name="app"
+							>
 								Додатки
 							</button>
 						</li>
 						<li class="portfolio__filter__item">
-							<button type="button" class="portfolio__filter__item__button">
+							<button
+								type="button"
+								class="portfolio__filter__item__button"
+								data-name="Design"
+							>
 								Дизайн
 							</button>
 						</li>
 						<li class="portfolio__filter__item">
-							<button type="button" class="portfolio__filter__item__button">
+							<button
+								type="button"
+								class="portfolio__filter__item__button"
+								data-name="marketing"
+							>
 								Маркетинг
 							</button>
 						</li>
 					</ul>
 
 					<ul class="portfolio__list">
-						<li class="portfolio__list__item">
+						<li class="portfolio__list__item" data-name="app">
 							<div class="portfolio__list__item__overlay-container">
 								<div class="portfolio__list__item__overlay-container__overlay">
 									Ресурс пропонує комплексні пропозиції з різним рівнем
@@ -125,7 +219,7 @@
 							</div>
 						</li>
 
-						<li class="portfolio__list__item">
+						<li class="portfolio__list__item" data-name="Design">
 							<div class="portfolio__list__item__overlay-container">
 								<div class="portfolio__list__item__overlay-container__overlay">
 									Ресурс пропонує комплексні пропозиції з різним рівнем
@@ -150,7 +244,7 @@
 							</div>
 						</li>
 
-						<li class="portfolio__list__item">
+						<li class="portfolio__list__item" data-name="app">
 							<div class="portfolio__list__item__overlay-container">
 								<div class="portfolio__list__item__overlay-container__overlay">
 									Ресурс пропонує комплексні пропозиції з різним рівнем
@@ -175,7 +269,7 @@
 							</div>
 						</li>
 
-						<li class="portfolio__list__item">
+						<li class="portfolio__list__item" data-name="marketing">
 							<div class="portfolio__list__item__overlay-container">
 								<div class="portfolio__list__item__overlay-container__overlay">
 									Ресурс пропонує комплексні пропозиції з різним рівнем
@@ -200,7 +294,7 @@
 							</div>
 						</li>
 
-						<li class="portfolio__list__item">
+						<li class="portfolio__list__item" data-name="app">
 							<div class="portfolio__list__item__overlay-container">
 								<div class="portfolio__list__item__overlay-container__overlay">
 									Ресурс пропонує комплексні пропозиції з різним рівнем
@@ -225,7 +319,7 @@
 							</div>
 						</li>
 
-						<li class="portfolio__list__item">
+						<li class="portfolio__list__item" data-name="website">
 							<div class="portfolio__list__item__overlay-container">
 								<div class="portfolio__list__item__overlay-container__overlay">
 									Ресурс пропонує комплексні пропозиції з різним рівнем
@@ -250,7 +344,7 @@
 							</div>
 						</li>
 
-						<li class="portfolio__list__item">
+						<li class="portfolio__list__item" data-name="Design">
 							<div class="portfolio__list__item__overlay-container">
 								<div class="portfolio__list__item__overlay-container__overlay">
 									Ресурс пропонує комплексні пропозиції з різним рівнем
@@ -275,7 +369,7 @@
 							</div>
 						</li>
 
-						<li class="portfolio__list__item">
+						<li class="portfolio__list__item" data-name="marketing">
 							<div class="portfolio__list__item__overlay-container">
 								<div class="portfolio__list__item__overlay-container__overlay">
 									Ресурс пропонує комплексні пропозиції з різним рівнем
@@ -300,7 +394,7 @@
 							</div>
 						</li>
 
-						<li class="portfolio__list__item">
+						<li class="portfolio__list__item" data-name="app">
 							<div class="portfolio__list__item__overlay-container">
 								<div class="portfolio__list__item__overlay-container__overlay">
 									Ресурс пропонує комплексні пропозиції з різним рівнем
@@ -334,13 +428,17 @@
 				<div>
 					<a href="index.html" class="footer__logo"> <span>Web</span>Studio </a>
 					<address class="footer__address-block">
-						<p class="footer__address-p">м. Київ, пр-т Лесі Українки, 26</p>
-						<a class="footer__address-a" href="mailto:info@devstrudio.com"
-							>info@devstrudio.com<br
-						/></a>
-						<a class="footer__address-a" href="tel:+380994814090"
-							>+38 099 481 40 90</a
-						>
+						<p class="footer__address-block__address">
+							м. Київ, пр-т Лесі Українки, 26
+						</p>
+						<a
+							class="footer__address-block__contact"
+							href="mailto:info@devstrudio.com"
+							>info@devstrudio.com
+						</a>
+						<a class="footer__address-block__contact" href="tel:+380994814090"
+							>+38 099 481 40 90
+						</a>
 					</address>
 				</div>
 
@@ -409,6 +507,8 @@
 			</div>
 		</footer>
 
+		<script src="./js/filter.js"></script>
+		<script src="./js/mobile-menu.js"></script>
 		<script src="./js/nav_underline.js"></script>
 	</body>
 </html>

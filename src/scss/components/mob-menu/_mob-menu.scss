@@ -1,0 +1,121 @@
+@import "../../utility/utility";
+@import "../../utility/utility";
+
+.mob-menu {
+	display: flex;
+	flex-direction: column;
+	position: fixed;
+	top: 0;
+	width: 100%;
+	height: 100%;
+	padding: 48px 40px;
+	background-color: $wht-color;
+	transform: translateY(-200%);
+	transition: transform $tras-settings;
+	justify-content: space-between;
+	&__close-btn {
+		position: absolute;
+		top: 16px;
+		right: 15px;
+		background: none;
+		border: 0;
+		padding: 11px;
+		font-size: 34px;
+		line-height: 0.53em;
+		color: $dark-color;
+		transition: color $tras-settings;
+		&:hover {
+			color: $more-blue-color;
+			transition: color $tras-settings;
+		}
+	}
+	&__nav-list {
+		display: flex;
+		flex-direction: column;
+		gap: 32px;
+		&__item__link {
+			position: relative;
+			text-decoration: none;
+			transition: color $tras-settings;
+			font-weight: 500;
+			color: $dark-color;
+			font-size: 40px;
+			line-height: auto;
+			letter-spacing: 0.02em;
+			&:hover {
+				color: $blue-color;
+				transition: color $tras-settings;
+			}
+		}
+	}
+	&__contacts {
+		display: flex;
+		flex-direction: column;
+		gap: 60px;
+		margin-bottom: 64px;
+		margin-top: auto;
+		&__link {
+			display: flex;
+			align-items: center;
+			gap: 32px;
+			font-weight: 500;
+			font-size: 24px;
+			line-height: 1.17;
+			letter-spacing: 0.02em;
+
+			color: $grey-color;
+			transition: color $tras-settings;
+			&:hover {
+				color: $blue-color;
+			}
+			&:hover svg {
+				color: $blue-color;
+			}
+		}
+		.tel {
+			color: $blue-color;
+			font-weight: 500;
+			font-size: 34px;
+			line-height: 1.17;
+			letter-spacing: 0.02em;
+		}
+	}
+	&__socials {
+		display: flex;
+		gap: 10px;
+		flex-wrap: wrap;
+		// list-style-type: symbols("|");
+		&__item {
+			display: flex;
+			& + &::before {
+				content: "|";
+				color: $grey-color;
+				opacity: 20%;
+				font-size: 22px;
+				margin-right: 15px;
+				text-align: center;
+				width: 0;
+				line-height: 1;
+			}
+			&__link {
+				color: $blue-color;
+				font-weight: 500;
+				font-size: 18px;
+				line-height: 1.22em;
+				letter-spacing: 0.02em;
+				text-transform: capitalize;
+			}
+		}
+	}
+	&__visible {
+		transform: translateY(0%);
+		transition: transform $tras-settings;
+	}
+	@include desktop {
+		display: none;
+		// visibility: visible;
+	}
+	@include tablet {
+		display: none;
+	}
+}
