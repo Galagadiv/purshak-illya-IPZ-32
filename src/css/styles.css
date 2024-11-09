@@ -693,6 +693,7 @@ button {
   background-color: #ffffff;
   transform: translateY(-200%);
   transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  justify-content: space-between;
 }
 .mob-menu__close-btn {
   position: absolute;
@@ -714,7 +715,6 @@ button {
   display: flex;
   flex-direction: column;
   gap: 32px;
-  margin-bottom: 150px;
 }
 .mob-menu__nav-list__item__link {
   position: relative;
@@ -763,6 +763,7 @@ button {
 .mob-menu__socials {
   display: flex;
   gap: 10px;
+  flex-wrap: wrap;
 }
 .mob-menu__socials__item {
   display: flex;
@@ -1150,6 +1151,7 @@ button {
   background-color: #ffffff;
   transform: translateY(-200%);
   transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  justify-content: space-between;
 }
 .mob-menu__close-btn {
   position: absolute;
@@ -1171,7 +1173,6 @@ button {
   display: flex;
   flex-direction: column;
   gap: 32px;
-  margin-bottom: 150px;
 }
 .mob-menu__nav-list__item__link {
   position: relative;
@@ -1220,6 +1221,7 @@ button {
 .mob-menu__socials {
   display: flex;
   gap: 10px;
+  flex-wrap: wrap;
 }
 .mob-menu__socials__item {
   display: flex;
