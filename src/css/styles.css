@@ -714,7 +714,7 @@ button {
   display: flex;
   flex-direction: column;
   gap: 32px;
-  margin-bottom: 300px;
+  margin-bottom: 150px;
 }
 .mob-menu__nav-list__item__link {
   position: relative;
@@ -1153,6 +1153,14 @@ button {
   line-height: 1.875em;
 }
 
+.active {
+  display: block;
+}
+
+.hide {
+  display: none;
+}
+
 .mob-menu {
   display: flex;
   flex-direction: column;
@@ -1185,7 +1193,7 @@ button {
   display: flex;
   flex-direction: column;
   gap: 32px;
-  margin-bottom: 300px;
+  margin-bottom: 150px;
 }
 .mob-menu__nav-list__item__link {
   position: relative;
