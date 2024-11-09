@@ -34,28 +34,32 @@
 				</a>
 				<nav class="header__nav">
 					<ul class="header__nav-list">
-						<li class="header__nav-item">
-							<a href="index.html" class="header__nav-link">Студія</a>
+						<li class="header__nav-list__item">
+							<a href="index.html" class="header__nav-list__item__link"
+								>Студія</a
+							>
 						</li>
 						<li class="header__nav-item">
-							<a href="portfolio.html" class="header__nav-link">Портфоліо</a>
+							<a href="portfolio.html" class="header__nav-list__item__link"
+								>Портфоліо</a
+							>
 						</li>
 						<li class="header__nav-item">
-							<a href="#" class="header__nav-link">Контакти</a>
+							<a href="#" class="header__nav-list__item__link">Контакти</a>
 						</li>
 					</ul>
 				</nav>
 				<ul class="header__contacts">
-					<li class="header__contacts-item header__contacts-item--mail">
-						<a href="mailto:info@devstrudio.com" class="header__contacts-link">
+					<li class="header__contacts__item">
+						<a href="mailto:info@devstrudio.com" class="header__contacts__link">
 							<svg width="16" height="12">
 								<use href="./images/social/social-icons.svg#icon-mail"></use>
 							</svg>
 							info@devstrudio.com
 						</a>
 					</li>
-					<li class="header__contacts-item header__contacts-item--tel">
-						<a href="tel:+380994814090" class="header__contacts-link">
+					<li class="header__contacts__item">
+						<a href="tel:+380994814090" class="header__contacts__link">
 							<svg width="10" height="16">
 								<use
 									href="./images/social/social-icons.svg#icon-smartphone"
@@ -65,6 +69,12 @@
 						</a>
 					</li>
 				</ul>
+
+				<button class="header__menu-btn" mob-menu-open>
+					<svg width="24" height="16">
+						<use href="./images/social/social-icons.svg#icon-humb-menu"></use>
+					</svg>
+				</button>
 			</div>
 		</header>
 
@@ -84,6 +94,8 @@
 						<li class="special__list__item">
 							<div class="special__list__item__icon-wrapper">
 								<img
+									width="70"
+									height="70"
 									src="./images/main/special/antenna.svg"
 									alt="Антена"
 									class="special__list__item__icon-wrapper__icon"
@@ -99,6 +111,8 @@
 						<li class="special__list__item">
 							<div class="special__list__item__icon-wrapper">
 								<img
+									width="70"
+									height="70"
 									src="./images/main/special/clock.svg"
 									alt="Годинник"
 									class="special__list__item__icon-wrapper__icon"
@@ -114,6 +128,8 @@
 						<li class="special__list__item">
 							<div class="special__list__item__icon-wrapper">
 								<img
+									width="70"
+									height="70"
 									src="./images/main/special/notebook.svg"
 									alt="Ноутбук"
 									class="special__list__item__icon-wrapper__icon"
@@ -128,6 +144,8 @@
 						<li class="special__list__item">
 							<div class="special__list__item__icon-wrapper">
 								<img
+									width="70"
+									height="70"
 									src="./images/main/special/astronaut.svg"
 									alt="Космонавт"
 									class="special__list__item__icon-wrapper__icon"
@@ -191,7 +209,7 @@
 				<div class="container">
 					<h2 class="team__title">Наша команда</h2>
 					<ul class="team__list">
-						<li class="team__list-item">
+						<li class="team__list__item">
 							<img
 								src="images/main/people/Igor.jpg"
 								alt="Ігор Дем'яненко"
@@ -199,14 +217,14 @@
 								width="270"
 								height="260"
 							/>
-							<div class="team__info">
-								<h3 class="team__name">Ігор Дем'яненко</h3>
-								<p class="team__position">Product Designer</p>
-								<ul class="team__media-list">
-									<li class="team__media-item">
+							<div class="team__list__item__info">
+								<h3 class="team__list__item__name">Ігор Дем'яненко</h3>
+								<p class="team__list__item__info__position">Product Designer</p>
+								<ul class="team__list__item__info__media-list">
+									<li>
 										<a
 											href="https://www.instagram.com/"
-											class="team__media-link"
+											class="team__list__item__info__media-list__link"
 										>
 											<svg width="20" height="20">
 												<use
@@ -215,8 +233,11 @@
 											</svg>
 										</a>
 									</li>
-									<li class="team__media-item">
-										<a href="https://x.com/" class="team__media-link">
+									<li>
+										<a
+											href="https://x.com/"
+											class="team__list__item__info__media-list__link"
+										>
 											<svg width="20" height="20">
 												<use
 													href="./images/social/social-icons.svg#icon-twitter"
@@ -224,10 +245,10 @@
 											</svg>
 										</a>
 									</li>
-									<li class="team__media-item">
+									<li>
 										<a
 											href="https://www.facebook.com/"
-											class="team__media-link"
+											class="team__list__item__info__media-list__link"
 										>
 											<svg width="20" height="20">
 												<use
@@ -236,8 +257,11 @@
 											</svg>
 										</a>
 									</li>
-									<li class="team__media-item">
-										<a href="https://ua.linkedin.com/" class="team__media-link">
+									<li>
+										<a
+											href="https://ua.linkedin.com/"
+											class="team__list__item__info__media-list__link"
+										>
 											<svg width="20" height="20">
 												<use
 													href="./images/social/social-icons.svg#icon-linkedin"
@@ -249,21 +273,23 @@
 							</div>
 						</li>
 
-						<li class="team__list-item">
+						<li class="team__list__item">
 							<img
 								src="images/main/people/Olga.jpg"
 								alt="Ольга Рєпіна"
 								width="270"
 								height="260"
 							/>
-							<div class="team__info">
-								<h3 class="team__name">Ольга Рєпіна</h3>
-								<p class="team__position">Frontend Developer</p>
-								<ul class="team__media-list">
-									<li class="team__media-item">
+							<div class="team__list__item__info">
+								<h3 class="team__list__item__name">Ольга Рєпіна</h3>
+								<p class="team__list__item__info__position">
+									Frontend Developer
+								</p>
+								<ul class="team__list__item__info__media-list">
+									<li>
 										<a
 											href="https://www.instagram.com/"
-											class="team__media-link"
+											class="team__list__item__info__media-list__link"
 										>
 											<svg width="20" height="20">
 												<use
@@ -272,8 +298,11 @@
 											</svg>
 										</a>
 									</li>
-									<li class="team__media-item">
-										<a href="https://x.com/" class="team__media-link">
+									<li>
+										<a
+											href="https://x.com/"
+											class="team__list__item__info__media-list__link"
+										>
 											<svg width="20" height="20">
 												<use
 													href="./images/social/social-icons.svg#icon-twitter"
@@ -281,10 +310,10 @@
 											</svg>
 										</a>
 									</li>
-									<li class="team__media-item">
+									<li>
 										<a
 											href="https://www.facebook.com/"
-											class="team__media-link"
+											class="team__list__item__info__media-list__link"
 										>
 											<svg width="20" height="20">
 												<use
@@ -293,8 +322,11 @@
 											</svg>
 										</a>
 									</li>
-									<li class="team__media-item">
-										<a href="https://ua.linkedin.com/" class="team__media-link">
+									<li>
+										<a
+											href="https://ua.linkedin.com/"
+											class="team__list__item__info__media-list__link"
+										>
 											<svg width="20" height="20">
 												<use
 													href="./images/social/social-icons.svg#icon-linkedin"
@@ -306,21 +338,21 @@
 							</div>
 						</li>
 
-						<li class="team__list-item">
+						<li class="team__list__item">
 							<img
 								src="images/main/people/Mykola.jpg"
 								alt="Микола Тарасок"
 								width="270"
 								height="260"
 							/>
-							<div class="team__info">
-								<h3 class="team__name">Микола Тарасок</h3>
-								<p class="team__position">Marketing</p>
-								<ul class="team__media-list">
-									<li class="team__media-item">
+							<div class="team__list__item__info">
+								<h3 class="team__list__item__name">Микола Тарасок</h3>
+								<p class="team__list__item__info__position">Marketing</p>
+								<ul class="team__list__item__info__media-list">
+									<li>
 										<a
 											href="https://www.instagram.com/"
-											class="team__media-link"
+											class="team__list__item__info__media-list__link"
 										>
 											<svg width="20" height="20">
 												<use
@@ -329,8 +361,11 @@
 											</svg>
 										</a>
 									</li>
-									<li class="team__media-item">
-										<a href="https://x.com/" class="team__media-link">
+									<li>
+										<a
+											href="https://x.com/"
+											class="team__list__item__info__media-list__link"
+										>
 											<svg width="20" height="20">
 												<use
 													href="./images/social/social-icons.svg#icon-twitter"
@@ -338,10 +373,10 @@
 											</svg>
 										</a>
 									</li>
-									<li class="team__media-item">
+									<li>
 										<a
 											href="https://www.facebook.com/"
-											class="team__media-link"
+											class="team__list__item__info__media-list__link"
 										>
 											<svg width="20" height="20">
 												<use
@@ -350,8 +385,11 @@
 											</svg>
 										</a>
 									</li>
-									<li class="team__media-item">
-										<a href="https://ua.linkedin.com/" class="team__media-link">
+									<li>
+										<a
+											href="https://ua.linkedin.com/"
+											class="team__list__item__info__media-list__link"
+										>
 											<svg width="20" height="20">
 												<use
 													href="./images/social/social-icons.svg#icon-linkedin"
@@ -363,21 +401,21 @@
 							</div>
 						</li>
 
-						<li class="team__list-item">
+						<li class="team__list__item">
 							<img
 								src="images/main/people/Myhaylo.jpg"
 								alt="Михайло Єрмаков"
 								width="270"
 								height="260"
 							/>
-							<div class="team__info">
-								<h3 class="team__name">Михайло Єрмаков</h3>
-								<p class="team__position">UI Designer</p>
-								<ul class="team__media-list">
-									<li class="team__media-item">
+							<div class="team__list__item__info">
+								<h3 class="team__list__item__name">Михайло Єрмаков</h3>
+								<p class="team__list__item__info__position">UI Designer</p>
+								<ul class="team__list__item__info__media-list">
+									<li>
 										<a
 											href="https://www.instagram.com/"
-											class="team__media-link"
+											class="team__list__item__info__media-list__link"
 										>
 											<svg width="20" height="20">
 												<use
@@ -386,8 +424,11 @@
 											</svg>
 										</a>
 									</li>
-									<li class="team__media-item">
-										<a href="https://x.com/" class="team__media-link">
+									<li>
+										<a
+											href="https://x.com/"
+											class="team__list__item__info__media-list__link"
+										>
 											<svg width="20" height="20">
 												<use
 													href="./images/social/social-icons.svg#icon-twitter"
@@ -395,10 +436,10 @@
 											</svg>
 										</a>
 									</li>
-									<li class="team__media-item">
+									<li>
 										<a
 											href="https://www.facebook.com/"
-											class="team__media-link"
+											class="team__list__item__info__media-list__link"
 										>
 											<svg width="20" height="20">
 												<use
@@ -407,8 +448,11 @@
 											</svg>
 										</a>
 									</li>
-									<li class="team__media-item">
-										<a href="https://ua.linkedin.com/" class="team__media-link">
+									<li>
+										<a
+											href="https://ua.linkedin.com/"
+											class="team__list__item__info__media-list__link"
+										>
 											<svg width="20" height="20">
 												<use
 													href="./images/social/social-icons.svg#icon-linkedin"
@@ -491,19 +535,23 @@
 				<div>
 					<a href="index.html" class="footer__logo"> <span>Web</span>Studio </a>
 					<address class="footer__address-block">
-						<p class="footer__address-p">м. Київ, пр-т Лесі Українки, 26</p>
-						<a class="footer__address-a" href="mailto:info@devstrudio.com"
+						<p class="footer__address-block__address">
+							м. Київ, пр-т Лесі Українки, 26
+						</p>
+						<a
+							class="footer__address-block__contact"
+							href="mailto:info@devstrudio.com"
 							>info@devstrudio.com<br
 						/></a>
-						<a class="footer__address-a" href="tel:+380994814090"
+						<a class="footer__address-block__contact" href="tel:+380994814090"
 							>+38 099 481 40 90</a
 						>
 					</address>
 				</div>
 
 				<div class="footer__media-block">
-					<p class="footer__media-p">Приєднуйтесь</p>
-					<ul class="footer__media-list">
+					<p class="footer__media-block__text">Приєднуйтесь</p>
+					<ul class="footer__media-block__list">
 						<li>
 							<a href="https://www.instagram.com/">
 								<svg width="20" height="20">
@@ -544,15 +592,10 @@
 				</div>
 
 				<div class="footer__subscribe-block">
-					<p class="footer__subscribe-block-title">Підпишіться на розсилку</p>
-					<form>
+					<p class="footer__subscribe-block__title">Підпишіться на розсилку</p>
+					<form class="footer__subscribe-block__form">
 						<label for="sub-email"></label>
-						<input
-							class="footer__subscribe-block-input"
-							type="email"
-							placeholder="E-mail"
-							name="sub-email"
-						/>
+						<input type="email" placeholder="E-mail" name="sub-email" />
 						<button type="submit">
 							<span>Підписатися</span>
 							<svg width="24" height="24">
@@ -565,6 +608,71 @@
 				</div>
 			</div>
 		</footer>
+
+		<div class="mob-menu" mob-menu>
+			<button class="mob-menu__close-btn" mob-menu-close>&times;</button>
+			<nav class="mob-menu__nav">
+				<ul class="mob-menu__nav-list">
+					<li class="mob-menu__nav-list__item">
+						<a href="index.html" class="mob-menu__nav-list__item__link"
+							>Студія</a
+						>
+					</li>
+					<li class="mob-menu__nav-item">
+						<a href="portfolio.html" class="mob-menu__nav-list__item__link"
+							>Портфоліо</a
+						>
+					</li>
+					<li class="mob-menu__nav-item">
+						<a href="#" class="mob-menu__nav-list__item__link">Контакти</a>
+					</li>
+				</ul>
+			</nav>
+			<ul class="mob-menu__contacts">
+				<li class="mob-menu__contacts__item">
+					<a href="tel:+380994814090" class="mob-menu__contacts__link tel">
+						+38 099 481 40 90
+					</a>
+				</li>
+				<li class="mob-menu__contacts__item">
+					<a href="mailto:info@devstrudio.com" class="mob-menu__contacts__link">
+						info@devstrudio.com
+					</a>
+				</li>
+			</ul>
+
+			<ul class="mob-menu__socials">
+				<li class="mob-menu__socials__item">
+					<a
+						href="https://www.instagram.com/"
+						class="mob-menu__socials__item__link"
+					>
+						instagram
+					</a>
+				</li>
+				<li class="mob-menu__socials__item">
+					<a href="https://x.com/" class="mob-menu__socials__item__link"
+						>twitter</a
+					>
+				</li>
+				<li class="mob-menu__socials__item">
+					<a
+						href="https://www.facebook.com/"
+						class="mob-menu__socials__item__link"
+					>
+						facebook
+					</a>
+				</li>
+				<li class="mob-menu__socials__item">
+					<a
+						href="https://ua.linkedin.com/"
+						class="mob-menu__socials__item__link"
+					>
+						linkedin
+					</a>
+				</li>
+			</ul>
+		</div>
 
 		<div class="backdrop" data-modal>
 			<div class="backdrop__modal">
@@ -678,7 +786,8 @@
 			</div>
 		</div>
 
-		<script src="./JS/nav_underline.js"></script>
-		<script src="./JS/modal.js"></script>
+		<script src="./js/mobile-menu.js"></script>
+		<script src="./js/nav_underline.js"></script>
+		<script src="./js/modal.js"></script>
 	</body>
 </html>
