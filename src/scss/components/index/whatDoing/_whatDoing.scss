@@ -2,8 +2,9 @@
 @import "../../../default/default";
 
 .what-doing {
-	@include mobile {
-		display: none;
+	display: none;
+	@include desktop {
+		display: flex;
 	}
 	@include tablet {
 		display: none;

@@ -1,7 +1,10 @@
 @import "../../../utility/utility";
 
 .hero {
-	padding: 200px 0;
+	padding: 118px 0;
+	height: auto;
+	background-size: cover;
+
 	background-color: $backgr-color;
 
 	text-align: center;
@@ -11,14 +14,20 @@
 		),
 		url("../../images/main/backgr.jpg");
 
-	background-size: 1600px 600px;
 	background-position: center;
 	background-repeat: no-repeat;
+	// @media (min-device-pixel-ratio: 2),
+	// 	(min-resolution: 192dpi),
+	// 	(min-resolution: 2dppx) {
+	// 	.box {
+	// 		background-image: url("photo@2x.png");
+	// 	}
+	// }
 
-	@include mobile {
-		padding: 118px 0;
-		height: auto;
-		background-size: cover;
+	@include desktop {
+		padding: 200px 0;
+		// background-size: cover;
+		background-size: 1600px 600px;
 	}
 	@include tablet {
 		padding: 118px 0;
@@ -26,18 +35,19 @@
 		background-size: cover;
 	}
 	&__title {
-		max-width: 700px;
+		font-size: 26px;
+		max-width: 360px;
 		margin-bottom: 30px;
 		font-weight: 900;
 		color: $wht-color;
-		font-size: 44px;
+
 		line-height: 1.36;
 		letter-spacing: 0.06em;
 		text-transform: uppercase;
 		justify-self: center;
-		@include mobile {
-			font-size: 26px;
-			max-width: 360px;
+		@include desktop {
+			font-size: 44px;
+			max-width: 700px;
 		}
 		@include tablet {
 			font-size: 26px;

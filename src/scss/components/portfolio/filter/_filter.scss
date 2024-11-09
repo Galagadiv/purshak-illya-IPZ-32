@@ -2,21 +2,33 @@
 
 .portfolio {
 	display: flex;
+
 	flex-direction: column;
 	justify-content: center;
+
 	&__filter {
 		display: flex;
-		justify-content: center;
 		align-content: center;
-		gap: 10px;
-		margin-bottom: 50px;
-		@include mobile {
-			flex-wrap: wrap;
-			justify-content: flex-start;
-			max-width: 370px;
-			gap: 8px;
-			row-gap: 15px;
-			margin-bottom: 40px;
+
+		flex-wrap: wrap;
+		justify-content: flex-start;
+		max-width: 370px;
+		gap: 8px;
+		row-gap: 15px;
+		margin-bottom: 40px;
+		@include desktop {
+			max-width: 100%;
+			flex-wrap: nowrap;
+			justify-content: center;
+			gap: 10px;
+			margin-bottom: 50px;
+		}
+		@include tablet {
+			max-width: 100%;
+			flex-wrap: nowrap;
+			justify-content: center;
+			gap: 10px;
+			margin-bottom: 50px;
 		}
 		&__item {
 			&__button {

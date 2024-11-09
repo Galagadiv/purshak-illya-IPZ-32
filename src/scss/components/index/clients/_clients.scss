@@ -16,6 +16,7 @@
 		flex-wrap: wrap;
 	}
 	&__item {
+		max-width: 170px;
 		padding: 16px 32px;
 		border: 1px solid $btn-grey-color;
 		border-radius: 5px;

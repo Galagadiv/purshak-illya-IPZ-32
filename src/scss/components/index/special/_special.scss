@@ -12,9 +12,9 @@
 		gap: 30px;
 		flex-wrap: wrap;
 		&__item {
-			max-width: 270px;
-			@include mobile {
-				max-width: 100%;
+			max-width: 100%;
+			@include desktop {
+				max-width: 270px;
 			}
 			@include tablet {
 				max-width: 354px;

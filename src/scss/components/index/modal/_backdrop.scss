@@ -16,8 +16,10 @@
 
 	opacity: 0;
 	transition: opacity var(--tras-settings);
-	@include mobile {
-		padding: 93px 15px;
+
+	padding: 93px 15px;
+	@include desktop {
+		padding: 0;
 	}
 	@include tablet {
 		padding: 208px 159px;
