@@ -12,10 +12,6 @@
 			max-width: 450px;
 			width: 100%;
 
-			&:nth-of-type(odd):last-child {
-				margin-right: auto;
-			}
-
 			@include desktop {
 				max-width: 370px;
 			}
@@ -78,8 +74,7 @@
 }
 
 .active {
-	background-color: $active-bg-color; /* Додати ваш колір активної кнопки */
-	color: $active-text-color; /* Додати колір тексту */
+	display: block;
 }
 
 .hide {

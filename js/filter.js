@@ -5,10 +5,13 @@ const filterableCard = document.querySelectorAll(".portfolio__list__item");
 
 // Функція для фільтрації карток
 const filterCard = (e) => {
-	// Видаляємо клас "active" з попередньої кнопки
-	document
-		.querySelector(".portfolio__filter__item__button.active")
-		?.classList.remove("active");
+	// Видаляємо клас "active" з попередньої кнопки, якщо така є
+	const activeButton = document.querySelector(
+		".portfolio__filter__item__button.active"
+	);
+	if (activeButton) {
+		activeButton.classList.remove("active");
+	}
 
 	// Додаємо клас "active" до натиснутої кнопки
 	e.target.classList.add("active");
