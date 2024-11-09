@@ -682,18 +682,13 @@ button {
   transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-<<<<<<< HEAD
-<<<<<<< Updated upstream
-=======
-=======
->>>>>>> ad387a8a8ffc8a6ad95e418662b1e8eae0b6f9ca
 .mob-menu {
   display: flex;
   flex-direction: column;
   position: fixed;
   top: 0;
   width: 100%;
-  height: 100%;
+  height: 100vh;
   padding: 48px 40px;
   background-color: #ffffff;
   transform: translateY(-200%);
@@ -740,10 +735,7 @@ button {
   flex-direction: column;
   gap: 60px;
   margin-bottom: 64px;
-<<<<<<< HEAD
   margin-top: auto;
-=======
->>>>>>> ad387a8a8ffc8a6ad95e418662b1e8eae0b6f9ca
 }
 .mob-menu__contacts__link {
   display: flex;
@@ -810,10 +802,6 @@ button {
   }
 }
 
-<<<<<<< HEAD
->>>>>>> Stashed changes
-=======
->>>>>>> ad387a8a8ffc8a6ad95e418662b1e8eae0b6f9ca
 .backdrop {
   display: none;
   position: fixed;
@@ -1145,13 +1133,7 @@ button {
   line-height: 1.875em;
 }
 
-<<<<<<< HEAD
-<<<<<<< Updated upstream
-=======
-.portfolio__active {
-=======
 .active {
->>>>>>> ad387a8a8ffc8a6ad95e418662b1e8eae0b6f9ca
   display: block;
 }
 
@@ -1165,7 +1147,7 @@ button {
   position: fixed;
   top: 0;
   width: 100%;
-  height: 100%;
+  height: 100vh;
   padding: 48px 40px;
   background-color: #ffffff;
   transform: translateY(-200%);
@@ -1212,10 +1194,7 @@ button {
   flex-direction: column;
   gap: 60px;
   margin-bottom: 64px;
-<<<<<<< HEAD
   margin-top: auto;
-=======
->>>>>>> ad387a8a8ffc8a6ad95e418662b1e8eae0b6f9ca
 }
 .mob-menu__contacts__link {
   display: flex;
@@ -1282,10 +1261,6 @@ button {
   }
 }
 
-<<<<<<< HEAD
->>>>>>> Stashed changes
-=======
->>>>>>> ad387a8a8ffc8a6ad95e418662b1e8eae0b6f9ca
 a {
   text-decoration: none;
 }
