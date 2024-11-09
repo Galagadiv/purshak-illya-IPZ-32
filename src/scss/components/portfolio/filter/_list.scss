@@ -24,6 +24,11 @@
 				box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.2);
 				transition: box-shadow $tras-settings;
 			}
+			&:hover &__overlay-container__overlay {
+				padding: 63px 24px;
+				transform: translateY(0%);
+				transition: transform $tras-settings;
+			}
 
 			&__overlay-container {
 				position: relative;
@@ -71,12 +76,4 @@
 			}
 		}
 	}
-}
-
-.active {
-	display: block;
-}
-
-.hide {
-	display: none;
 }
