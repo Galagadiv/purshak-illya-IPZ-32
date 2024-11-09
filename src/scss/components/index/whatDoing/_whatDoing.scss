@@ -2,7 +2,12 @@
 @import "../../../default/default";
 
 .what-doing {
-	.container {
+	display: none;
+	@include desktop {
+		display: flex;
+	}
+	@include tablet {
+		display: none;
 	}
 	&__title {
 		text-align: center;

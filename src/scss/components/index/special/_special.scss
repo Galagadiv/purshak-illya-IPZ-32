@@ -2,36 +2,44 @@
 @import "../../../default/default";
 
 .special {
-	padding-bottom: 0;
-	.container {
+	@include desktop {
+		padding-bottom: 0;
 	}
 	&__list {
 		display: flex;
 		flex-direction: row;
+		justify-content: center;
 		gap: 30px;
-	}
-	&__list__item {
-		max-width: 270px;
-		&__icon-wrapper {
-			padding: 25px 100px;
-			margin-bottom: 30px;
-			background-color: $nowht-color;
-		}
-		&__icon-wrapper__icon {
-			width: 100%;
-			height: auto;
-		}
-		&__title {
-			font-weight: 700;
-			color: $dark-color;
-			font-size: 14px;
-			line-height: 1.17;
-			margin-bottom: 10px;
-		}
-		&__description {
-			color: $grey-color;
-			font-size: 14px;
-			line-height: 1.71;
+		flex-wrap: wrap;
+		&__item {
+			max-width: 100%;
+			@include desktop {
+				max-width: 270px;
+			}
+			@include tablet {
+				max-width: 354px;
+			}
+			&__icon-wrapper {
+				padding: 25px 100px;
+				margin-bottom: 30px;
+				background-color: $nowht-color;
+			}
+			&__icon-wrapper__icon {
+				margin-left: auto;
+				margin-right: auto;
+			}
+			&__title {
+				font-weight: 700;
+				color: $dark-color;
+				font-size: 14px;
+				line-height: 1.17;
+				margin-bottom: 10px;
+			}
+			&__description {
+				color: $grey-color;
+				font-size: 14px;
+				line-height: 1.71;
+			}
 		}
 	}
 }

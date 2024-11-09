@@ -23,7 +23,7 @@
 
 	<body>
 		<header class="header">
-			<div class="header__container container">
+			<div class="container">
 				<a href="index.html" class="header__logo">
 					<img
 						src="./images/logobl.svg"
@@ -45,21 +45,21 @@
 							</a>
 						</li>
 						<li class="header__nav-item">
-							<a href="#" class="header__nav-link">Контакти</a>
+							<a href="#" class="header__nav-list__item__link">Контакти</a>
 						</li>
 					</ul>
 				</nav>
 				<ul class="header__contacts">
-					<li class="header__contacts-item header__contacts-item--mail">
-						<a href="mailto:info@devstrudio.com" class="header__contacts-link">
+					<li class="header__contacts__item">
+						<a href="mailto:info@devstrudio.com" class="header__contacts__link">
 							<svg width="16" height="12">
 								<use href="./images/social/social-icons.svg#icon-mail"></use>
 							</svg>
 							info@devstrudio.com
 						</a>
 					</li>
-					<li class="header__contacts-item header__contacts-item--tel">
-						<a href="tel:+380994814090" class="header__contacts-link">
+					<li class="header__contacts__item">
+						<a href="tel:+380994814090" class="header__contacts__link">
 							<svg width="10" height="16">
 								<use
 									href="./images/social/social-icons.svg#icon-smartphone"
@@ -151,7 +151,11 @@
 				<div class="container">
 					<ul class="portfolio__filter">
 						<li class="portfolio__filter__item">
-							<button type="button" class="portfolio__filter__item__button">
+							<button
+								type="button"
+								class="portfolio__filter__item__button"
+								data-name="all"
+							>
 								Усі
 							</button>
 						</li>
@@ -209,11 +213,12 @@
 									class="portfolio__list__item__overlay-container__item-image"
 								/>
 							</div>
-							<div class="portfolio__list__item__item-textblock">
-								<h3 class="portfolio__list__item__item-textblock__title">
+
+							<div class="portfolio__list__item__textblock">
+								<h3 class="portfolio__list__item__textblock__title">
 									Технокряк
 								</h3>
-								<p class="portfolio__list__item__item-textblock__category">
+								<p class="portfolio__list__item__textblock__category">
 									Додаток
 								</p>
 							</div>
@@ -234,13 +239,11 @@
 									class="portfolio__list__item__overlay-container__item-image"
 								/>
 							</div>
-							<div class="portfolio__list__item__item-textblock">
-								<h3 class="portfolio__list__item__item-textblock__title">
+							<div class="portfolio__list__item__textblock">
+								<h3 class="portfolio__list__item__textblock__title">
 									Постер New Orlean vs Golden Star
 								</h3>
-								<p class="portfolio__list__item__item-textblock__category">
-									Дизайн
-								</p>
+								<p class="portfolio__list__item__textblock__category">Дизайн</p>
 							</div>
 						</li>
 
@@ -259,11 +262,11 @@
 									class="portfolio__list__item__overlay-container__item-image"
 								/>
 							</div>
-							<div class="portfolio__list__item__item-textblock">
-								<h3 class="portfolio__list__item__item-textblock__title">
+							<div class="portfolio__list__item__textblock">
+								<h3 class="portfolio__list__item__textblock__title">
 									Ресторан Seafood
 								</h3>
-								<p class="portfolio__list__item__item-textblock__category">
+								<p class="portfolio__list__item__textblock__category">
 									Додаток
 								</p>
 							</div>
@@ -284,11 +287,11 @@
 									class="portfolio__list__item__overlay-container__item-image"
 								/>
 							</div>
-							<div class="portfolio__list__item__item-textblock">
-								<h3 class="portfolio__list__item__item-textblock__title">
+							<div class="portfolio__list__item__textblock">
+								<h3 class="portfolio__list__item__textblock__title">
 									Проєкт Prime
 								</h3>
-								<p class="portfolio__list__item__item-textblock__category">
+								<p class="portfolio__list__item__textblock__category">
 									Маркетинг
 								</p>
 							</div>
@@ -309,11 +312,11 @@
 									class="portfolio__list__item__overlay-container__item-image"
 								/>
 							</div>
-							<div class="portfolio__list__item__item-textblock">
-								<h3 class="portfolio__list__item__item-textblock__title">
+							<div class="portfolio__list__item__textblock">
+								<h3 class="portfolio__list__item__textblock__title">
 									Проєкт Boxes
 								</h3>
-								<p class="portfolio__list__item__item-textblock__category">
+								<p class="portfolio__list__item__textblock__category">
 									Додаток
 								</p>
 							</div>
@@ -334,11 +337,11 @@
 									class="portfolio__list__item__overlay-container__item-image"
 								/>
 							</div>
-							<div class="portfolio__list__item__item-textblock">
-								<h3 class="portfolio__list__item__item-textblock__title">
+							<div class="portfolio__list__item__textblock">
+								<h3 class="portfolio__list__item__textblock__title">
 									Inspiration has no Borders
 								</h3>
-								<p class="portfolio__list__item__item-textblock__category">
+								<p class="portfolio__list__item__textblock__category">
 									Веб-сайт
 								</p>
 							</div>
@@ -359,13 +362,11 @@
 									class="portfolio__list__item__overlay-container__item-image"
 								/>
 							</div>
-							<div class="portfolio__list__item__item-textblock">
-								<h3 class="portfolio__list__item__item-textblock__title">
+							<div class="portfolio__list__item__textblock">
+								<h3 class="portfolio__list__item__textblock__title">
 									Видання Limited Edition
 								</h3>
-								<p class="portfolio__list__item__item-textblock__category">
-									Дизайн
-								</p>
+								<p class="portfolio__list__item__textblock__category">Дизайн</p>
 							</div>
 						</li>
 
@@ -384,11 +385,11 @@
 									class="portfolio__list__item__overlay-container__item-image"
 								/>
 							</div>
-							<div class="portfolio__list__item__item-textblock">
-								<h3 class="portfolio__list__item__item-textblock__title">
+							<div class="portfolio__list__item__textblock">
+								<h3 class="portfolio__list__item__textblock__title">
 									Проєкт LAB
 								</h3>
-								<p class="portfolio__list__item__item-textblock__category">
+								<p class="portfolio__list__item__textblock__category">
 									Маркетинг
 								</p>
 							</div>
@@ -409,11 +410,11 @@
 									class="portfolio__list__item__overlay-container__item-image"
 								/>
 							</div>
-							<div class="portfolio__list__item__item-textblock">
-								<h3 class="portfolio__list__item__item-textblock__title">
+							<div class="portfolio__list__item__textblock">
+								<h3 class="portfolio__list__item__textblock__title">
 									Growing Bussiness
 								</h3>
-								<p class="portfolio__list__item__item-textblock__category">
+								<p class="portfolio__list__item__textblock__category">
 									Додаток
 								</p>
 							</div>
@@ -443,8 +444,8 @@
 				</div>
 
 				<div class="footer__media-block">
-					<p class="footer__media-p">Приєднуйтесь</p>
-					<ul class="footer__media-list">
+					<p class="footer__media-block__text">Приєднуйтесь</p>
+					<ul class="footer__media-block__list">
 						<li>
 							<a href="https://www.instagram.com/">
 								<svg width="20" height="20">
@@ -485,15 +486,10 @@
 				</div>
 
 				<div class="footer__subscribe-block">
-					<p class="footer__subscribe-block-title">Підпишіться на розсилку</p>
-					<form>
+					<p class="footer__subscribe-block__title">Підпишіться на розсилку</p>
+					<form class="footer__subscribe-block__form">
 						<label for="sub-email"></label>
-						<input
-							class="footer__subscribe-block-input"
-							type="email"
-							placeholder="E-mail"
-							name="sub-email"
-						/>
+						<input type="email" placeholder="E-mail" name="sub-email" />
 						<button type="submit">
 							<span>Підписатися</span>
 							<svg width="24" height="24">

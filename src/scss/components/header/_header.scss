@@ -2,11 +2,15 @@
 @import "../../default/default";
 
 .header {
+	display: flex;
 	padding: 24px 0;
 	border-bottom: 1px solid $border-color;
 	.container {
 		display: flex;
 		align-items: center;
+		@include mobile {
+			justify-content: space-between;
+		}
 	}
 	&__logo {
 		margin-right: 93px;
@@ -15,69 +19,112 @@
 		display: flex;
 		flex-direction: row;
 		gap: 50px;
-	}
-	&__nav-link {
-		position: relative;
-		text-decoration: none;
-		transition: color 250ms $tras-settings;
-		font-weight: 500;
-		color: $dark-color;
-		font-size: 16px;
-		line-height: 1.17;
-		letter-spacing: 0.02em;
-	}
-	&__nav-link:hover {
-		color: $blue-color;
-	}
-	&__nav-link::after {
-		content: "";
-		display: block;
-		width: 100%;
-		height: 4px;
-		background-color: $more-blue-color;
-		position: absolute;
-		border-radius: 2px;
-		bottom: -32px;
-		transform: scaleX(0);
-		transition: transform 250ms $tras-settings;
-	}
-	&__nav-link:hover::after,
-	&__nav-link--active::after {
-		transform: scaleX(1);
-	}
-	/* Зміна кольору тексту на активних посиланнях */
-	&__nav-link--active {
-		color: $blue-color;
-	}
-	/* текст чорний після переведення */
-	&__nav-link--hover-out {
-		color: #000;
+		&__item__link {
+			position: relative;
+			text-decoration: none;
+			transition: color $tras-settings;
+			font-weight: 500;
+			color: $dark-color;
+			font-size: 14px;
+			line-height: 1.17;
+			letter-spacing: 0.02em;
+
+			&:hover {
+				color: $blue-color;
+			}
+			&::after {
+				content: "";
+				display: block;
+				width: 100%;
+				height: 4px;
+				background-color: $more-blue-color;
+				position: absolute;
+				border-radius: 2px;
+				bottom: -32px;
+				transform: scaleX(0);
+				transition: transform 250ms $tras-settings;
+				@include tablet {
+					bottom: -36px;
+				}
+			}
+			&--active {
+				color: $blue-color;
+			}
+			&:hover::after,
+			&--active::after {
+				transform: scaleX(1);
+			}
+		}
 	}
 	&__contacts {
 		display: flex;
 		gap: 60px;
 		margin-left: auto;
 		align-items: center;
-	}
-	&__contacts-link {
-		display: flex;
-		align-items: center;
-		gap: 10px;
-		font-weight: 500;
-		font-size: 16px;
-		line-height: 1.17;
-		letter-spacing: 0.02em;
+		&__item svg {
+			color: $grey-color;
+		}
+		&__link {
+			display: flex;
+			align-items: center;
+			gap: 10px;
+			font-weight: 500;
+			font-size: 14px;
+			line-height: 1.17;
+			letter-spacing: 0.02em;
 
-		color: $grey-color;
+			color: $grey-color;
+			transition: color $tras-settings;
+			@include tablet {
+				font-size: 12px;
+			}
+		}
+		&__link:hover {
+			color: $blue-color;
+		}
+		&__link:hover svg {
+			color: $blue-color;
+		}
+	}
+	&__menu-btn {
+		display: none;
+		background: none;
+		border: 0;
+		padding: 12px 8px;
 		transition: color $tras-settings;
+		&:hover {
+			color: $blue-color;
+			transition: color $tras-settings;
+		}
 	}
-	&__contacts-link:hover {
-		color: $blue-color;
+	@include mobile {
+		padding: 16px 0;
+		&__nav,
+		&__contacts {
+			display: none;
+		}
+		&__menu-btn {
+			display: flex;
+		}
+		&__logo {
+			img {
+				width: 134px;
+				height: 28px;
+			}
+		}
 	}
-	&__contacts-link:hover svg {
-		color: $blue-color;
-	}
-	&__contacts-item svg {
-		color: $grey-color;
+	@include tablet {
+		&__contacts {
+			flex-direction: column;
+			align-items: flex-start;
+			gap: 10px;
+		}
+		&__logo {
+			margin-right: 88px;
+			img {
+				width: 134px;
+				height: 28px;
+			}
+		}
 	}
 }
